@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
 </head>
+
 <body>
   <header class="page-header">
-    <div class="page-header__navigation">
-      <img src="http://placehold.it/150x100" alt="pink-logo">
-      <button class="btn-metu"></button>
-      <nav class="page-header__menu page-header__menu--disabled">
-        <ul>
-          <li><a href="#" title="ГЛАВНАЯ">ГЛАВНАЯ</a></li>
-          <li><a href="#" title="ФОТОГРАФИИ">ФОТОГРАФИИ</a></li>
-          <li><a href="#" title="КОНКУРС">КОНКУРС</a></li>
-          <li><a href="#" title="HTML ACADEMY">HTML ACADEMY</a></li>
-        </ul>
-      </nav>
-    </div>
-    <img src="http://placehold.it/150x100" alt="mobile photo">
+    <nav class="page-header__menu">
+      <img src="http://placehold.it/75x22" alt="pink-logo">
+      <button type="button" class="btn-metu"></button>
+      <ul class="page-header__nav">
+        <li><a href="#" title="ГЛАВНАЯ">ГЛАВНАЯ</a></li>
+        <li><a href="#" title="ФОТОГРАФИИ">ФОТОГРАФИИ</a></li>
+        <li><a href="#" title="КОНКУРС">КОНКУРС</a></li>
+        <li><a href="#" title="HTML ACADEMY">HTML ACADEMY</a></li>
+      </ul>
+    </nav>
+    <img src="http://placehold.it/320x490" alt="mobile photo">
     <ul>
       <li>
-        <a href="#" title="download apple app"><img src="http://placehold.it/150x100" alt="#"></a>
+        <a href="#" title="download-apple-app"><img src="http://placehold.it/47x56" alt="#"></a>
       </li>
       <li>
-        <a href="#" title="download android app"><img src="http://placehold.it/150x100" alt="#"></a>
+        <a href="#" title="download-android-app"><img src="http://placehold.it/43x47" alt="#"></a>
       </li>
       <li>
-        <a href="#" title="download windows app"><img src="http://placehold.it/150x100" alt="#"></a>
+        <a href="#" title="download-windows-app"><img src="http://placehold.it/44x41" alt="#"></a>
       </li>
     </ul>
-    <p>Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
+    <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
   </header>
   <main>
     <section class="main-about">
-      <h2>Устали от серости<br> мегаполиса?<br><br>Нам есть, что вам <br>предложить!</h2>
+      <h2>Устали от серости мегаполиса?</h2>
+      <h2>Нам есть, что вам предложить!</h2>
       <h3>Поднимает настроение</h3>
       <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
       <h3>Меняет мир вокруг</h3>
       <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
       <h3>Заводит новых друзей</h3>
       <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      <img src="http://placehold.it/150x100" alt="mobile photo">
+      <img src="http://placehold.it/157x320" alt="mobile photo">
     </section>
     <section class="main-slider">
-      <div class="main-slider__1">
+      <div class="main-slider__item main-slider__item--active">
         <h3>Николай Петров</h3>
-        <p>«Это приложение перевернуло мой мир<br> и позволило по-новому взглянуть на<br> привычные серые вещи! А еще я<br> познакомился со своей будущей женой<br> в комментариях к выложенной<br> фотографии!»</p>
+        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
       </div>
-      <div class="main-slider-navigation">
+      <div class="main-slider__navigation">
         <ul>
           <li>
-            <a href="#" title="main-slider__1"></a>
+            <a href="#" title="main-slider__1 main-slider__1--active"></a>
           </li>
           <li>
-            <a href="#" title="main-slider__1"></a>
+            <a href="#" title="main-slider__2"></a>
           </li>
           <li>
-            <a href="#" title="main-slider__1"></a>
+            <a href="#" title="main-slider__3"></a>
           </li>
         </ul>
       </div>
     </section>
     <section class="main-service">
-      <div class="main-service__1">
+      <div class="main-service__item">
         <table>
-          <tr>
-            <th>Стандарт<br>3,99 USD</th>
-          </tr>
-          <tr>
-            <td>Розовый фильтр</td>
-          </tr>
-          <tr>
-            <td>Смайлики</td>
-          </tr>
-          <tr>
-            <td>Комментарии</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Стандарт 3,99 USD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Розовый фильтр</td>
+            </tr>
+            <tr>
+              <td>Смайлики</td>
+            </tr>
+            <tr>
+              <td>Комментарии</td>
+            </tr>
+            <tbody>
         </table>
       </div>
-      <div class="main-slider-navigation">
+      <div class="main-service__navigation">
         <ul>
           <li>
             <a href="#" title="main-service__1"></a>
           </li>
           <li>
-            <a href="#" title="main-service__1"></a>
+            <a href="#" title="main-service__2 main-service__2--active"></a>
           </li>
           <li>
-            <a href="#" title="main-service__1"></a>
+            <a href="#" title="main-service__3"></a>
           </li>
         </ul>
       </div>
@@ -96,13 +101,17 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__contacts">
-      <h2>Остались вопросы?<br>Свяжитесь с нами!</h2>
-      <p>Звоните:<br><span>+7 (812) 555-66-66</span></p>
-      <p>Пишите:<br><span>mail@htmlacademy.ru</span></p>
-      <p>Приезжайте в гости::<br><span>ул. Большая Конюшенная, 19/8</span></p>
+      <h2>Остались вопросы? Свяжитесь с нами!</h2>
+      <p>Звоните:</p>
+      <a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a>
+      <p>Пишите:</p>
+      <a href="mailto:mail@htmlacademy.ru" </span></p>
+        <p>Приезжайте в гости:</p>
+        <address>ул. Большая Конюшенная, 19/8</address>
     </div>
     <div class="page-footer__map">
     </div>
   </footer>
 </body>
+
 </html>

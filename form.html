@@ -8,36 +8,33 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header__navigation">
-      <img src="http://placehold.it/150x100" alt="pink-logo">
-      <button class="btn-metu"></button>
-      <nav class="page-header__menu page-header__menu--disabled">
-        <ul>
-          <li><a href="#" title="ГЛАВНАЯ">ГЛАВНАЯ</a></li>
-          <li><a href="#" title="ФОТОГРАФИИ">ФОТОГРАФИИ</a></li>
-          <li><a href="#" title="КОНКУРС">КОНКУРС</a></li>
-          <li><a href="#" title="HTML ACADEMY">HTML ACADEMY</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="page-header__header">
-      <h2>Конкурс на самое<br>безбашеное<br>путешествие с Пинк</h2>
-    </div>
+    <nav class="page-header__menu page-header__menu--disabled">
+      <img src="http://placehold.it/320x462" alt="pink-logo">
+      <button type="button" class="btn-metu"></button>
+      <ul class="page-header__nav">
+        <li><a href="#" title="ГЛАВНАЯ">ГЛАВНАЯ</a></li>
+        <li><a href="#" title="ФОТОГРАФИИ">ФОТОГРАФИИ</a></li>
+        <li><a href="#" title="КОНКУРС">КОНКУРС</a></li>
+        <li><a href="#" title="HTML ACADEMY">HTML ACADEMY</a></li>
+      </ul>
+    </nav>
   </header>
-
   <main>
-    <p>Поделитесь своей историей и получите<br> шанс выиграть ценный приз — 1000<br> миль на вашу бонусную карту!<br> Пожалуйста, заполните форму ниже:</p>
+    <div class="page__tour">
+      <h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
+    </div>
+    <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
     <form class="form">>
-      <section class="form__contacts">
+      <fieldset class="form__contacts">
         <label for="surname">ФАМИЛИЯ:</label>
         <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
         <label for="name">ИМЯ:</label>
         <input type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
         <label for="patronymic">ОТЧЕСТВО:</label>
         <input type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
-      </section>
-      <section class="form__achievements">
-        <p>Ваши безбашенные<br>достижения в путешествии</p>
+      </fieldset>
+      <fieldset class="form__achievements">
+        <legend>Ваши безбашенные достижения в путешествии</legend>
         <label for="sharp">Сделал селфи с акулой</label>
         <input type="checkbox" id="sharp" name="sharp" checked>
         <label for="tan">Обгорел на пляже</label>
@@ -50,40 +47,47 @@
         <input type="checkbox" id="tower" name="tower" checked>
         <label for="hotel">Разгромил отель</label>
         <input type="checkbox" id="hotel" name="hotel">
-      </section>
-      <section class="form__tel-email">
+      </fieldset>
+      <fieldset class="form__tel-email">
         <label for="number">НОМЕР ТЕЛЕФОНА</label>
         <input type="number" id="number" name="number" placeholder="Номер пожалуйста">
         <label for="email">АДРЕСОК ПОЧТЫ</label>
         <input type="email" id="email" name="email" placeholder="Введите почту *" required>
-      </section>
-      <section class="forn__app">
+      </fieldset>
+      <fieldset class="form__app">
+        <legend>С каким приложением путешествовали?</legend>
         <label for="ios">Pink для iOS</label>
         <input type="radio" id="ios" name="iOS">
         <label for="android">Pink для Android</label>
         <input type="radio" id="android" name="android">
         <label for="windows-phone">Windows Phone</label>
         <input type="radio" id="windows-phone" name="windows-phone">
-      </section>
-      <section class="emotions">
+      </fieldset>
+      <fieldset class="emotions">
+        <legend>Опишите свои эмоции</legend>
         <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-      </section>
-      <button>ОТПРАВИТЬ ФОРМУ</button>
+      </fieldset>
+      <button class "btn btn-submit" type="button">ОТПРАВИТЬ ФОРМУ</button>
       <p><span>*</span> - обязательные поля</p>
     </form>
   </main>
-
-
-  <footer class="page-footer">
-    <a href="#" title="pink logo"><img src="http://placehold.it/150x100" alt="pink logo"></a>
-    <div class="page-footer__socail-btn">
+  <footer class="page-footer--inner">
+    <a href="index.html" title="pink logo"><img src="http://placehold.it/147x40" alt="pink logo"></a>
+    <div class="page-footer__social">
       <ul>
-        <li><a href="#" title="twitter"></a></li>
-        <li><a href="#" title="facebok"></a></li>
-        <li><a href="#" title="youtube"></a></li>
+        <li>
+          <a class="page-footer__twitter" href="#" title="twitter"></a>
+        </li>
+        <li>
+          <a class="page-footer__facebook" href="#" title="facebok"></a>
+        </li>
+        <li>
+          <a class="page-footer__youtube" href="#" title="youtube"></a>
+        </li>
       </ul>
     </div>
-    <a href="www.htmlacademy.ru">Разработано<img src="http://placehold.it/150x100" alt="logo html academy"></a>
+    <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="http://placehold.it/27x34" alt="logo html academy"></a>
   </footer>
 </body>
+
 </html>
