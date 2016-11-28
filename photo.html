@@ -25,7 +25,7 @@
     </div>
     <div class="post">
       <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      <article class="post__item post__item--panorama">
+      <div class="post__item post__item--panorama">
         <span>ПАНОРАМА ДНЯ</span>
         <header>
           <a href="#"><img src="http://placehold.it/320x137" title="" alt=""></a>
@@ -33,69 +33,69 @@
         <p class="post__author">Анна<span>(5 минут назад)</span></p>
         <p class="post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
         <footer><a href="#">Нравится: 215</a></footer>
-      </article>
-      <article class="post__item">
+      </div>
+      <div class="post__item">
         <header>
           <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
         </header>
         <p class="post__author">Левон<span>(5 часов назад)</span></p>
         <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
         <footer><a href="#">Нравится: 356</a></footer>
-      </article>
-      <article class="post__item">
+      </div>
+      <div class="post__item">
         <header>
           <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
         </header>
         <p class="post__author">Антон<span>(12 часов назад)</span></p>
         <p class="post__content">Соседи будут рады!</p>
         <footer><a href="#">Нравится: 666</a></footer>
-      </article>
-      <article class="post__item">
+      </div>
+      <div class="post__item">
         <header>
           <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
         </header>
         <p class="post__author">Борис<span>(20 часов назад)</span></p>
         <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
         <footer><a href="#">Нравится: 215</a></footer>
-      </article>
-      <article class="post__item">
+      </div>
+      <div class="post__item">
         <header>
           <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
         </header>
         <p class="post__author">Сергей<span>(25 часов назад)</span></p>
         <p class="post__content">Самая кубанская в мире!</p>
         <footer><a href="#">Нравится: 4</a></footer>
-      </article>
-      <article class="post__item">
+      </div>
+      <div class="post__item">
         <header>
           <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
         </header>
         <p class="post__author">Максим<span>(40 часов назад)</span></p>
         <p class="post__content">Где снег-то?</p>
         <footer><a href="#">Нравится: 150</a></footer>
-      </article>
-      <article class="post__item">
+      </div>
+      <div class="post__item">
         <header>
           <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
         </header>
         <p class="post__author">Надежда<span>(45 часов назад)</span></p>
         <p class="post__content"> Всем GM и взаимные лайки!</p>
         <footer><a href="#">Нравится: 2560</a></footer>
-      </article>
+      </div>
       <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
     </div>
     <div class="photopost">
       <img src="http://placehold.it/280x374" alt="">
-      <div class="photopost__edit-btn">
         <form>
-          <button type="button" class="photopost__edit-btn--crop"></button>
-          <button type="button" class="photopost__edit-btn--contrast"></button>
-          <button type="button" class="photopost__edit-btn--fill"></button>
-          <input type="range" min="1" max="100" step="1" class="photopost__edit--rangform">
+          <button type="button" class="photopost__crop"></button>
+          <button type="button" class="photopost__contrast"></button>
+          <button type="button" class="photopost__fill"></button>
+          <input type="range" min="1" max="100" step="1" class="photopost__range photopost__range--active">
+          <input type="range" min="1" max="100" step="1" class="photopost__range photopost__range">
+          <input type="range" min="1" max="100" step="1" class="photopost__range photopost__range">
           <button type="button" class="btn btn-post">Запостить</button>
           <input type="reset" value="Отмена" class="btn btn-reset">
         </form>
-      </div>
     </div>
   </main>
   <footer class="page-footer-inner">
