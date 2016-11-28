@@ -9,13 +9,13 @@
 <body>
   <header class="page-header">
     <nav class="page-header__menu page-header__menu--disabled">
-      <img src="http://placehold.it/320x462" alt="pink-logo">
-      <button type="button" class="btn-metu"></button>
+      <img class="header-image-inner" src="http://placehold.it/320x462" alt="pink-logo">
+      <button type="button" class="btn-menu"></button>
       <ul class="page-header__nav">
-        <li><a href="#" title="ГЛАВНАЯ">ГЛАВНАЯ</a></li>
-        <li><a href="#" title="ФОТОГРАФИИ">ФОТОГРАФИИ</a></li>
-        <li><a href="#" title="КОНКУРС">КОНКУРС</a></li>
-        <li><a href="#" title="HTML ACADEMY">HTML ACADEMY</a></li>
+        <li><a href="#" title="ГЛАВНАЯ">Главная</a></li>
+        <li><a href="#" title="ФОТОГРАФИИ">Фотографии</a></li>
+        <li><a href="#" title="КОНКУРС">Конкурс</a></li>
+        <li><a href="#" title="HTML ACADEMY">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
@@ -27,47 +27,47 @@
     <form class="form">>
       <fieldset class="form__contacts">
         <label for="surname">ФАМИЛИЯ:</label>
-        <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+        <input type="text" class="surname" id="surname" name="surname" placeholder="Укажите фамилию *" required>
         <label for="name">ИМЯ:</label>
-        <input type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
+        <input type="text" class="name" id="name" name="name" placeholder="Введите ваше имя *" required>
         <label for="patronymic">ОТЧЕСТВО:</label>
-        <input type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+        <input type="text" class="patronymic" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
       </fieldset>
       <fieldset class="form__achievements">
         <legend>Ваши безбашенные достижения в путешествии</legend>
         <label for="sharp">Сделал селфи с акулой</label>
-        <input type="checkbox" id="sharp" name="sharp" checked>
+        <input type="checkbox" class="sharp" id="sharp" name="sharp" checked>
         <label for="tan">Обгорел на пляже</label>
-        <input type="checkbox" id="tan" name="tan" checked>
+        <input type="checkbox" class="tan" id="tan" name="tan" checked>
         <label for="chak">Видел Чака Норриса</label>
-        <input type="checkbox" id="chak" name="chak">
+        <input type="checkbox" class="chak" id="chak" name="chak">
         <label for="souvenir">Накупил сувениров</label>
-        <input type="checkbox" id="souvenir" name="souvenir">
+        <input type="checkbox" class="souvenir" id="souvenir" name="souvenir">
         <label for="tower">Удержал башню</label>
-        <input type="checkbox" id="tower" name="tower" checked>
+        <input type="checkbox" class="tower" id="tower" name="tower" checked>
         <label for="hotel">Разгромил отель</label>
-        <input type="checkbox" id="hotel" name="hotel">
+        <input type="checkbox" class="hotel" id="hotel" name="hotel">
       </fieldset>
       <fieldset class="form__tel-email">
-        <label for="number">НОМЕР ТЕЛЕФОНА</label>
-        <input type="number" id="number" name="number" placeholder="Номер пожалуйста">
-        <label for="email">АДРЕСОК ПОЧТЫ</label>
-        <input type="email" id="email" name="email" placeholder="Введите почту *" required>
+        <label for="form-tel">НОМЕР ТЕЛЕФОНА</label>
+        <input type="tel" class="form-tel" id="form-tel" name="tel" placeholder="Номер пожалуйста">
+        <label for="form-email">АДРЕСОК ПОЧТЫ</label>
+        <input type="email" class="form-email" id="form-email" name="email" placeholder="Введите почту *" required>
       </fieldset>
       <fieldset class="form__app">
         <legend>С каким приложением путешествовали?</legend>
         <label for="ios">Pink для iOS</label>
-        <input type="radio" id="ios" name="iOS">
+        <input type="radio" class="ios" id="ios" name="iOS">
         <label for="android">Pink для Android</label>
-        <input type="radio" id="android" name="android">
+        <input type="radio" class="android" id="android" name="android">
         <label for="windows-phone">Windows Phone</label>
-        <input type="radio" id="windows-phone" name="windows-phone">
+        <input type="radio" class="radio" id="windows-phone" name="windows-phone">
       </fieldset>
       <fieldset class="emotions">
         <legend>Опишите свои эмоции</legend>
-        <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <textarea class="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
-      <button class="btn btn-submit" type="button">ОТПРАВИТЬ ФОРМУ</button>
+      <button class="btn btn--submit" type="button">ОТПРАВИТЬ ФОРМУ</button>
       <p><span>*</span> - обязательные поля</p>
     </form>
   </main>
