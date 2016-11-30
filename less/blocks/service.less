@@ -1,3 +1,36 @@
 .service{
   background: @color-bg;
 }
+
+.service__item table{
+  display: inline-block;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.service__item th,
+.service__item td{
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+
+.service__item th{
+  padding: 25px 0;
+  min-width: 270px;
+  background: @color-text;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: @font-size-p;
+}
+
+.service__item span{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+.service__item td{
+  padding: 25px 35px;
+  text-align: left;
+  background: #fff;
+}

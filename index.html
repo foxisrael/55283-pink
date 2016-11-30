@@ -5,34 +5,41 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
-    <nav class="page-header__menu">
-      <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo">
+    <div class="page-header__nav">
+      <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo">
       <button type="button" class="btn-menu"></button>
-      <ul class="page-header__nav">
-        <li><a href="#" title="ГЛАВНАЯ">Главная</a></li>
-        <li><a href="#" title="ФОТОГРАФИИ">Фотографии</a></li>
-        <li><a href="#" title="КОНКУРС">Конкурс</a></li>
+    </div>
+    <nav class="page-header__menu">
+      <ul>
+        <li><a href="#" title="Главная">Главная</a></li>
+        <li><a href="#" title="Фотографии">Фотографии</a></li>
+        <li><a href="#" title="Конкурс">Конкурс</a></li>
         <li><a href="#" title="HTML ACADEMY">HTML Academy</a></li>
       </ul>
     </nav>
-    <img class="header-image" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="mobile photo">
-    <button class="btn btn--download" type="button">Скачать приложение</button>
-    <ul class="page-header__apps">
-      <li>
-        <a href="#" title="download-apple-app"><img src="img/logo-apple.svg" width="47" height="56" alt="#"></a>
-      </li>
-      <li>
-        <a href="#" title="download-android-app"><img src="img/logo-android.svg" width="43" height="47" alt="#"></a>
-      </li>
-      <li>
-        <a href="#" title="download-windows-app"><img src="img/logo-microsoft.svg" width="44" height="41" alt="#"></a>
-      </li>
-    </ul>
-    <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    <div class="page-header__photo">
+      <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="mobile photo">
+    </div>
+    <div class="page-header__apps">
+      <button class="btn btn-download" type="button">Скачать приложение</button>
+      <ul>
+        <li>
+          <a href="#" title="download-apple-app"><img src="img/logo-apple.svg" width="47" height="56" alt="#"></a>
+        </li>
+        <li>
+          <a href="#" title="download-android-app"><img src="img/logo-android.svg" width="43" height="47" alt="#"></a>
+        </li>
+        <li>
+          <a href="#" title="download-windows-app"><img src="img/logo-microsoft.svg" width="44" height="41" alt="#"></a>
+        </li>
+      </ul>
+      <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </div>
   </header>
   <main>
     <h2>Устали от серости мегаполиса?</h2>
@@ -62,10 +69,10 @@
       <div class="slider-navigation">
         <ul>
           <li>
-            <a href="#" class="slider-navigation__control" title=""></a>
+            <a href="#" class="slider-navigation__control slider-navigation__control--active" title=""></a>
           </li>
           <li>
-            <a href="#" class="slider-navigation__control slider-navigation__control--active" title=""></a>
+            <a href="#" class="slider-navigation__control" title=""></a>
           </li>
           <li>
             <a href="#" class="slider-navigation__control" title=""></a>
@@ -93,8 +100,6 @@
             </tr>
             <tbody>
         </table>
-      </div>
-      <div class="service__item">
         <table>
           <thead>
             <tr>
@@ -113,8 +118,6 @@
             </tr>
             <tbody>
         </table>
-      </div>
-      <div class="service__item">
         <table>
           <thead>
             <tr>
