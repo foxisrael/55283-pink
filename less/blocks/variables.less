@@ -8,6 +8,8 @@
 @font-size-h2: 24px;
 @font-size-p: 18px;
 @font-size-btn: 18px;
+@font-size-label: 14px;
+@line-height-label: 30px;
 
 
 //body
@@ -29,4 +31,19 @@ p{
   font-size: @font-size-p;
   color: @color-text;
   line-height: 24px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+  padding: 0;
+}
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }

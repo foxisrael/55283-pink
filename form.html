@@ -9,13 +9,17 @@
 
 <body>
   <header class="page-header">
-    <nav class="page-header__menu page-header__menu--disabled">
-      <img class="header-image-inner" src="http://placehold.it/320x462" alt="pink-logo">
-      <button type="button" class="btn-menu"></button>
-      <ul class="page-header__nav">
-        <li><a href="#" title="ГЛАВНАЯ">Главная</a></li>
-        <li><a href="#" title="ФОТОГРАФИИ">Фотографии</a></li>
-        <li><a href="#" title="КОНКУРС">Конкурс</a></li>
+    <nav class="page-header__menu">
+      <ul>
+        <li>
+          <div class="page-header__nav clearfix">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo">
+            <button type="button" class="btn-menu"></button>
+          </div>
+        </li>
+        <li><a href="#" title="Главная">Главная</a></li>
+        <li><a href="#" title="Фотографии">Фотографии</a></li>
+        <li><a href="#" title="Конкурс">Конкурс</a></li>
         <li><a href="#" title="HTML ACADEMY">HTML Academy</a></li>
       </ul>
     </nav>
@@ -24,8 +28,8 @@
     <div class="page-tour">
       <h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
     </div>
-    <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
-    <form class="form">>
+    <p class="page-tour-header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+    <form class="form">
       <fieldset class="form__contacts">
         <label for="surname">ФАМИЛИЯ:</label>
         <input type="text" class="surname" id="surname" name="surname" placeholder="Укажите фамилию *" required>
@@ -73,7 +77,7 @@
     </form>
   </main>
   <footer class="page-footer-inner">
-    <a href="index.html" title="pink logo"><img src="http://placehold.it/147x40" alt="pink logo"></a>
+    <a class="pink-logo" href="index.html" title="pink logo"><img src="img/logo-pink-blue-mobile.svg" width="170" height="40" alt="pink logo"></a>
     <div class="page-footer__social">
       <ul>
         <li>
@@ -87,7 +91,9 @@
         </li>
       </ul>
     </div>
-    <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="http://placehold.it/27x34" alt="logo html academy"></a>
+    <div class="page-footer__copyright">
+      <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="img/htmlacademy.svg" width="27" height="34" alt="logo html academy"></a>
+    </div>
   </footer>
 </body>
 
