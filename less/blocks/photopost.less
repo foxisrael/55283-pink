@@ -1,6 +1,54 @@
+.photopost{
+  padding: 20px;
+  background: #f2f2f2;
+}
+
 .photopost button{
+  background: none;
+  border: none;
+}
+
+.photopost-btn-range{
+  margin-bottom: 30px;
+}
+
+.photopost__crop,
+.photopost__fill,
+.photopost__contrast{
   display: inline-block;
   vertical-align: middle;
   background: none;
-  border: none;
+  margin-bottom: 40px;
+}
+
+.photopost__range:nth-child(2),
+.photopost__range:nth-child(3){
+  display: none;
+}
+
+.photopost__main-image{
+  margin-bottom: 40px;
+}
+
+.photopost-btn-submit{
+  padding: 0 20px;
+}
+
+.photopost-btn-submit button,
+.photopost-btn-submit input[type="reset"]{
+  display: block;
+  margin: 0 auto;
+}
+
+.photopost-btn-submit .btn-post{
+  width: 100%;
+  border: 3px solid #d22856;
+  color: #d22856;
+  margin-bottom: 12px;
+}
+
+.photopost-btn-submit input[type="reset"]{
+  width: 100%;
+  border: 3px solid #dddfe0;
+  color: #dddfe0;
 }

@@ -9,13 +9,17 @@
 
 <body>
   <header class="page-header">
-    <nav class="page-header__menu page-header__menu--disabled">
-      <img class="header-image-inner" src="http://placehold.it/320x462" alt="pink-logo">
-      <button type="button" class="btn-menu"></button>
-      <ul class="page-header__nav">
-        <li><a href="#" title="ГЛАВНАЯ">Главная</a></li>
-        <li><a href="#" title="ФОТОГРАФИИ">Фотографии</a></li>
-        <li><a href="#" title="КОНКУРС">Конкурс</a></li>
+    <nav class="page-header__menu">
+      <ul>
+        <li>
+          <div class="page-header__nav clearfix">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo">
+            <button type="button" class="btn-menu"></button>
+          </div>
+        </li>
+        <li><a href="#" title="Главная">Главная</a></li>
+        <li><a href="#" title="Фотографии">Фотографии</a></li>
+        <li><a href="#" title="Конкурс">Конкурс</a></li>
         <li><a href="#" title="HTML ACADEMY">HTML Academy</a></li>
       </ul>
     </nav>
@@ -24,8 +28,8 @@
     <div class="page-tour">
       <h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
     </div>
-    <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
-    <form class="form">>
+    <p class="page-tour-header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+    <form class="form">
       <fieldset class="form__contacts">
         <label for="surname">ФАМИЛИЯ:</label>
         <input type="text" class="surname" id="surname" name="surname" placeholder="Укажите фамилию *" required>
@@ -36,18 +40,18 @@
       </fieldset>
       <fieldset class="form__achievements">
         <legend>Ваши безбашенные достижения в путешествии</legend>
-        <label for="sharp" class="custom-checkbox">Сделал селфи с акулой</label>
         <input type="checkbox" id="sharp" name="sharp" checked>
-        <label for="tan" class="custom-checkbox">Обгорел на пляже</label>
+        <label for="sharp" class="custom-checkbox">Сделал селфи с акулой</label>
         <input type="checkbox" id="tan" name="tan" checked>
-        <label for="chak" class="custom-checkbox">Видел Чака Норриса</label>
+        <label for="tan" class="custom-checkbox">Обгорел на пляже</label>
         <input type="checkbox" id="chak" name="chak">
-        <label for="souvenir" class="custom-checkbox">Накупил сувениров</label>
+        <label for="chak" class="custom-checkbox">Видел Чака Норриса</label>
         <input type="checkbox" id="souvenir" name="souvenir">
-        <label for="tower" class="custom-checkbox">Удержал башню</label>
+        <label for="souvenir" class="custom-checkbox">Накупил сувениров</label>
         <input type="checkbox" id="tower" name="tower" checked>
-        <label for="hotel" class="custom-checkbox">Разгромил отель</label>
+        <label for="tower" class="custom-checkbox">Удержал башню</label>
         <input type="checkbox" id="hotel" name="hotel">
+        <label for="hotel" class="custom-checkbox">Разгромил отель</label>
       </fieldset>
       <fieldset class="form__tel-email">
         <label for="form-tel" class="custom-radio">НОМЕР ТЕЛЕФОНА</label>
@@ -57,23 +61,23 @@
       </fieldset>
       <fieldset class="form__app">
         <legend>С каким приложением путешествовали?</legend>
-        <label for="ios">Pink для iOS</label>
         <input type="radio" class="ios" id="ios" name="iOS">
-        <label for="android">Pink для Android</label>
+        <label for="ios">Pink для iOS</label>
         <input type="radio" class="android" id="android" name="android">
-        <label for="windows-phone">Windows Phone</label>
+        <label for="android">Pink для Android</label>
         <input type="radio" class="radio" id="windows-phone" name="windows-phone">
+        <label for="windows-phone">Windows Phone</label>
       </fieldset>
       <fieldset class="emotions">
         <legend>Опишите свои эмоции</legend>
         <textarea class="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
-      <button class="btn btn-submit">ОТПРАВИТЬ ФОРМУ</button>
-      <p><span>*</span> - обязательные поля</p>
+        <button class="btn btn--submit">ОТПРАВИТЬ ФОРМУ</button>
+        <p><span>*</span> - обязательные поля</p>
     </form>
   </main>
   <footer class="page-footer-inner">
-    <a href="index.html" title="pink logo"><img src="http://placehold.it/147x40" alt="pink logo"></a>
+    <a class="pink-logo" href="index.html" title="pink logo"><img src="img/logo-pink-blue-mobile.svg" width="170" height="40" alt="pink logo"></a>
     <div class="page-footer__social">
       <ul>
         <li>
@@ -87,7 +91,9 @@
         </li>
       </ul>
     </div>
-    <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="http://placehold.it/27x34" alt="logo html academy"></a>
+    <div class="page-footer__copyright">
+      <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="img/htmlacademy.svg" width="27" height="34" alt="logo html academy"></a>
+    </div>
   </footer>
 </body>
 

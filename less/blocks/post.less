@@ -1,6 +1,20 @@
+.post{
+  padding: 50px 0;
+}
+
+.post-header,
+.post-footer{
+  font-size: 14px;
+  line-height: 30px;
+
+}
+
+.post-header{
+    margin-bottom: 55px;
+}
+
 .post__item{
   background: @color-bg;
-  width: 280px;
   margin: 0 auto 20px;
   padding-bottom: 20px;
   text-align: left;
@@ -11,7 +25,13 @@
   position: relative;
 }
 
-.header-panoramna{
+.post__item--panorama img{
+  display: block;
+  position: relative;
+  left: -20px;
+}
+
+.header-panorama{
   display: block;
   position: absolute;
   top: 0;
@@ -20,6 +40,7 @@
   background: @color-link;
   color: #fff;
   width: 140px;
+  z-index: 2;
 }
 
 .post__author{
