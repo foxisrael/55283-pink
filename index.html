@@ -11,17 +11,15 @@
 <body>
   <header class="page-header">
     <nav class="page-header__menu">
-      <ul>
-        <li>
-          <div class="page-header__nav clearfix">
-            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo">
-            <button type="button" class="btn-menu"></button>
-          </div>
-        </li>
-        <li><a href="#" title="Главная">Главная</a></li>
-        <li><a href="#" title="Фотографии">Фотографии</a></li>
-        <li><a href="#" title="Конкурс">Конкурс</a></li>
-        <li><a href="#" title="HTML ACADEMY">HTML Academy</a></li>
+      <div class="page-header__nav clearfix">
+        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo">
+        <button type="button" class="btn-menu"></button>
+      </div>
+      <ul class="menu-items">
+        <li><a class="menu-item" href="index.html" title="Главная">Главная</a></li>
+        <li><a class="menu-item" href="photo.html" title="Фотографии">Фотографии</a></li>
+        <li><a class="menu-item" href="form.html" title="Конкурс">Конкурс</a></li>
+        <li><a class="menu-item" href="www.htmlacademy.ru" title="HTML ACADEMY">HTML Academy</a></li>
       </ul>
     </nav>
     <div class="page-header__photo">
@@ -155,6 +153,7 @@
     </div>
   </main>
   <footer class="page-footer">
+    <div class="wrapper">
     <div class="page-footer__contacts">
       <h2>Остались вопросы? Свяжитесь с нами!</h2>
       <p>Звоните:</p>
@@ -164,6 +163,7 @@
       <p>Приезжайте в гости:</p>
       <address>ул. Большая Конюшенная, 19/8</address>
     </div>
+  </div>
     <div class="page-footer__map">
     </div>
   </footer>
