@@ -4,34 +4,42 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
     <nav class="page-header__menu">
-      <img src="http://placehold.it/75x22" alt="pink-logo">
-      <button type="button" class="btn-metu"></button>
-      <ul class="page-header__nav">
-        <li><a href="#" title="ГЛАВНАЯ">Главная</a></li>
-        <li><a href="#" title="ФОТОГРАФИИ">Фотографии</a></li>
-        <li><a href="#" title="КОНКУРС">Конкурс</a></li>
-        <li><a href="#" title="HTML ACADEMY">HTML Academy</a></li>
+      <div class="page-header__nav clearfix">
+        <a class="page-header__logo" href="#"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo"></a>
+        <button type="button" class="btn-menu"></button>
+      </div>
+      <ul class="menu-items">
+        <li><a class="menu-item" href="index.html" title="Главная">Главная</a></li>
+        <li><a class="menu-item" href="photo.html" title="Фотографии">Фотографии</a></li>
+        <li><a class="menu-item" href="form.html" title="Конкурс">Конкурс</a></li>
+        <li><a class="menu-item" href="www.htmlacademy.ru" title="HTML ACADEMY">HTML Academy</a></li>
       </ul>
     </nav>
-    <img class="header-image" src="http://placehold.it/320x490" alt="mobile photo">
-    <button class="btn btn--download" type="button">Скачать приложение</button>
-    <ul>
-      <li>
-        <a href="#" title="download-apple-app"><img src="http://placehold.it/47x56" alt="#"></a>
-      </li>
-      <li>
-        <a href="#" title="download-android-app"><img src="http://placehold.it/43x47" alt="#"></a>
-      </li>
-      <li>
-        <a href="#" title="download-windows-app"><img src="http://placehold.it/44x41" alt="#"></a>
-      </li>
-    </ul>
-    <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    <div class="page-header__photo">
+      <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="mobile photo">
+    </div>
+    <div class="page-header__apps">
+      <button class="btn btn--download" type="button">Скачать приложение</button>
+      <ul>
+        <li>
+          <a href="#" title="download-apple-app"><img src="img/logo-apple.svg" width="47" height="56" alt="#"></a>
+        </li>
+        <li>
+          <a href="#" title="download-android-app"><img src="img/logo-android.svg" width="43" height="47" alt="#"></a>
+        </li>
+        <li>
+          <a href="#" title="download-windows-app"><img src="img/logo-microsoft.svg" width="44" height="41" alt="#"></a>
+        </li>
+      </ul>
+      <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </div>
   </header>
   <main>
     <h2>Устали от серости мегаполиса?</h2>
@@ -43,7 +51,7 @@
       <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
       <h3>Заводит новых друзей</h3>
       <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      <img src="http://placehold.it/157x320" alt="mobile photo">
+      <img src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="mobile photo">
     </div>
     <div class="comments">
       <div class="comments__item">
@@ -61,10 +69,10 @@
       <div class="slider-navigation">
         <ul>
           <li>
-            <a href="#" class="slider-navigation__control" title=""></a>
+            <a href="#" class="slider-navigation__control slider-navigation__control--active" title=""></a>
           </li>
           <li>
-            <a href="#" class="slider-navigation__control slider-navigation__control--active" title=""></a>
+            <a href="#" class="slider-navigation__control" title=""></a>
           </li>
           <li>
             <a href="#" class="slider-navigation__control" title=""></a>
@@ -92,8 +100,6 @@
             </tr>
             <tbody>
         </table>
-      </div>
-      <div class="service__item">
         <table>
           <thead>
             <tr>
@@ -112,8 +118,6 @@
             </tr>
             <tbody>
         </table>
-      </div>
-      <div class="service__item">
         <table>
           <thead>
             <tr>
@@ -149,14 +153,16 @@
     </div>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__contacts">
-      <h2>Остались вопросы? Свяжитесь с нами!</h2>
-      <p>Звоните:</p>
-      <a href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
-      <p>Пишите:</p>
-      <a href="mailto:mail@htmlacademy.ru"></a>
-      <p>Приезжайте в гости:</p>
-      <address>ул. Большая Конюшенная, 19/8</address>
+    <div class="wrapper">
+      <div class="page-footer__contacts">
+        <h2>Остались вопросы? Свяжитесь с нами!</h2>
+        <p>Звоните:</p>
+        <a href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
+        <p>Пишите:</p>
+        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <p>Приезжайте в гости:</p>
+        <address>ул. Большая Конюшенная, 19/8</address>
+      </div>
     </div>
     <div class="page-footer__map">
     </div>

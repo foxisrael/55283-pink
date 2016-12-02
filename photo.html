@@ -4,18 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
-    <nav class="page-header__menu page-header__menu--disabled">
-      <img class="header-image-inner" src="http://placehold.it/320x462" alt="pink-logo">
-      <button type="button" class="btn-metu"></button>
-      <ul class="page-header__nav">
-        <li><a href="#" title="ГЛАВНАЯ">Главная</a></li>
-        <li><a href="#" title="ФОТОГРАФИИ">Фотографии</a></li>
-        <li><a href="#" title="КОНКУРС">Конкурс</a></li>
-        <li><a href="#" title="HTML ACADEMY">HTML Academy</a></li>
+    <nav class="page-header__menu">
+      <div class="page-header__nav clearfix">
+        <a class="page-header__logo" href="index.html"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo"></a>
+        <button type="button" class="btn-menu"></button>
+      </div>
+      <ul class="menu-items">
+        <li><a class="menu-item" href="index.html" title="Главная">Главная</a></li>
+        <li><a class="menu-item" href="photo.html" title="Фотографии">Фотографии</a></li>
+        <li><a class="menu-item" href="form.html" title="Конкурс">Конкурс</a></li>
+        <li><a class="menu-item" href="www.htmlacademy.ru" title="HTML ACADEMY">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
@@ -24,82 +27,91 @@
       <h2>Фотографии пользователей</h2>
     </div>
     <div class="post">
-      <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <p class="post-header">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <div class="post__item post__item--panorama">
-        <span>ПАНОРАМА ДНЯ</span>
-        <header>
-          <a href="#"><img src="http://placehold.it/320x137" title="" alt=""></a>
-        </header>
-        <p class="post__author">Анна<span>(5 минут назад)</span></p>
-        <p class="post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-        <footer><a href="#">Нравится: 215</a></footer>
+        <span class="header-panorama">ПАНОРАМА ДНЯ</span>
+        <a href="#"><img src="img/panorama-mobile@1x.jpg" width="320" height="137" title="" alt=""></a>
+        <div class="wrapper">
+          <p class="post__author">Анна<span> (5 минут назад)</span></p>
+          <p class="post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <a class="like" href="#">Нравится: 215</a>
+        </div>
       </div>
       <div class="post__item">
-        <header>
-          <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
-        </header>
-        <p class="post__author">Левон<span>(5 часов назад)</span></p>
-        <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-        <footer><a href="#">Нравится: 356</a></footer>
+        <a href="#" target="_blank"><img src="img/photo-1-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
+        <div class="wrapper">
+          <p class="post__author">Левон<span>(5 часов назад)</span></p>
+          <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <a class="like" href="#">Нравится: 356</a>
+        </div>
       </div>
       <div class="post__item">
-        <header>
-          <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
-        </header>
-        <p class="post__author">Антон<span>(12 часов назад)</span></p>
-        <p class="post__content">Соседи будут рады!</p>
-        <footer><a href="#">Нравится: 666</a></footer>
+        <a href="#" target="_blank"><img src="img/photo-2-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
+        <div class="wrapper">
+          <p class="post__author">Антон<span>(12 часов назад)</span></p>
+          <p class="post__content">Соседи будут рады!</p>
+          <a class="like" href="#">Нравится: 666</a>
+        </div>
       </div>
       <div class="post__item">
-        <header>
-          <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
-        </header>
-        <p class="post__author">Борис<span>(20 часов назад)</span></p>
-        <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
-        <footer><a href="#">Нравится: 215</a></footer>
+        <a href="#" target="_blank"><img src="img/photo-3-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
+        <div class="wrapper">
+          <p class="post__author">Борис<span>(20 часов назад)</span></p>
+          <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <a class="like" href="#">Нравится: 215</a>
+        </div>
       </div>
       <div class="post__item">
-        <header>
-          <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
-        </header>
-        <p class="post__author">Сергей<span>(25 часов назад)</span></p>
-        <p class="post__content">Самая кубанская в мире!</p>
-        <footer><a href="#">Нравится: 4</a></footer>
+        <a href="#" target="_blank"><img src="img/photo-4-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
+        <div class="wrapper">
+          <p class="post__author">Сергей<span>(25 часов назад)</span></p>
+          <p class="post__content">Самая кубанская в мире!</p>
+          <a class="like" href="#">Нравится: 4</a>
+        </div>
       </div>
       <div class="post__item">
-        <header>
-          <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
-        </header>
-        <p class="post__author">Максим<span>(40 часов назад)</span></p>
-        <p class="post__content">Где снег-то?</p>
-        <footer><a href="#">Нравится: 150</a></footer>
+        <a href="#" target="_blank"><img src="img/photo-5-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
+        <div class="wrapper">
+          <p class="post__author">Максим<span>(40 часов назад)</span></p>
+          <p class="post__content">Где снег-то?</p>
+          <a class="like" href="#">Нравится: 150</a>
+          </p>
+        </div>
       </div>
       <div class="post__item">
-        <header>
-          <a href="#" target="_blank"><img src="http://placehold.it/280x180" title="" alt=""></a>
-        </header>
-        <p class="post__author">Надежда<span>(45 часов назад)</span></p>
-        <p class="post__content"> Всем GM и взаимные лайки!</p>
-        <footer><a href="#">Нравится: 2560</a></footer>
+        <a href="#" target="_blank"><img src="img/photo-6-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
+        <div class="wrapper">
+          <p class="post__author">Надежда<span>(45 часов назад)</span></p>
+          <p class="post__content"> Всем GM и взаимные лайки!</p>
+          <a class="like" href="#">Нравится: 2560</a>
+        </div>
       </div>
-      <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+      <p class="post-footer">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
     </div>
     <div class="photopost">
-      <img src="http://placehold.it/280x374" alt="">
-        <form>
-          <button type="button" class="photopost__crop"></button>
-          <button type="button" class="photopost__contrast"></button>
-          <button type="button" class="photopost__fill"></button>
+      <img class="photopost__main-image" src="img/photo-7-mobile@1x.jpg" widht="280" height="374" alt="">
+      <form>
+        <div class="photopost-btn-editors">
+          <button type="button" class="photopost__crop"><img src="img/icon-editor-crop.svg" width="44" height="44"></button>
+          <button type="button" class="photopost__fill"><img src="img/icon-editor-fill.svg" width="48" height="43"></button>
+          <button type="button" class="photopost__contrast"><img src="img/icon-editor-contrast.svg" width="32" height="32"></button>
+        </div>
+        <div class="photopost-btn-range">
           <input type="range" min="1" max="100" step="1" class="photopost__range photopost__range--active">
-          <input type="range" min="1" max="100" step="1" class="photopost__range photopost__range">
-          <input type="range" min="1" max="100" step="1" class="photopost__range photopost__range">
-          <button type="button" class="btn btn-post">Запостить</button>
-          <input type="reset" value="Отмена" class="btn btn-reset">
-        </form>
+          <input type="range" min="1" max="100" step="1" class="photopost__range">
+          <input type="range" min="1" max="100" step="1" class="photopost__range">
+        </div>
+        <div class="photopost-btn-submit">
+          <div class="wrapper">
+            <button type="button" class="btn btn--post">Запостить</button>
+            <input type="reset" value="Отмена" class="btn btn-reset">
+          </div>
+        </div>
+      </form>
     </div>
   </main>
   <footer class="page-footer-inner">
-    <a href="index.html" title="pink logo"><img src="http://placehold.it/147x40" alt="pink logo"></a>
+    <a class="pink-logo" href="index.html" title="pink logo"><img src="img/logo-pink-blue-mobile.svg" width="170" height="40" alt="pink logo"></a>
     <div class="page-footer__social">
       <ul>
         <li>
@@ -113,7 +125,9 @@
         </li>
       </ul>
     </div>
-    <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="http://placehold.it/27x34" alt="logo html academy"></a>
+    <div class="page-footer__copyright">
+      <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="img/htmlacademy.svg" width="27" height="34" alt="logo html academy"></a>
+    </div>
   </footer>
 </body>
 
