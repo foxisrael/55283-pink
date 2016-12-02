@@ -11,7 +11,7 @@
   <header class="page-header">
     <nav class="page-header__menu">
       <div class="page-header__nav clearfix">
-        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo">
+        <a class="page-header__logo" href="index.html"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink-logo"></a>
         <button type="button" class="btn-menu"></button>
       </div>
       <ul class="menu-items">
@@ -31,45 +31,60 @@
       <div class="post__item post__item--panorama">
         <span class="header-panorama">ПАНОРАМА ДНЯ</span>
         <a href="#"><img src="img/panorama-mobile@1x.jpg" width="320" height="137" title="" alt=""></a>
-        <p class="post__author">Анна<span> (5 минут назад)</span></p>
-        <p class="post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-        <a class="like" href="#">Нравится: 215</a>
+        <div class="wrapper">
+          <p class="post__author">Анна<span> (5 минут назад)</span></p>
+          <p class="post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <a class="like" href="#">Нравится: 215</a>
+        </div>
       </div>
       <div class="post__item">
         <a href="#" target="_blank"><img src="img/photo-1-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
-        <p class="post__author">Левон<span>(5 часов назад)</span></p>
-        <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-        <a class="like" href="#">Нравится: 356</a>
+        <div class="wrapper">
+          <p class="post__author">Левон<span>(5 часов назад)</span></p>
+          <p class="post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <a class="like" href="#">Нравится: 356</a>
+        </div>
       </div>
       <div class="post__item">
         <a href="#" target="_blank"><img src="img/photo-2-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
-        <p class="post__author">Антон<span>(12 часов назад)</span></p>
-        <p class="post__content">Соседи будут рады!</p>
-        <a class="like" href="#">Нравится: 666</a>
+        <div class="wrapper">
+          <p class="post__author">Антон<span>(12 часов назад)</span></p>
+          <p class="post__content">Соседи будут рады!</p>
+          <a class="like" href="#">Нравится: 666</a>
+        </div>
       </div>
       <div class="post__item">
         <a href="#" target="_blank"><img src="img/photo-3-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
-        <p class="post__author">Борис<span>(20 часов назад)</span></p>
-        <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
-        <a class="like" href="#">Нравится: 215</a>
+        <div class="wrapper">
+          <p class="post__author">Борис<span>(20 часов назад)</span></p>
+          <p class="post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <a class="like" href="#">Нравится: 215</a>
+        </div>
       </div>
       <div class="post__item">
         <a href="#" target="_blank"><img src="img/photo-4-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
-        <p class="post__author">Сергей<span>(25 часов назад)</span></p>
-        <p class="post__content">Самая кубанская в мире!</p>
-        <a class="like" href="#">Нравится: 4</a>
+        <div class="wrapper">
+          <p class="post__author">Сергей<span>(25 часов назад)</span></p>
+          <p class="post__content">Самая кубанская в мире!</p>
+          <a class="like" href="#">Нравится: 4</a>
+        </div>
       </div>
       <div class="post__item">
         <a href="#" target="_blank"><img src="img/photo-5-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
-        <p class="post__author">Максим<span>(40 часов назад)</span></p>
-        <p class="post__content">Где снег-то?</p>
-        <a class="like" href="#">Нравится: 150</a>
+        <div class="wrapper">
+          <p class="post__author">Максим<span>(40 часов назад)</span></p>
+          <p class="post__content">Где снег-то?</p>
+          <a class="like" href="#">Нравится: 150</a>
+          </p>
+        </div>
       </div>
       <div class="post__item">
         <a href="#" target="_blank"><img src="img/photo-6-mobile@1x.jpg" width="280" height="180" title="" alt=""></a>
-        <p class="post__author">Надежда<span>(45 часов назад)</span></p>
-        <p class="post__content"> Всем GM и взаимные лайки!</p>
-        <a class="like" href="#">Нравится: 2560</a>
+        <div class="wrapper">
+          <p class="post__author">Надежда<span>(45 часов назад)</span></p>
+          <p class="post__content"> Всем GM и взаимные лайки!</p>
+          <a class="like" href="#">Нравится: 2560</a>
+        </div>
       </div>
       <p class="post-footer">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
     </div>
@@ -87,8 +102,10 @@
           <input type="range" min="1" max="100" step="1" class="photopost__range">
         </div>
         <div class="photopost-btn-submit">
-          <button type="button" class="btn btn-post">Запостить</button>
-          <input type="reset" value="Отмена" class="btn btn-reset">
+          <div class="wrapper">
+            <button type="button" class="btn btn--post">Запостить</button>
+            <input type="reset" value="Отмена" class="btn btn-reset">
+          </div>
         </div>
       </form>
     </div>
