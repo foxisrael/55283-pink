@@ -14,6 +14,25 @@
   margin: 0 auto;
 }
 
+.btn--download {
+  margin: 40px auto 20px;
+  outline: none;
+}
+
+.btn--download:hover {
+  background: @color-white;
+  color: @color-magenta;
+  margin: 40px auto 20px;
+  outline: none;
+}
+
+.btn--download:active {
+  background: @color-white;
+  color: rgba(240, 40, 86, 0.3);
+  margin: 40px auto 20px;
+  outline: none;
+}
+
 .btn--submit{
     width: 100%;
     border-radius: 10px;
@@ -75,4 +94,18 @@
   color: rgba(255, 255, 255, 0.3);
   margin-bottom: 12px;
   outline: none;
+}
+
+@media (min-width: 700px) {
+  .btn--download {
+    width: 300px;
+  }
+
+  .btn--download:hover {
+    width: 300px;
+  }
+
+  .btn--download:active {
+    width: 300px;
+  }
 }
