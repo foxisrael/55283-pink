@@ -372,12 +372,6 @@ input[type="radio"]:checked:active + label:active::after {
     float: right;
   }
 }
-@media (min-width: 1200px) {
-  .form__contacts,
-  .form__app {
-    width: 50%;
-  }
-}
 .page-tour {
   height: 85px;
   background: url("../img/bg-back-mobile@1x.jpg");
