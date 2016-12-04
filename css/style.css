@@ -339,26 +339,14 @@ input[type="radio"]:checked:active + label:active::after {
     display: inline-block;
     width: auto;
   }
-  .emotions,
-  .form__contacts {
-    padding: 0;
+  .form-header,
+  .form__achievements,
+  .form__tel-email,
+  .form__app {
+    padding: 40px;
   }
   .form__contacts {
     border: none;
-  }
-  .form__tel-email legend {
-    display: inherit;
-    padding: 0 10px;
-    background: #ffffff;
-    position: relative;
-    top: 0;
-  }
-  legend {
-    box-sizing: border-box;
-    padding: 0 10px 30px;
-    background: #ffffff;
-    position: relative;
-    top: -10px;
   }
   .form__achievements,
   .form__app {
@@ -366,6 +354,14 @@ input[type="radio"]:checked:active + label:active::after {
   }
   .emotions {
     padding: 0 40px 40px;
+  }
+  legend {
+    background: #ffffff;
+    padding: 0 10px;
+  }
+  .form__tel-email legend {
+    display: inherit;
+    background: #ffffff;
   }
   .required-line {
     display: block;
