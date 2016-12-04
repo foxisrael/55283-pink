@@ -309,12 +309,6 @@ input[type="radio"]:checked:active + label:active::after {
     padding: 0 20px;
   }
 
-  .page-tour h2 {
-    font-family: @font-family-light;
-    font-size: 50px;
-    line-height: normal;
-}
-
   fieldset {
     box-sizing: border-box;
     border: 2px solid #e5e5e5;
@@ -326,14 +320,14 @@ input[type="radio"]:checked:active + label:active::after {
   }
 
   label{
-    display: inline-block;
+    display: block;
   }
 
   input[type="email"],
   input[type="tel"],
   input[type="text"]{
-    display: inline-block;
-    width: auto;
+    display: inline;
+    float: left;
   }
 
   .form-header,
@@ -375,9 +369,6 @@ input[type="radio"]:checked:active + label:active::after {
     float: right;
   }
 }
-
-
-
 
 
 

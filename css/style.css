@@ -317,11 +317,6 @@ input[type="radio"]:checked:active + label:active::after {
   body {
     padding: 0 20px;
   }
-  .page-tour h2 {
-    font-family: "Open Sans Light", sans-serif;
-    font-size: 50px;
-    line-height: normal;
-  }
   fieldset {
     box-sizing: border-box;
     border: 2px solid #e5e5e5;
@@ -331,13 +326,13 @@ input[type="radio"]:checked:active + label:active::after {
     padding-top: 0;
   }
   label {
-    display: inline-block;
+    display: block;
   }
   input[type="email"],
   input[type="tel"],
   input[type="text"] {
-    display: inline-block;
-    width: auto;
+    display: inline;
+    float: left;
   }
   .form-header,
   .form__achievements,
@@ -376,6 +371,19 @@ input[type="radio"]:checked:active + label:active::after {
 .page-tour h2 {
   color: #ffffff;
   margin: 0;
+}
+@media (min-width: 700px) {
+  .page-tour {
+    height: 160px;
+    background: url("../img/bg-back-mobile@1x.jpg");
+    background-size: cover;
+    padding: 190px 115px 150px;
+  }
+  .page-tour h2 {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 50px;
+    line-height: normal;
+  }
 }
 .photopost {
   padding: 20px;
