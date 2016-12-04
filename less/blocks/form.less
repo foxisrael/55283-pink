@@ -296,10 +296,17 @@ input[type="radio"]:checked:active + label:active::after {
   top: 8px;
   left: 12px;
 }
+
 @media (min-width: 700px) {
   body {
     padding: 0 20px;
   }
+
+  .page-tour h2 {
+    font-family: @font-family-light;
+    font-size: 50px;
+    line-height: normal;
+}
 
   fieldset {
     box-sizing: border-box;
@@ -354,5 +361,15 @@ input[type="radio"]:checked:active + label:active::after {
 
   .emotions {
     padding: 0 40px 40px;
+  }
+
+  .required-line{
+    display: block;
+    float: right;
+  }
+}
+
+@media (min-width: 1200px) {
+
   }
 }
