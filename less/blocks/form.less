@@ -1,28 +1,20 @@
 .form {
-  padding: 55px 0 60px;
+  padding: 55px 0;
 }
 
 .form-header {
-  margin-bottom: 25px;
   padding: 0 20px;
-}
-
-.form span {
-  font-family: @font-family-regular;
-  font-size: 14px;
-  color: @color-magenta;
-  line-height: 30px;
-}
-
-.page-tour {
-  font-size: 14px;
-  line-height: 30px;
 }
 
 fieldset {
   border: none;
   margin: 0 auto;
-  padding: 0;
+  padding: 40px 20px;
+}
+
+.form__achievements,
+.form__app {
+  background: @color-bg;
 }
 
 legend {
@@ -32,28 +24,12 @@ legend {
   line-height: 18px;
   color: @color-magenta;
   text-transform: uppercase;
-  padding: 40px 0;
-  background: #f2f2f2;
+  background: @color-bg;
+  padding-bottom: 40px;
 }
 
-.form__achievements,
-.form__app {
-  background: #f2f2f2;
-  padding: 0 20px 50px;
-}
-
-.form__tel-email {
-  padding: 40px 20px 50px;
-}
-
-.emotions,
-.form__contacts,
-.form__tel-email {
-  padding: 40px 20px;
-}
-
-.emotions {
-  padding-top: 0;
+.form__tel-email legend {
+  display: none;
 }
 
 .emotions legend {
@@ -75,7 +51,8 @@ label {
   padding: 25px 0 15px 20px;
 }
 
-.form__tel-email label:first-child {
+.form__contacts label:first-of-type,
+.form__tel-email label:first-of-type {
   padding-top: 0;
 }
 
@@ -85,10 +62,6 @@ label {
   font-size: 18px;
   color: @color-darkblue;
   line-height: 30px;
-}
-
-.form__tel-email legend {
-  display: none;
 }
 
 input[type="email"],
@@ -121,12 +94,41 @@ textarea:active {
   border: 2px solid @color-magenta;
   outline: none;
 }
+
+input[type="email"],
+input[type="tel"] {
+  display: block;
+  position: relative;
+}
+
+input[type="tel"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @color-bg;
+  width: 62px;
+  height: 62px;
+  top: 0;
+  right: 0;
+}
+
+input[type="email"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @color-bg;
+  width: 62px;
+  height: 62px;
+  top: 0;
+  right: 0;
+}
 /* TEXTAREA */
 textarea {
   box-sizing: border-box;
   width: 100%;
   height: 156px;
   padding: 20px;
+  color: @color-darkblue;
 }
 
 textarea:hover {
@@ -297,49 +299,44 @@ input[type="radio"]:checked:active + label:active::after {
   left: 12px;
 }
 
-
-
-
-
-
-
-
+.form span {
+  font-family: @font-family-regular;
+  font-size: 14px;
+  color: @color-magenta;
+  line-height: 30px;
+}
 @media (min-width: 700px) {
-  body {
-    padding: 0 20px;
+  .wrapper {
+    min-width: 300px;
+    max-width: 700px;
   }
 
   fieldset {
-    box-sizing: border-box;
     border: 2px solid #e5e5e5;
     margin-bottom: 60px;
+    padding: 50px 60px;
   }
 
-  fieldset label:first-of-type {
-    padding-top: 0;
+  .form__contacts {
+    padding: 50px 0;
   }
 
-  label{
-    display: block;
+  .form__tel-email legend {
+    background: #ffffff;
+    display: inline-block;
   }
 
-  input[type="email"],
-  input[type="tel"],
-  input[type="text"]{
-    display: inline;
-    float: left;
+  legend {
+    position: relative;
+    top: -60px;
+    padding: 0 35px;
+    background: #ffffff;
   }
 
-  .form-header,
-  .form__achievements,
-  .form__tel-email,
-  .form__app{
-    padding: 40px;
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
   }
-
-
-
-
 
   .form__contacts {
     border: none;
@@ -350,28 +347,24 @@ input[type="radio"]:checked:active + label:active::after {
     background: @color-white;
   }
 
-  .emotions {
-    padding: 0 40px 40px;
-  }
-
-  legend {
-    background: #ffffff;
-    padding: 0 10px;
-  }
-
-  .form__tel-email legend {
-    display: inherit;
-    background: #ffffff;
-  }
-
-  .required-line{
+  .required-line {
     display: block;
     float: right;
   }
 }
-
-
-
 @media (min-width: 1200px) {
+  .wrapper {
+    min-width: 700px;
+    max-width: 1200px;
+  }
 
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 100px;
+  }
+
+  fieldset {
+    padding: 50px 60px;
+  }
 }

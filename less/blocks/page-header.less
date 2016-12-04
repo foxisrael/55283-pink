@@ -1,33 +1,19 @@
 .page-header {
-  background: #1d2631;
+  background: @color-darkblue;
 }
 
-.page-header p {
-  font-family: @font-family-light;
-  line-height: 24px;
-  color: @color-white;
+.page-header__menu{
+  background: @color-darkblue;
 }
 
 .page-header__nav {
   padding: 20px;
-  background: @color-darkblue;
 }
 
 .page-header__logo {
   display: block;
   float: left;
   border: none;
-}
-
-.btn-menu {
-  background-image: url("../img/icon-menu-burger.svg") no-repeat;
-  float: right;
-  width: 24px;
-  height: 12px;
-}
-
-.page-header__menu {
-  background: @color-darkblue;
 }
 
 .page-header__menu li {
@@ -81,43 +67,43 @@
   margin-right: 0;
 }
 
-@media (min-width: 700px) {
-  .wrapper {
-    width: 660px;
-    margin: 0 auto;
-    padding: 0 20px;
+
+@media (min-width: 1200px) {
+  .page-header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background: none;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
-.page-header__photo{
-  height: 730px;
-}
+  .page-header__menu{
+    width: auto;
+    height: 55px;
+    padding: 25px 0 40px;
+    background: none;
+  }
 
-.hand-with-mobile{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-right: 90px;
-  width: 470px;
-  height: 545px;
-}
+  .page-header__nav{
+    display: block;
+    float: left;
+    margin-right: 170px;
+  }
 
-.page-header__apps{
-  position: absolute;
-  width: 300px;
-  top: 100px;
-  left: 40px;
-  background: none;
-}
+  .menu-items{
+    display: block;
+    float: right;
+  }
 
-.page-header__apps h2{
-  display: block;
-  min-width: 300px;
-  margin: 0 auto;
-}
+  .menu-items li,
+  .menu-item{
+    display: inline-block;
+    margin-right: 80px;
+    border: none;
+  }
 
-.page-header__apps p{
-  font-size: 18px;
-  line-height: 18px;
-}
-
+  .menu-items li:last-child,
+  .menu-item:last-child{
+    margin-right: 0px;
+  }
 }
