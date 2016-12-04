@@ -1,49 +1,66 @@
-.form{
+.form {
   padding: 55px 0 60px;
 }
 
-.form-header{
+.form-header {
   margin-bottom: 25px;
+  padding: 0 20px;
 }
 
-.form span{
+.form span {
   font-family: @font-family-regular;
   font-size: 14px;
   color: @color-magenta;
   line-height: 30px;
 }
 
-.page-tour{
+.page-tour {
   font-size: 14px;
   line-height: 30px;
 }
 
-fieldset{
+fieldset {
   border: none;
   margin: 0 auto;
   padding: 0;
 }
 
-legend{
+legend {
+  display: inline-block;
   font-family: @font-family-regular;
   font-size: 14px;
   line-height: 18px;
   color: @color-magenta;
   text-transform: uppercase;
   padding: 40px 0;
+  background: #f2f2f2;
 }
 
 .form__achievements,
-.form__app{
+.form__app {
   background: #f2f2f2;
-  padding-bottom: 50px;
+  padding: 0 20px 50px;
 }
 
-.form__tel-email{
-  padding: 40px 0 50px;
+.form__tel-email {
+  padding: 40px 20px 50px;
 }
 
-label{
+.emotions,
+.form__contacts,
+.form__tel-email {
+  padding: 40px 20px;
+}
+
+.emotions {
+  padding-top: 0;
+}
+
+.emotions legend {
+  background: @color-white;
+}
+
+label {
   display: block;
   position: relative;
   font-family: @font-family-regular;
@@ -54,28 +71,34 @@ label{
 }
 
 .form__contacts label,
-.form__tel-email label{
+.form__tel-email label {
   padding: 25px 0 15px 20px;
 }
 
-.form__tel-email label:first-child{
+.form__tel-email label:first-child {
   padding-top: 0;
 }
 
 .form__achievements label,
-.form__app label{
+.form__app label {
   font-family: @font-family-regular;
-  font-size:18px;
+  font-size: 18px;
   color: @color-darkblue;
   line-height: 30px;
 }
 
-input[type="text"],
-input[type="tel"],
+.form__tel-email legend {
+  display: none;
+}
+
 input[type="email"],
-textarea{
+input[type="tel"],
+input[type="text"],
+textarea {
+  width: 100%;
+  box-sizing: border-box;
   font-family: @font-family-regular;
-  padding: 20px 20px;
+  padding: 20px;
   text-align: left;
   font-size: 18px;
   line-height: 18px;
@@ -83,46 +106,44 @@ textarea{
   border: 2px solid #e7e7e7;
 }
 
-input[type="text"]:hover,
-input[type="tel"]:hover,
 input[type="email"]:hover,
-textarea:hover{
+input[type="tel"]:hover,
+input[type="text"]:hover,
+textarea:hover {
   border: 2px solid @color-darkblue;
   outline: none;
 }
 
-input[type="text"]:active,
-input[type="tel"]:active,
 input[type="email"]:active,
-textarea:active{
+input[type="tel"]:active,
+input[type="text"]:active,
+textarea:active {
   border: 2px solid @color-magenta;
   outline: none;
 }
-
 /* TEXTAREA */
-textarea{
-  width: 236px;
+textarea {
+  box-sizing: border-box;
+  width: 100%;
   height: 156px;
   padding: 20px;
 }
-textarea:hover{
+
+textarea:hover {
   border: 2px solid @color-darkblue;
 }
 
-textarea:active{
+textarea:active {
   border: 2px solid @color-darkblue;
 }
-
-
 /* CHECKBOX */
-
 input[type="checkbox"],
-input[type="radio"]{
+input[type="radio"] {
   display: none;
 }
 
 input[type="checkbox"] + label,
-input[type="radio"] + label{
+input[type="radio"] + label {
   display: block;
   position: relative;
   cursor: pointer;
@@ -131,11 +152,11 @@ input[type="radio"] + label{
 }
 
 input[type="checkbox"] + label:last-child,
-input[type="radio"] + label:last-child{
+input[type="radio"] + label:last-child {
   margin-bottom: 0;
 }
 
-input[type="checkbox"] + label::before{
+input[type="checkbox"] + label::before {
   content: "";
   display: block;
   position: absolute;
@@ -144,10 +165,10 @@ input[type="checkbox"] + label::before{
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
 }
 
-input[type="checkbox"]:hover + label:hover::before{
+input[type="checkbox"]:hover + label:hover::before {
   content: "";
   display: block;
   position: absolute;
@@ -156,11 +177,11 @@ input[type="checkbox"]:hover + label:hover::before{
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 
-input[type="checkbox"]:active + label:active::before{
+input[type="checkbox"]:active + label:active::before {
   content: "";
   display: block;
   position: absolute;
@@ -169,11 +190,11 @@ input[type="checkbox"]:active + label:active::before{
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 
-input[type="checkbox"]:active + label::after{
+input[type="checkbox"]:active + label::after {
   content: "";
   display: block;
   position: absolute;
@@ -186,7 +207,7 @@ input[type="checkbox"]:active + label::after{
   outline: none;
 }
 
-input[type="checkbox"]:checked + label::after{
+input[type="checkbox"]:checked + label::after {
   content: "";
   display: block;
   position: absolute;
@@ -198,9 +219,8 @@ input[type="checkbox"]:checked + label::after{
   left: 10px;
   outline: none;
 }
-
 /* RADIO */
-input[type="radio"] + label::before{
+input[type="radio"] + label::before {
   content: "";
   display: block;
   position: absolute;
@@ -210,10 +230,10 @@ input[type="radio"] + label::before{
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
 }
 
-input[type="radio"]:hover + label:hover::before{
+input[type="radio"]:hover + label:hover::before {
   content: "";
   display: block;
   position: absolute;
@@ -223,11 +243,11 @@ input[type="radio"]:hover + label:hover::before{
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 
-input[type="radio"]:active + label:active::before{
+input[type="radio"]:active + label:active::before {
   content: "";
   display: block;
   position: absolute;
@@ -237,11 +257,11 @@ input[type="radio"]:active + label:active::before{
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 
-input[type="radio"]:checked + label::after{
+input[type="radio"]:checked + label::after {
   content: "";
   display: block;
   position: absolute;
@@ -253,7 +273,7 @@ input[type="radio"]:checked + label::after{
   left: 12px;
 }
 
-input[type="radio"]:checked:hover + label:hover::after{
+input[type="radio"]:checked:hover + label:hover::after {
   content: "";
   display: block;
   position: absolute;
@@ -265,7 +285,7 @@ input[type="radio"]:checked:hover + label:hover::after{
   left: 12px;
 }
 
-input[type="radio"]:checked:active + label:active::after{
+input[type="radio"]:checked:active + label:active::after {
   content: "";
   display: block;
   position: absolute;
@@ -275,4 +295,64 @@ input[type="radio"]:checked:active + label:active::after{
   height: 15px;
   top: 8px;
   left: 12px;
+}
+@media (min-width: 700px) {
+  body {
+    padding: 0 20px;
+  }
+
+  fieldset {
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    margin-bottom: 60px;
+  }
+
+  fieldset label:first-of-type {
+    padding-top: 0;
+  }
+
+  label{
+    display: inline-block;
+  }
+
+  input[type="email"],
+  input[type="tel"],
+  input[type="text"]{
+    display: inline-block;
+    width: auto;
+  }
+
+  .emotions,
+  .form__contacts {
+    padding: 0;
+  }
+
+  .form__contacts {
+    border: none;
+  }
+
+  .form__tel-email legend {
+    display: inherit;
+    padding: 0 10px;
+    background: #ffffff;
+    position: relative;
+    top: 0;
+  }
+
+  legend {
+    box-sizing: border-box;
+    padding: 0 10px 30px;
+    background: #ffffff;
+    position: relative;
+    top: -10px;
+  }
+
+  .form__achievements,
+  .form__app {
+    background: @color-white;
+  }
+
+  .emotions {
+    padding: 0 40px 40px;
+  }
 }

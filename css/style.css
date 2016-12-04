@@ -42,6 +42,8 @@ ul {
   clear: both;
 }
 .wrapper {
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -50,6 +52,7 @@ ul {
 }
 .form-header {
   margin-bottom: 25px;
+  padding: 0 20px;
 }
 .form span {
   font-family: "Open Sans Regular", sans-serif;
@@ -67,20 +70,33 @@ fieldset {
   padding: 0;
 }
 legend {
+  display: inline-block;
   font-family: "Open Sans Regular", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #d22856;
   text-transform: uppercase;
   padding: 40px 0;
+  background: #f2f2f2;
 }
 .form__achievements,
 .form__app {
   background: #f2f2f2;
-  padding-bottom: 50px;
+  padding: 0 20px 50px;
 }
 .form__tel-email {
-  padding: 40px 0 50px;
+  padding: 40px 20px 50px;
+}
+.emotions,
+.form__contacts,
+.form__tel-email {
+  padding: 40px 20px;
+}
+.emotions {
+  padding-top: 0;
+}
+.emotions legend {
+  background: #ffffff;
 }
 label {
   display: block;
@@ -105,35 +121,41 @@ label {
   color: #283645;
   line-height: 30px;
 }
-input[type="text"],
-input[type="tel"],
+.form__tel-email legend {
+  display: none;
+}
 input[type="email"],
+input[type="tel"],
+input[type="text"],
 textarea {
+  width: 100%;
+  box-sizing: border-box;
   font-family: "Open Sans Regular", sans-serif;
-  padding: 20px 20px;
+  padding: 20px;
   text-align: left;
   font-size: 18px;
   line-height: 18px;
   color: #283645;
   border: 2px solid #e7e7e7;
 }
-input[type="text"]:hover,
-input[type="tel"]:hover,
 input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover,
 textarea:hover {
   border: 2px solid #283645;
   outline: none;
 }
-input[type="text"]:active,
-input[type="tel"]:active,
 input[type="email"]:active,
+input[type="tel"]:active,
+input[type="text"]:active,
 textarea:active {
   border: 2px solid #d22856;
   outline: none;
 }
 /* TEXTAREA */
 textarea {
-  width: 236px;
+  box-sizing: border-box;
+  width: 100%;
   height: 156px;
   padding: 20px;
 }
@@ -169,7 +191,7 @@ input[type="checkbox"] + label::before {
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
 }
 input[type="checkbox"]:hover + label:hover::before {
   content: "";
@@ -180,7 +202,7 @@ input[type="checkbox"]:hover + label:hover::before {
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 input[type="checkbox"]:active + label:active::before {
@@ -192,7 +214,7 @@ input[type="checkbox"]:active + label:active::before {
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 input[type="checkbox"]:active + label::after {
@@ -230,7 +252,7 @@ input[type="radio"] + label::before {
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
 }
 input[type="radio"]:hover + label:hover::before {
   content: "";
@@ -242,7 +264,7 @@ input[type="radio"]:hover + label:hover::before {
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 input[type="radio"]:active + label:active::before {
@@ -255,7 +277,7 @@ input[type="radio"]:active + label:active::before {
   width: 35px;
   height: 35px;
   top: -4px;
-  left: 0px;
+  left: 0;
   outline: none;
 }
 input[type="radio"]:checked + label::after {
@@ -290,6 +312,56 @@ input[type="radio"]:checked:active + label:active::after {
   height: 15px;
   top: 8px;
   left: 12px;
+}
+@media (min-width: 700px) {
+  body {
+    padding: 0 20px;
+  }
+  fieldset {
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    margin-bottom: 60px;
+  }
+  fieldset label:first-of-type {
+    padding-top: 0;
+  }
+  label {
+    display: inline-block;
+  }
+  input[type="email"],
+  input[type="tel"],
+  input[type="text"] {
+    display: inline-block;
+    width: auto;
+  }
+  .emotions,
+  .form__contacts {
+    padding: 0;
+  }
+  .form__contacts {
+    border: none;
+  }
+  .form__tel-email legend {
+    display: inherit;
+    padding: 0 10px;
+    background: #ffffff;
+    position: relative;
+    top: 0;
+  }
+  legend {
+    box-sizing: border-box;
+    padding: 0 10px 30px;
+    background: #ffffff;
+    position: relative;
+    top: -10px;
+  }
+  .form__achievements,
+  .form__app {
+    background: #ffffff;
+  }
+  .emotions {
+    padding: 0 40px 40px;
+  }
 }
 .page-tour {
   height: 85px;
