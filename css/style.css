@@ -11,17 +11,17 @@
   src: local("opensansbold"), url("../fonts/opensansbold.woff") format("woff");
 }
 body {
-  font-family: "Open Sans Regular", sans-serif;
+  font-family: "opensans", sans-serif;
   text-align: center;
   margin: 0 auto;
 }
 h2 {
-  font-family: "Open Sans Light", sans-serif;
+  font-family: "opensanslight", sans-serif;
   font-size: 24px;
   color: #283645;
 }
 h3 {
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
 }
 p {
   font-size: 14px;
@@ -29,7 +29,7 @@ p {
   line-height: 24px;
 }
 a {
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
   text-decoration: none;
 }
 ul {
@@ -64,7 +64,7 @@ fieldset {
 }
 legend {
   display: inline-block;
-  font-family: "Open Sans Regular", sans-serif;
+  font-family: "opensans", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #d22856;
@@ -81,7 +81,7 @@ legend {
 label {
   display: block;
   position: relative;
-  font-family: "Open Sans Regular", sans-serif;
+  font-family: "opensans", sans-serif;
   font-size: 14px;
   color: #d22856;
   line-height: 24px;
@@ -97,7 +97,7 @@ label {
 }
 .form__achievements label,
 .form__app label {
-  font-family: "Open Sans Regular", sans-serif;
+  font-family: "opensans", sans-serif;
   font-size: 18px;
   color: #283645;
   line-height: 30px;
@@ -108,7 +108,7 @@ input[type="text"],
 textarea {
   width: 100%;
   box-sizing: border-box;
-  font-family: "Open Sans Regular", sans-serif;
+  font-family: "opensans", sans-serif;
   padding: 20px;
   text-align: left;
   font-size: 18px;
@@ -318,7 +318,7 @@ input[type="radio"]:checked:active + label:active::after {
   left: 12px;
 }
 .form span {
-  font-family: "Open Sans Regular", sans-serif;
+  font-family: "opensans", sans-serif;
   font-size: 14px;
   color: #d22856;
   line-height: 30px;
@@ -385,7 +385,7 @@ input[type="radio"]:checked:active + label:active::after {
     padding: 190px 50px 150px;
   }
   .page-tour h2 {
-    font-family: "Open Sans Light", sans-serif;
+    font-family: "opensanslight", sans-serif;
     font-size: 50px;
     line-height: normal;
   }
@@ -577,7 +577,7 @@ input[type="reset"]:active {
   margin: 0;
 }
 .post__author span {
-  font-family: "Open Sans Light", sans-serif;
+  font-family: "opensanslight", sans-serif;
   line-height: 24px;
 }
 .like {
@@ -703,7 +703,7 @@ input[type="reset"]:active {
   padding: 20px;
   color: #ffffff;
   text-align: center;
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
   font-size: 18px;
   line-height: 18px;
   cursor: pointer;
@@ -736,7 +736,7 @@ input[type="reset"]:active {
   border-radius: 10px;
   background: #2aab6d;
   color: #ffffff;
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
   font-size: 18px;
   padding: 20px;
   margin-top: 50px;
@@ -763,7 +763,7 @@ input[type="reset"]:active {
   display: block;
   width: 100%;
   border: 3px solid #d22856;
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
   font-size: 18px;
   color: #d22856;
   margin-bottom: 12px;
@@ -849,16 +849,16 @@ input[type="reset"]:active {
   background-color: #ffffff;
 }
 .page-header h2 {
-  font-family: "Open Sans Light", sans-serif;
+  font-family: "opensanslight", sans-serif;
 }
 .page-footer__contacts p {
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
   font-size: 14px;
   color: #283645;
 }
 .page-footer__contacts a,
 .page-footer__contacts address {
-  font-family: "Open Sans Light", sans-serif;
+  font-family: "opensanslight", sans-serif;
   font-size: 24px;
   font-style: normal;
   color: #d22856;
@@ -956,7 +956,7 @@ input[type="reset"]:active {
   border-collapse: collapse;
 }
 .service__item th {
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
   padding: 25px 0;
   min-width: 270px;
   background: #283645;
@@ -965,7 +965,7 @@ input[type="reset"]:active {
   font-size: 14px;
 }
 .service__item span {
-  font-family: "Open Sans Light", sans-serif;
+  font-family: "opensanslight", sans-serif;
   font-size: 24px;
   line-height: 30px;
 }
@@ -1025,7 +1025,7 @@ input[type="reset"]:active {
   list-style: none;
 }
 .menu-item {
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "opensansbold", sans-serif;
   display: block;
   text-decoration: none;
   color: #ffffff;
@@ -1053,7 +1053,7 @@ input[type="reset"]:active {
 .page-header__apps h2 {
   display: none;
   font-size: 40px;
-  font-family: "Open Sans Light", sans-serif;
+  font-family: "opensanslight", sans-serif;
   color: #ffffff;
 }
 .page-header__apps li {
