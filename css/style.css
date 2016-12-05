@@ -45,7 +45,7 @@ ul {
   width: 300px;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 .form {
   padding: 55px 0;
@@ -324,6 +324,12 @@ input[type="radio"]:checked:active + label:active::after {
   line-height: 30px;
 }
 @media (min-width: 700px) {
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   fieldset {
     border: 2px solid #e5e5e5;
     margin-bottom: 60px;
@@ -359,6 +365,12 @@ input[type="radio"]:checked:active + label:active::after {
   }
 }
 @media (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   .form-header {
     font-size: 18px;
     line-height: 30px;
