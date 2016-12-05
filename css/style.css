@@ -523,6 +523,19 @@ input[type="reset"]:active {
 .page-hero h2 {
   color: #ffffff;
 }
+@media (min-width: 700px) {
+  .page-hero {
+    height: 100px;
+    background: url("../img/bg-back-mobile@1x.jpg");
+    background-size: cover;
+    padding: 190px 20px 150px;
+  }
+  .page-hero h2 {
+    font-size: 50px;
+    padding: 0 170px;
+    color: #ffffff;
+  }
+}
 .btn {
   display: block;
   width: 100%;
