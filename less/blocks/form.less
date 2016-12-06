@@ -9,7 +9,11 @@
 fieldset {
   border: none;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 0;
+}
+
+.emotions{
+  padding-bottom: 0;
 }
 
 .form__achievements,
@@ -126,7 +130,7 @@ input[type="email"]::before {
 textarea {
   box-sizing: border-box;
   width: 100%;
-  height: 156px;
+  height: 201px;
   padding: 20px;
   color: @color-darkblue;
 }
@@ -204,8 +208,8 @@ input[type="checkbox"]:active + label::after {
   background-repeat: no-repeat;
   width: 22px;
   height: 16px;
-  top: 7px;
-  left: 10px;
+  top: 6px;
+  left: 7px;
   outline: none;
 }
 
@@ -217,8 +221,8 @@ input[type="checkbox"]:checked + label::after {
   background-repeat: no-repeat;
   width: 22px;
   height: 16px;
-  top: 7px;
-  left: 10px;
+  top: 6px;
+  left: 7px;
   outline: none;
 }
 /* RADIO */
@@ -271,8 +275,8 @@ input[type="radio"]:checked + label::after {
   border-radius: 50%;
   width: 15px;
   height: 15px;
-  top: 8px;
-  left: 12px;
+  top: 6px;
+  left: 10px;
 }
 
 input[type="radio"]:checked:hover + label:hover::after {
@@ -283,8 +287,8 @@ input[type="radio"]:checked:hover + label:hover::after {
   border-radius: 50%;
   width: 15px;
   height: 15px;
-  top: 8px;
-  left: 12px;
+  top: 6px;
+  left: 10px;
 }
 
 input[type="radio"]:checked:active + label:active::after {
@@ -295,8 +299,8 @@ input[type="radio"]:checked:active + label:active::after {
   border-radius: 50%;
   width: 15px;
   height: 15px;
-  top: 8px;
-  left: 12px;
+  top: 6px;
+  left: 10px;
 }
 
 .form span {
@@ -306,12 +310,17 @@ input[type="radio"]:checked:active + label:active::after {
   line-height: 30px;
 }
 
+::-webkit-input-placeholder {color:#283645;}
+::-moz-placeholder          {color:#283645;}
+:-moz-placeholder           {color:#283645;}
+:-ms-input-placeholder      {color:#283645;}
+
 @media (min-width: 700px) {
   .wrapper{
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
   }
 
   fieldset {
@@ -348,6 +357,9 @@ input[type="radio"]:checked:active + label:active::after {
   .form__achievements,
   .form__app {
     background: @color-white;
+    margin: 0 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .required-line {

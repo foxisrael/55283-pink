@@ -25,7 +25,7 @@
   </header>
   <main>
     <div class="page-tour">
-      <h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
+      <h2>Конкурс на самое<br> безбашеное<br> путешествие с Пинк</h2>
     </div>
     <div class="wrapper">
       <form class="form">
@@ -38,8 +38,10 @@
           <label for="patronymic">ОТЧЕСТВО:</label>
           <input type="text" class="patronymic" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
         </fieldset>
+      </div>
         <fieldset class="form__achievements">
           <legend>Ваши безбашенные достижения в путешествии</legend>
+          <div class="wrapper">
           <input type="checkbox" id="sharp" name="sharp" checked>
           <label for="sharp" class="custom-checkbox">Сделал селфи с акулой</label>
           <input type="checkbox" id="tan" name="tan" checked>
@@ -53,6 +55,8 @@
           <input type="checkbox" id="hotel" name="hotel">
           <label for="hotel" class="custom-checkbox">Разгромил отель</label>
         </fieldset>
+      </div>
+        <div class="wrapper">
         <fieldset class="form__tel-email">
           <legend>Контактная информация</legend>
           <label for="form-tel" class="custom-radio">НОМЕР ТЕЛЕФОНА</label>
@@ -60,15 +64,19 @@
           <label for="form-email" class="custom-radio">АДРЕСОК ПОЧТЫ</label>
           <input type="email" class="email" id="form-email" name="email" placeholder="Введите почту *" required>
         </fieldset>
+      </div>
         <fieldset class="form__app">
           <legend>С каким приложением путешествовали?</legend>
+      <div class="wrapper">
           <input type="radio" class="ios" id="ios" name="form__app form__app--active">
           <label for="ios">Pink для iOS</label>
           <input type="radio" class="android" id="android" name="form__app">
           <label for="android">Pink для Android</label>
           <input type="radio" class="radio" id="windows-phone" name="form__app">
           <label for="windows-phone">Windows Phone</label>
+      </div>
         </fieldset>
+        <div class="wrapper">
         <fieldset class="emotions">
           <legend>Опишите свои эмоции</legend>
           <textarea class="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>

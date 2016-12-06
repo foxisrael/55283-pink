@@ -1,5 +1,16 @@
 //body
 
+html {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
 body{
   font-family: @font-family-regular;
   text-align: center;
@@ -20,6 +31,7 @@ p{
   font-size: @font-size-p;
   color:  @color-darkblue;
   line-height: @line-height-label;
+  margin: 0;
 }
 
 a{
@@ -39,7 +51,7 @@ ul{
 }
 
 .wrapper{
-  width: 300px;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
