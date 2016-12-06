@@ -18,7 +18,7 @@ fieldset {
 
 .form__achievements,
 .form__app {
-  background: @color-bg;
+  background: @color-gray;
 }
 
 legend {
@@ -28,7 +28,7 @@ legend {
   line-height: 18px;
   color: @color-magenta;
   text-transform: uppercase;
-  background: @color-bg;
+  background: @color-gray;
   padding-bottom: 40px;
 }
 
@@ -109,7 +109,7 @@ input[type="tel"]::before {
   content: "";
   display: block;
   position: absolute;
-  background-color: @color-bg;
+  background-color: @color-gray;
   width: 62px;
   height: 62px;
   top: 0;
@@ -120,7 +120,7 @@ input[type="email"]::before {
   content: "";
   display: block;
   position: absolute;
-  background-color: @color-bg;
+  background-color: @color-gray;
   width: 62px;
   height: 62px;
   top: 0;
@@ -315,6 +315,12 @@ input[type="radio"]:checked:active + label:active::after {
 :-moz-placeholder           {color:#283645;}
 :-ms-input-placeholder      {color:#283645;}
 
+
+
+
+
+
+
 @media (min-width: 700px) {
   .wrapper{
     width: 100%;
@@ -323,66 +329,73 @@ input[type="radio"]:checked:active + label:active::after {
     padding: 0 40px;
   }
 
-  fieldset {
-    border: 2px solid #e5e5e5;
-    margin-bottom: 60px;
-    padding: 50px 60px;
+  .form {
+    padding: 0;
   }
 
-  .form__contacts {
-    padding: 50px 0;
-  }
+fieldset {
+     border: 2px solid #e5e5e5;
+     margin-bottom: 60px;
+     padding: 50px 60px;
+   }
 
-  .form__tel-email legend {
-    background: #ffffff;
-    display: inline-block;
-  }
+   .form__contacts {
+     padding: 0 0;
+   }
 
-  legend {
-    position: relative;
-    top: -60px;
-    padding: 0 35px;
-    background: #ffffff;
-  }
-
-  .form-header {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  .form__contacts {
-    border: none;
-  }
-
-  .form__achievements,
-  .form__app {
-    background: @color-white;
-    margin: 0 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .required-line {
-    display: block;
-    float: right;
-  }
+.emotions{
+  padding-bottom: 50px;
+  margin-bottom: 0;
 }
 
-@media (min-width: 1200px) {
-  .wrapper{
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+   .form__tel-email legend {
+     background: #ffffff;
+     display: inline-block;
+   }
 
-  .form-header {
-    font-size: 18px;
-    line-height: 30px;
-    padding: 0 100px;
-  }
+legend {
+     position: relative;
+     top: -60px;
+     padding: 0 35px;
+     background: #ffffff;
+   }
 
-  fieldset {
-    padding: 50px 60px;
-  }
+   .form-header {
+     font-size: 18px;
+     line-height: 30px;
+     padding: 100px 100px;
 }
+
+
+   .form__contacts {
+     border: none;
+   }
+
+   .form__achievements,
+   .form__app {
+     background: @color-white;
+     margin: 60px 40px;
+     padding: 50px 20px;
+   }
+
+   .required-line {
+     display: block;
+     float: right;
+     margin-top: 90px;
+   }
+}
+
+// @media (min-width: 1200px) {
+//   .wrapper{
+//     width: 100%;
+//     max-width: 960px;
+//     margin: 0 auto;
+//     padding: 0 20px;
+//   }
+//
+
+//
+//   fieldset {
+//     padding: 50px 60px;
+//   }
+// }

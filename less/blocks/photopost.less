@@ -1,6 +1,7 @@
 .photopost{
-  padding: 20px;
+  padding: 20px 0 20px;
   background: #f2f2f2;
+  position: relative;
 }
 
 .photopost-btn-range{
@@ -13,7 +14,7 @@
   display: inline-block;
   vertical-align: middle;
   background: none;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   border: none;
 }
 
@@ -23,7 +24,7 @@
 }
 
 .photopost__main-image{
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 
 input[type="reset"]{
@@ -51,6 +52,46 @@ input[type="reset"]:active{
   color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
+
+ .photopost::after{
+   content: "";
+   display: block;
+   position: absolute;
+   bottom: 152px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background: #dddfe0;
+   margin-bottom: 38px;
+ }
+
+.photopost__range--active {
+  position: relative;
+  width: 240px;
+  margin: 0 auto 68px;
+}
+
+.scale {
+  height: 2px;
+  background: @color-darkblue;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -5px;
+  left: 185px;
+  width: 12px;
+  height: 12px;
+  background: @color-gray;
+  border: 2px solid @color-magenta;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle:active {
+  background: @color-magenta;
+}
+
 
 @media (min-width: 700px) {
   .photopost{

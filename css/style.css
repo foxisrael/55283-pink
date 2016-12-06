@@ -18,6 +18,7 @@ html {
 *:after,
 *:before {
   box-sizing: inherit;
+  margin: 0;
 }
 body {
   font-family: "opensans", sans-serif;
@@ -355,13 +356,20 @@ input[type="radio"]:checked:active + label:active::after {
     margin: 0 auto;
     padding: 0 40px;
   }
+  .form {
+    padding: 0;
+  }
   fieldset {
     border: 2px solid #e5e5e5;
     margin-bottom: 60px;
     padding: 50px 60px;
   }
   .form__contacts {
-    padding: 50px 0;
+    padding: 0 0;
+  }
+  .emotions {
+    padding-bottom: 50px;
+    margin-bottom: 0;
   }
   .form__tel-email legend {
     background: #ffffff;
@@ -376,6 +384,7 @@ input[type="radio"]:checked:active + label:active::after {
   .form-header {
     font-size: 18px;
     line-height: 30px;
+    padding: 100px 100px;
   }
   .form__contacts {
     border: none;
@@ -383,29 +392,13 @@ input[type="radio"]:checked:active + label:active::after {
   .form__achievements,
   .form__app {
     background: #ffffff;
-    margin: 0 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 60px 40px;
+    padding: 50px 20px;
   }
   .required-line {
     display: block;
     float: right;
-  }
-}
-@media (min-width: 1200px) {
-  .wrapper {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  .form-header {
-    font-size: 18px;
-    line-height: 30px;
-    padding: 0 100px;
-  }
-  fieldset {
-    padding: 50px 60px;
+    margin-top: 90px;
   }
 }
 .page-tour {
@@ -419,10 +412,10 @@ input[type="radio"]:checked:active + label:active::after {
 }
 @media (min-width: 700px) {
   .page-tour {
-    height: 160px;
+    min-height: 440px;
     background: url("../img/bg-back-mobile@1x.jpg");
     background-size: cover;
-    padding: 190px 50px 150px;
+    padding: 150px 50px 85px;
   }
   .page-tour h2 {
     font-family: "opensanslight", sans-serif;
@@ -430,17 +423,10 @@ input[type="radio"]:checked:active + label:active::after {
     line-height: normal;
   }
 }
-@media (min-width: 1200px) {
-  .page-tour {
-    height: 100px;
-    background: url("../img/bg-back-mobile@1x.jpg");
-    background-size: cover;
-    padding: 200px 100px 100px;
-  }
-}
 .photopost {
-  padding: 20px;
+  padding: 20px 0 20px;
   background: #f2f2f2;
+  position: relative;
 }
 .photopost-btn-range {
   margin-bottom: 30px;
@@ -451,7 +437,7 @@ input[type="radio"]:checked:active + label:active::after {
   display: inline-block;
   vertical-align: middle;
   background: none;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   border: none;
 }
 .photopost__range:nth-child(2),
@@ -459,7 +445,7 @@ input[type="radio"]:checked:active + label:active::after {
   display: none;
 }
 .photopost__main-image {
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 input[type="reset"] {
   display: block;
@@ -482,6 +468,40 @@ input[type="reset"]:active {
   background: #b5b9be;
   color: rgba(255, 255, 255, 0.3);
   outline: none;
+}
+.photopost::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 152px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #dddfe0;
+  margin-bottom: 38px;
+}
+.photopost__range--active {
+  position: relative;
+  width: 240px;
+  margin: 0 auto 68px;
+}
+.scale {
+  height: 2px;
+  background: #283645;
+}
+.range-toggle {
+  position: absolute;
+  top: -5px;
+  left: 185px;
+  width: 12px;
+  height: 12px;
+  background: #f2f2f2;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.range-toggle:active {
+  background: #d22856;
 }
 @media (min-width: 700px) {
   .photopost {
@@ -573,7 +593,7 @@ input[type="reset"]:active {
 .post-header {
   font-size: 14px;
   line-height: 30px;
-  padding: 50px 40px 60px;
+  padding: 55px 40px 60px;
 }
 .post__item {
   margin: 0 auto 20px;
@@ -639,9 +659,12 @@ input[type="reset"]:active {
   top: 0;
   left: 20px;
 }
+.like::before .post__item::last-child {
+  margin-bottom: 0;
+}
 @media (min-width: 700px) {
-  .post-header,
-  .post-footer {
+  .post-footer,
+  .post-header {
     font-size: 18px;
     line-height: 30px;
   }
@@ -714,9 +737,9 @@ input[type="reset"]:active {
   }
 }
 .page-hero {
-  height: 85px;
+  height: 235px;
   background: url("../img/bg-back-mobile@1x.jpg");
-  padding: 70px 20px 80px;
+  padding: 100px 75px 85px;
 }
 .page-hero h2 {
   color: #ffffff;
@@ -738,7 +761,7 @@ input[type="reset"]:active {
   display: block;
   width: 100%;
   border: 3px solid #ffffff;
-  border-radius: 25px;
+  border-radius: 30px;
   background: none;
   padding: 20px;
   color: #ffffff;
@@ -841,15 +864,15 @@ input[type="reset"]:active {
     width: 300px;
     display: block;
     float: left;
-    margin: 0;
+    margin-top: 70px;
   }
   .btn--submit:hover {
     width: 300px;
-    margin: 0;
+    margin-top: 70px;
   }
   .btn--submit:active {
     width: 300px;
-    margin: 0;
+    margin: 70px 0 85px;
   }
   .btn--post {
     width: 260px;
@@ -910,7 +933,7 @@ input[type="reset"]:active {
 }
 .page-footer-inner {
   width: 100%;
-  padding: 65px 40px;
+  padding: 40px 0;
 }
 .page-footer__social {
   margin: 40px 0;
@@ -962,7 +985,7 @@ input[type="reset"]:active {
 @media (min-width: 700px) {
   .page-footer-inner {
     width: 100%;
-    padding: 80px 0 35px;
+    padding: 0 0 35px;
   }
   .pink-logo {
     display: inline-block;

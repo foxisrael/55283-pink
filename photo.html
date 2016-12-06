@@ -27,7 +27,6 @@
     <div class="page-hero">
       <h2>Фотографии пользователей</h2>
     </div>
-
     <div class="post clearfix">
       <p class="post-header">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <div class="wrapper">
@@ -79,8 +78,8 @@
       </div>
     </div>
     <div class="photopost clearfix">
-      <div class="wrapper">
         <img class="photopost__main-image" src="img/photo-7-mobile@1x.jpg" widht="280" height="374" alt="">
+        <div class="wrapper">
         <form class="photopost__filtr">
           <div class="photopost__btn-editors">
             <button type="button" class="photopost__crop"><img src="img/icon-editor-crop.svg" width="44" height="44"></button>
@@ -88,17 +87,27 @@
             <button type="button" class="photopost__contrast"><img src="img/icon-editor-contrast.svg" width="32" height="32"></button>
           </div>
           <div class="photopost__btn-range">
-            <input type="range" min="1" max="100" step="1" class="photopost__range photopost__range--active">
-            <input type="range" min="1" max="100" step="1" class="photopost__range">
-            <input type="range" min="1" max="100" step="1" class="photopost__range">
+            <div class="photopost__range photopost__range--active">
+              <div class="scale"></div>
+              <div class="range-toggle"></div>
+            </div>
+            <div class="photopost__range">
+              <div class="scale"></div>
+              <div class="range-toggle"></div>
+            </div>
+            <div class="photopost__range">
+              <div class="scale"></div>
+              <div class="range-toggle"></div>
+            </div>
           </div>
           <div class="photopost__btn-submit">
             <button type="button" class="btn btn--post">Запостить</button>
             <input type="reset" value="Отмена" class="btn btn-reset">
           </div>
-        </form>
       </div>
+      </form>
     </div>
+
   </main>
   <footer class="page-footer-inner">
     <div class="wrapper">
