@@ -1,38 +1,86 @@
 .service{
   background: @color-gray;
-  padding: 60px 0 50px;
+  padding: 65px 0 50px;
+  overflow: hidden;
 }
 
-.service__item table{
-  display: inline-block;
+table{
+  position: relative;
+  left: -520px;
   border-collapse: collapse;
-  margin: 0;
+  margin-bottom: 40px;
 }
 
-.service__item th,
-.service__item td{
-  border: 1px solid #e5e5e5;
+th,
+td{
+  border: 3px solid #e5e5e5;
   border-collapse: collapse;
 }
 
-.service__item th{
+.service .empty{
+  background: @color-gray;
+  border-top: none;
+  border-left: none;
+}
+
+th{
   font-family: @font-family-bold;
   padding: 25px 0;
-  min-width: 270px;
+  min-width: 280px;
   background: @color-darkblue;
   color: @color-white;
   text-transform: uppercase;
-  font-size: @font-size-p;
+  font-size: 18px;
+  line-height: 30px;
 }
 
-.service__item span{
+th span{
   font-family: @font-family-light;
   font-size: 24px;
   line-height: 30px;
 }
 
-.service__item td{
-  padding: 25px 35px;
+td{
+  padding: 25px 23px;
   text-align: left;
   background: @color-white;
+  text-transform: uppercase;
+  color: @color-darkblue;
+}
+
+.service-header{
+  display: block;
+  float: left;
+}
+
+.service-element-ok,
+.service-element-no{
+  display: block;
+  float: right;
+}
+
+.hit{
+  position: relative;
+}
+
+.hit::before{
+  content:"";
+  display: block;
+  position: absolute;
+  color: @color-white;
+  background: url("../img/bg-hit.svg") no-repeat;
+  width: 72px;
+  height: 72px;
+  top: 0;
+  left: 0;
+}
+
+.hit::after{
+  content:"ХИТ";
+  display: block;
+  position: absolute;
+  color: @color-white;
+  top: 9px;
+  left: 9px;
+  transform: rotate(-45deg);
 }
