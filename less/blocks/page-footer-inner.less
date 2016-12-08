@@ -59,29 +59,28 @@
 
 
 @media (min-width: 700px) {
-  .page-footer-inner{
+  .wrapper {
     width: 100%;
-    padding: 0 0 35px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 
-  .pink-logo{
-    display: inline-block;
-    float: left;
+  .page-footer__inner-logo{
     margin-right: 70px;
   }
 
-  .page-footer__social{
-    display: inline-block;
-    position: relative;
-    top: -40px;
-    margin-right: 90px;
+  .page-footer-inner .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 85px 40px 35px;
   }
 
-  .page-footer__copyright{
-    display: inline-block;
-    float: right;
-    text-align: right;
+  .page-footer__social{
+    position: relative;
+    margin: 0 90px 0 0;
   }
+
 }
 
 @media (min-width: 1200px) {

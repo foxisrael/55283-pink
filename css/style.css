@@ -386,10 +386,6 @@ input[type="radio"]:checked:active + label:active::after {
     margin-bottom: 60px;
   }
   .form__contacts {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-order: 1;
-        order: 1;
     padding: 0;
     border: none;
   }
@@ -428,6 +424,7 @@ input[type="radio"]:checked:active + label:active::after {
     display: block;
     float: right;
     margin-top: 90px;
+    text-transform: uppercase;
   }
   input[type="tel"] + label:before {
     content: "";
@@ -468,6 +465,17 @@ input[type="radio"]:checked:active + label:active::after {
     display: flex;
     -ms-flex-order: 5;
         order: 5;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  fieldset {
+    padding: 50px 60px;
   }
 }
 .page-tour {
@@ -933,15 +941,15 @@ input[type="reset"]:active {
     width: 300px;
     display: block;
     float: left;
-    margin-top: 70px;
+    margin: 70px 0 0;
   }
   .btn--submit:hover {
     width: 300px;
-    margin-top: 70px;
+    margin: 70px 0 0;
   }
   .btn--submit:active {
     width: 300px;
-    margin: 70px 0 85px;
+    margin: 70px 0 0;
   }
   .btn--post {
     width: 260px;
@@ -1061,25 +1069,25 @@ input[type="reset"]:active {
   vertical-align: middle;
 }
 @media (min-width: 700px) {
-  .page-footer-inner {
+  .wrapper {
     width: 100%;
-    padding: 0 0 35px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
-  .pink-logo {
-    display: inline-block;
-    float: left;
+  .page-footer__inner-logo {
     margin-right: 70px;
   }
-  .page-footer__social {
-    display: inline-block;
-    position: relative;
-    top: -40px;
-    margin-right: 90px;
+  .page-footer-inner .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    padding: 85px 40px 35px;
   }
-  .page-footer__copyright {
-    display: inline-block;
-    float: right;
-    text-align: right;
+  .page-footer__social {
+    position: relative;
+    margin: 0 90px 0 0;
   }
 }
 .service {
