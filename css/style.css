@@ -76,6 +76,18 @@ fieldset {
 .form__app {
   background: #f2f2f2;
 }
+.form-row {
+  margin-bottom: 25px;
+}
+.form-row:last-child {
+  margin-bottom: 0;
+}
+.form-column {
+  margin-bottom: 43px;
+}
+.form-column:last-child {
+  margin-bottom: 0;
+}
 legend {
   display: inline-block;
   font-family: "opensans", sans-serif;
@@ -148,26 +160,6 @@ input[type="email"],
 input[type="tel"] {
   display: block;
   position: relative;
-}
-input[type="tel"]::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #f2f2f2;
-  width: 62px;
-  height: 62px;
-  top: 0;
-  right: 0;
-}
-input[type="email"]::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #f2f2f2;
-  width: 62px;
-  height: 62px;
-  top: 0;
-  right: 0;
 }
 /* TEXTAREA */
 textarea {
@@ -356,49 +348,126 @@ input[type="radio"]:checked:active + label:active::after {
     margin: 0 auto;
     padding: 0 40px;
   }
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 100px;
+  }
   .form {
     padding: 0;
   }
+  .form-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: center;
+        align-items: center;
+    margin-bottom: 50px;
+  }
+  .form-row:last-child {
+    margin-bottom: 0;
+  }
+  .form-column {
+    margin-bottom: 43px;
+  }
+  .form-column:last-child {
+    margin-bottom: 0;
+  }
+  .form__achievements,
+  .form__app {
+    background: #ffffff;
+    margin: 0 40px 60px;
+    padding: 50px 20px;
+  }
   fieldset {
     border: 2px solid #e5e5e5;
-    margin-bottom: 60px;
     padding: 50px 60px;
+    margin-bottom: 60px;
   }
   .form__contacts {
-    padding: 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 1;
+        order: 1;
+    padding: 0;
+    border: none;
+  }
+  .form__contacts label {
+    padding: 0;
+    margin-right: 20px;
   }
   .emotions {
     padding-bottom: 50px;
     margin-bottom: 0;
   }
+  legend {
+    position: relative;
+    padding: 0 20px;
+    margin-bottom: 0;
+    background: #ffffff;
+  }
   .form__tel-email legend {
     background: #ffffff;
     display: inline-block;
   }
-  legend {
-    position: relative;
-    top: -60px;
-    padding: 0 35px;
-    background: #ffffff;
+  .form__tel-email .form-row {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    margin: 0;
   }
-  .form-header {
-    font-size: 18px;
-    line-height: 30px;
-    padding: 100px 100px;
+  .form__tel-email .form-row:nth-child(2) {
+    margin-bottom: 20px;
   }
-  .form__contacts {
-    border: none;
-  }
-  .form__achievements,
-  .form__app {
-    background: #ffffff;
-    margin: 60px 40px;
-    padding: 50px 20px;
+  .form__tel-email label {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 20px;
   }
   .required-line {
     display: block;
     float: right;
     margin-top: 90px;
+  }
+  input[type="tel"] + label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #f2f2f2;
+    width: 62px;
+    height: 62px;
+    top: 0;
+    right: 0;
+  }
+  .form__contacts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .form__app {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .form__tel-email {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .form__achievements {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 4;
+        order: 4;
+  }
+  .emotions {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 5;
+        order: 5;
   }
 }
 .page-tour {

@@ -29,41 +29,62 @@
       <h2>Конкурс на самое<br> безбашеное<br> путешествие с Пинк</h2>
     </div>
     <form class="form">
-        <p class="form-header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
-        <div class="wrapper">
+      <p class="form-header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <div class="wrapper">
         <fieldset class="form__contacts">
-          <label for="surname">ФАМИЛИЯ:</label>
-          <input type="text" class="surname" id="surname" name="surname" placeholder="Укажите фамилию *" required>
-          <label for="name">ИМЯ:</label>
-          <input type="text" class="name" id="name" name="name" placeholder="Введите ваше имя *" required>
-          <label for="patronymic">ОТЧЕСТВО:</label>
-          <input type="text" class="patronymic" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+          <div class="form-row">
+            <label for="surname">ФАМИЛИЯ:</label>
+            <input type="text" class="surname" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+          </div>
+          <div class="form-row">
+            <label for="name">ИМЯ:</label>
+            <input type="text" class="name" id="name" name="name" placeholder="Введите ваше имя *" required>
+          </div>
+          <div class="form-row">
+            <label for="patronymic">ОТЧЕСТВО:</label>
+            <input type="text" class="patronymic" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+          </div>
         </fieldset>
       </div>
       <fieldset class="form__achievements">
         <legend>Ваши безбашенные достижения в путешествии</legend>
         <div class="wrapper">
-          <input type="checkbox" id="sharp" name="sharp" checked>
-          <label for="sharp" class="custom-checkbox">Сделал селфи с акулой</label>
-          <input type="checkbox" id="tan" name="tan" checked>
-          <label for="tan" class="custom-checkbox">Обгорел на пляже</label>
-          <input type="checkbox" id="chak" name="chak">
-          <label for="chak" class="custom-checkbox">Видел Чака Норриса</label>
-          <input type="checkbox" id="souvenir" name="souvenir">
-          <label for="souvenir" class="custom-checkbox">Накупил сувениров</label>
-          <input type="checkbox" id="tower" name="tower" checked>
-          <label for="tower" class="custom-checkbox">Удержал башню</label>
-          <input type="checkbox" id="hotel" name="hotel">
-          <label for="hotel" class="custom-checkbox">Разгромил отель</label>
-        </div>
+          <div class="form-column">
+            <input type="checkbox" id="sharp" name="sharp" checked>
+            <label for="sharp" class="custom-checkbox">Сделал селфи с акулой</label>
+          </div>
+          <div class="form-column">
+            <input type="checkbox" id="tan" name="tan" checked>
+            <label for="tan" class="custom-checkbox">Обгорел на пляже</label>
+          </div>
+          <div class="form-column">
+            <input type="checkbox" id="chak" name="chak">
+            <label for="chak" class="custom-checkbox">Видел Чака Норриса</label>
+          </div>
+          <div class="form-column">
+            <input type="checkbox" id="souvenir" name="souvenir">
+            <label for="souvenir" class="custom-checkbox">Накупил сувениров</label>
+          </div>
+          <div class="form-column">
+            <input type="checkbox" id="tower" name="tower" checked>
+            <label for="tower" class="custom-checkbox">Удержал башню</label>
+          </div>
+          <div class="form-column">
+            <input type="checkbox" id="hotel" name="hotel">
+            <label for="hotel" class="custom-checkbox">Разгромил отель</label>
+          </div>
       </fieldset>
       <div class="wrapper">
         <fieldset class="form__tel-email">
           <legend>Контактная информация</legend>
-          <label for="form-tel" class="custom-radio">НОМЕР ТЕЛЕФОНА</label>
-          <input type="tel" class="tel" id="form-tel" name="tel" placeholder="Номер пожалуйста">
-          <label for="form-email" class="custom-radio">АДРЕСОК ПОЧТЫ</label>
-          <input type="email" class="email" id="form-email" name="email" placeholder="Введите почту *" required>
+          <div class="form-row">
+            <label for="form-tel" class="custom-radio">НОМЕР ТЕЛЕФОНА</label>
+            <input type="tel" class="tel" id="form-tel" name="tel" placeholder="Номер пожалуйста">
+          </div>
+          <div class="form-row">
+            <label for="form-email" class="custom-radio">АДРЕСОК ПОЧТЫ</label>
+            <input type="email" class="email" id="form-email" name="email" placeholder="Введите почту *" required>
+          </div>
         </fieldset>
       </div>
       <fieldset class="form__app">
