@@ -1,24 +1,24 @@
 .btn {
-  display: block;
-  width: 100%;
-  border: 3px solid @color-white;
-  border-radius: 30px;
-  background: none;
-  padding: 20px;
-  color: @color-white;
-  text-align: center;
   font-family: @font-family-bold;
   font-size: @font-size-btn;
   line-height: 18px;
-  cursor: pointer;
+  display: block;
+  width: 100%;
   margin: 0 auto;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  color: @color-white;
+  border: 3px solid @color-white;
+  border-radius: 30px;
+  background: none;
 }
 
 .btn-menu {
-  background-image: url("../img/icon-menu-burger.svg") no-repeat;
   float: right;
   width: 24px;
   height: 12px;
+  background-image: url('../img/icon-menu-burger.svg') no-repeat;
 }
 
 .btn--download {
@@ -27,82 +27,81 @@
 }
 
 .btn--download:hover {
-  background: @color-white;
-  color: @color-magenta;
   margin: 0 auto 30px;
+  color: @color-magenta;
   outline: none;
+  background: @color-white;
 }
 
 .btn--download:active {
-  background: @color-white;
-  color: rgba(240, 40, 86, 0.3);
   margin: 0 auto 30px;
+  color: rgba(240, 40, 86, .3);
   outline: none;
+  background: @color-white;
 }
 
 .btn--submit {
-  width: 100%;
-  border-radius: 10px;
-  background: #2aab6d;
-  color: @color-white;
   font-family: @font-family-bold;
   font-size: @font-size-btn;
-  padding: 20px;
+  width: 100%;
   margin: 50px 0;
+  padding: 20px;
+  color: @color-white;
+  border-radius: 10px;
   outline: none;
+  background: #2aab6d;
 }
 
 .btn--submit:hover {
-  background: #1c9b5e;
-  outline: none;
   margin: 50px 0;
+  outline: none;
+  background: #1c9b5e;
 }
 
 .btn--submit:active {
-  background: #1c9b5e;
-  color: rgba(255, 255, 255, 0.35);
-  outline: none;
   margin: 50px 0;
+  color: rgba(255, 255, 255, .35);
+  outline: none;
+  background: #1c9b5e;
 }
 
 .btn--submit:disabled {
-  background: #e5e5e5;
+  margin: 50px 0;
   color: @color-white;
   outline: none;
-  margin: 50px 0;
+  background: #e5e5e5;
 }
 
 .btn--post {
-  display: block;
-  width: 100%;
-  border: 3px solid @color-magenta;
   font-family: @font-family-bold;
   font-size: @font-size-btn;
-  color: #d22856;
+  display: block;
+  width: 100%;
   margin-bottom: 12px;
+  color: #d22856;
+  border: 3px solid @color-magenta;
   outline: none;
 }
 
 .btn--post:hover {
   display: block;
   width: 100%;
-  border: 3px solid @color-magenta;
-  background: @color-magenta;
-  color: @color-white;
   margin-bottom: 12px;
+  color: @color-white;
+  border: 3px solid @color-magenta;
   outline: none;
+  background: @color-magenta;
 }
 
 .btn--post:active {
   display: block;
   width: 100%;
-  border: 3px solid @color-magenta;
-  background: @color-magenta;
-  color: rgba(255, 255, 255, 0.3);
   margin-bottom: 12px;
+  color: rgba(255, 255, 255, .3);
+  border: 3px solid @color-magenta;
   outline: none;
+  background: @color-magenta;
 }
-
 @media (min-width: 700px) {
   .btn--download {
     width: 300px;
@@ -117,9 +116,9 @@
   }
 
   .btn--submit {
-    width: 300px;
     display: block;
     float: left;
+    width: 300px;
     margin: 70px 0 0;
   }
 
@@ -133,41 +132,39 @@
     margin: 70px 0 0;
   }
 
-  .btn--post{
+  .btn--post {
     width: 260px;
     margin: 0 0 25px;
   }
 
-  .btn--post:hover{
+  .btn--post:hover {
     width: 260px;
     margin: 0 0 25px;
   }
 
-  .btn--post:active{
+  .btn--post:active {
     width: 260px;
     margin: 0 0 25px;
   }
-
 }
-
 @media (min-width: 1200px) {
   .btn-menu {
     display: none;
   }
 
-  .btn--post{
+  .btn--post {
     display: inline-block;
     width: 180px;
     margin: 85px 45px 0 0;
   }
 
-  .btn--post:hover{
+  .btn--post:hover {
     display: inline-block;
     width: 180px;
     margin: 85px 45px 0 0;
   }
 
-  .btn--post:active{
+  .btn--post:active {
     display: inline-block;
     width: 180px;
     margin: 85px 45px 0 0;

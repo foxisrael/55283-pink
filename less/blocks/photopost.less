@@ -1,69 +1,69 @@
-.photopost{
-  padding: 20px 0 20px;
-  background: #f2f2f2;
+.photopost {
   position: relative;
+  padding: 20px 0;
+  background: #f2f2f2;
 }
 
-.photopost-btn-range{
+.photopost-btn-range {
   margin-bottom: 30px;
 }
 
+.photopost__contrast,
 .photopost__crop,
-.photopost__fill,
-.photopost__contrast{
+.photopost__fill {
   display: inline-block;
-  vertical-align: middle;
-  background: none;
   margin-bottom: 30px;
+  vertical-align: middle;
   border: none;
+  background: none;
 }
 
 .photopost__range:nth-child(2),
-.photopost__range:nth-child(3){
+.photopost__range:nth-child(3) {
   display: none;
 }
 
-.photopost__main-image{
+.photopost__main-image {
   margin: 0 auto 40px;
 }
 
-input[type="reset"]{
+input[type='reset'] {
   display: block;
 }
 
-input[type="reset"]{
+input[type='reset'] {
   width: 100%;
+  color: #dddfe0;
   border: 3px solid #dddfe0;
-  color: #dddfe0;
   outline: none;
 }
 
-input[type="reset"]:hover{
+input[type='reset']:hover {
   width: 100%;
-  border: 3px solid #b5b9be;
   color: #dddfe0;
+  border: 3px solid #b5b9be;
   outline: none;
 }
 
-input[type="reset"]:active{
+input[type='reset']:active {
   width: 100%;
+  color: rgba(255, 255, 255, .3);
   border: 3px solid #b5b9be;
+  outline: none;
   background: #b5b9be;
-  color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
- .photopost::after{
-   content: "";
-   display: block;
-   position: absolute;
-   bottom: 152px;
-   left: 0;
-   width: 100%;
-   height: 2px;
-   background: #dddfe0;
-   margin-bottom: 38px;
- }
+.photopost::after {
+  position: absolute;
+  bottom: 152px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 38px;
+  content: '';
+  background: #dddfe0;
+}
 
 .photopost__range--active {
   position: relative;
@@ -82,23 +82,21 @@ input[type="reset"]:active{
   left: 185px;
   width: 12px;
   height: 12px;
-  background: @color-gray;
+  cursor: pointer;
   border: 2px solid @color-magenta;
   border-radius: 50%;
-  cursor: pointer;
+  background: @color-gray;
 }
 
 .range-toggle:active {
   background: @color-magenta;
 }
-
-
 @media (min-width: 700px) {
-  .photopost{
+  .photopost {
     padding: 55px 40px;
   }
 
-  .photopost__main-image{
+  .photopost__main-image {
     display: block;
     float: left;
     width: 300px;
@@ -107,83 +105,82 @@ input[type="reset"]:active{
     margin-bottom: 0;
   }
 
-  .photopost__filtr{
-    display: block;
-    float: left;
+  .photopost__filtr {
     position: relative;
-  }
-
-  .photopost__crop,
-  .photopost__fill,
-  .photopost__contrast{
     display: block;
-  }
-
-  .photopost__range:first-child{
-    display: block;
-    position: absolute;
     float: left;
+  }
+
+  .photopost__contrast,
+  .photopost__crop,
+  .photopost__fill {
+    display: block;
+  }
+
+  .photopost__range:first-child {
+    position: absolute;
     top: 12px;
     right: 30px;
+    display: block;
+    float: left;
     width: 200px;
   }
 
-  .photopost__range:nth-child(2){
-    display: block;
+  .photopost__range:nth-child(2) {
     position: absolute;
-    float: left;
     top: 100px;
     right: 30px;
+    display: block;
+    float: left;
     width: 200px;
   }
 
-  .photopost__range:last-child{
-    display: block;
+  .photopost__range:last-child {
     position: absolute;
-    float: left;
     top: 185px;
     right: 30px;
+    display: block;
+    float: left;
     width: 200px;
   }
 
-  input[type="reset"]{
+  input[type='reset'] {
     width: 260px;
     margin: 0;
   }
 
-  input[type="reset"]:hover{
+  input[type='reset']:hover {
     width: 260px;
     margin: 0;
   }
 
-  input[type="reset"]:active{
+  input[type='reset']:active {
     width: 260px;
     margin: 0;
   }
 }
-
 @media (min-width: 1200px) {
-  .photopost{
+  .photopost {
     width: 960px;
-    padding: 55px 40px;
     margin: 0 auto;
+    padding: 55px 40px;
   }
 
-  .photopost__main-image{
+  .photopost__main-image {
     margin-right: 90px;
   }
 
-  input[type="reset"]{
+  input[type='reset'] {
     display: inline-block;
     width: 180px;
   }
 
-  input[type="reset"]:hover{
+  input[type='reset']:hover {
     display: inline-block;
     width: 180px;
   }
 
-  input[type="reset"]:active{
+  input[type='reset']:active {
     display: inline-block;
     width: 180px;
   }

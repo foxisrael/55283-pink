@@ -7,9 +7,9 @@
 }
 
 fieldset {
-  border: none;
   margin: 0 auto;
   padding: 40px 0;
+  border: none;
 }
 
 .emotions {
@@ -18,34 +18,35 @@ fieldset {
 
 .form__achievements,
 .form__app {
+  padding: 40px 0;
   background: @color-gray;
 }
 
-.form-row{
+.form-row {
   margin-bottom: 25px;
 }
 
-.form-row:last-child{
+.form-row:last-child {
   margin-bottom: 0;
 }
 
-.form-column{
+.form-column {
   margin-bottom: 43px;
 }
 
-.form-column:last-child{
+.form-column:last-child {
   margin-bottom: 0;
 }
 
 legend {
-  display: inline-block;
   font-family: @font-family-regular;
   font-size: 14px;
   line-height: 18px;
-  color: @color-magenta;
-  text-transform: uppercase;
-  background: @color-gray;
+  display: inline-block;
   margin: 0 20px 40px;
+  text-transform: uppercase;
+  color: @color-magenta;
+  background: @color-gray;
 }
 
 .form__tel-email legend {
@@ -57,13 +58,13 @@ legend {
 }
 
 label {
-  display: block;
-  position: relative;
   font-family: @font-family-regular;
   font-size: @font-size-label;
-  color: @color-magenta;
   line-height: @line-height-label;
+  position: relative;
+  display: block;
   text-align: left;
+  color: @color-magenta;
 }
 
 .form__contacts label,
@@ -80,47 +81,46 @@ label {
 .form__app label {
   font-family: @font-family-regular;
   font-size: 18px;
-  color: @color-darkblue;
   line-height: 30px;
+  color: @color-darkblue;
 }
 
-input[type="email"],
-input[type="tel"],
-input[type="text"],
+input[type='email'],
+input[type='tel'],
+input[type='text'],
 textarea {
-  width: 100%;
-  box-sizing: border-box;
   font-family: @font-family-regular;
-  padding: 20px;
-  text-align: left;
   font-size: 18px;
   line-height: 18px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
   color: @color-darkblue;
   border: 2px solid #e7e7e7;
 }
 
-input[type="email"]:hover,
-input[type="tel"]:hover,
-input[type="text"]:hover,
+input[type='email']:hover,
+input[type='tel']:hover,
+input[type='text']:hover,
 textarea:hover {
   border: 2px solid @color-darkblue;
   outline: none;
 }
 
-input[type="email"]:active,
-input[type="tel"]:active,
-input[type="text"]:active,
+input[type='email']:active,
+input[type='tel']:active,
+input[type='text']:active,
 textarea:active {
   border: 2px solid @color-magenta;
   outline: none;
 }
 
-input[type="email"],
-input[type="tel"] {
-  display: block;
+input[type='email'],
+input[type='tel'] {
   position: relative;
+  display: block;
 }
-
 /* TEXTAREA */
 textarea {
   box-sizing: border-box;
@@ -138,171 +138,171 @@ textarea:active {
   border: 2px solid @color-darkblue;
 }
 /* CHECKBOX */
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   display: none;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  display: block;
+input[type='checkbox'] + label,
+input[type='radio'] + label {
   position: relative;
-  cursor: pointer;
-  padding-left: 70px;
+  display: block;
   margin-bottom: 45px;
+  padding-left: 70px;
+  cursor: pointer;
 }
 
-input[type="checkbox"] + label:last-child,
-input[type="radio"] + label:last-child {
+input[type='checkbox'] + label:last-child,
+input[type='radio'] + label:last-child {
   margin-bottom: 0;
 }
 
-input[type="checkbox"] + label::before {
-  content: "";
-  display: block;
+input[type='checkbox'] + label::before {
   position: absolute;
-  background-color: @color-white;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: '';
   border: 2px solid #e5e5e5;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0;
+  background-color: @color-white;
 }
 
-input[type="checkbox"]:hover + label:hover::before {
-  content: "";
-  display: block;
+input[type='checkbox']:hover + label:hover::before {
   position: absolute;
-  background-color: @color-white;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: '';
   border: 2px solid @color-darkblue;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0;
   outline: none;
-}
-
-input[type="checkbox"]:active + label:active::before {
-  content: "";
-  display: block;
-  position: absolute;
   background-color: @color-white;
-  border: 2px solid @color-magenta;
-  width: 35px;
-  height: 35px;
+}
+
+input[type='checkbox']:active + label:active::before {
+  position: absolute;
   top: -4px;
   left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: '';
+  border: 2px solid @color-magenta;
   outline: none;
+  background-color: @color-white;
 }
 
-input[type="checkbox"]:active + label::after {
-  content: "";
-  display: block;
+input[type='checkbox']:active + label::after {
   position: absolute;
-  background: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
-  width: 22px;
-  height: 16px;
   top: 6px;
   left: 7px;
+  display: block;
+  width: 22px;
+  height: 16px;
+  content: '';
   outline: none;
+  background: url('../img/icon-yes.svg');
+  background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:checked + label::after {
-  content: "";
-  display: block;
+input[type='checkbox']:checked + label::after {
   position: absolute;
-  background: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
-  width: 22px;
-  height: 16px;
   top: 6px;
   left: 7px;
+  display: block;
+  width: 22px;
+  height: 16px;
+  content: '';
   outline: none;
+  background: url('../img/icon-yes.svg');
+  background-repeat: no-repeat;
 }
 /* RADIO */
-input[type="radio"] + label::before {
-  content: "";
-  display: block;
+input[type='radio'] + label::before {
   position: absolute;
-  background-color: @color-white;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: '';
   border: 2px solid #e5e5e5;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0;
+  background-color: @color-white;
 }
 
-input[type="radio"]:hover + label:hover::before {
-  content: "";
-  display: block;
+input[type='radio']:hover + label:hover::before {
   position: absolute;
-  background-color: @color-white;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: '';
   border: 2px solid @color-darkblue;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0;
   outline: none;
+  background-color: @color-white;
 }
 
-input[type="radio"]:active + label:active::before {
-  content: "";
-  display: block;
+input[type='radio']:active + label:active::before {
   position: absolute;
-  background-color: @color-white;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: '';
   border: 2px solid @color-magenta;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0;
   outline: none;
+  background-color: @color-white;
 }
 
-input[type="radio"]:checked + label::after {
-  content: "";
-  display: block;
+input[type='radio']:checked + label::after {
   position: absolute;
+  top: 6px;
+  left: 10px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  content: '';
+  border-radius: 50%;
   background-color: #d22856;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  top: 6px;
-  left: 10px;
 }
 
-input[type="radio"]:checked:hover + label:hover::after {
-  content: "";
-  display: block;
+input[type='radio']:checked:hover + label:hover::after {
   position: absolute;
-  background-color: @color-magenta;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
   top: 6px;
   left: 10px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  content: '';
+  border-radius: 50%;
+  background-color: @color-magenta;
 }
 
-input[type="radio"]:checked:active + label:active::after {
-  content: "";
-  display: block;
+input[type='radio']:checked:active + label:active::after {
   position: absolute;
-  background-color: @color-magenta;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
   top: 6px;
   left: 10px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  content: '';
+  border-radius: 50%;
+  background-color: @color-magenta;
 }
 
 .form span {
   font-family: @font-family-regular;
   font-size: 14px;
-  color: @color-magenta;
   line-height: 30px;
+  color: @color-magenta;
 }
 
 ::-webkit-input-placeholder {
@@ -324,153 +324,189 @@ input[type="radio"]:checked:active + label:active::after {
 
 
 
+@media (min-width: 700px) {
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 
- @media (min-width: 700px) {
-   .wrapper {
-     width: 100%;
-     max-width: 960px;
-     margin: 0 auto;
-     padding: 0 40px;
-   }
+  .wrapper-tablet {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 
-   .form-header {
-     font-size: 18px;
-     line-height: 30px;
-     padding: 100px;
-   }
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 100px;
+  }
 
-   .form {
-     padding: 0;
-   }
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 
-   .form-row {
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-     margin-bottom: 50px;
-   }
+  .form-row {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-   .form-row:last-child {
-     margin-bottom: 0;
-   }
+  .form-row:last-child {
+    margin-bottom: 0;
+  }
 
-   .form-column {
-     margin-bottom: 43px;
-   }
+  .form-column {
+    margin-bottom: 43px;
+  }
 
-   .form-column:last-child {
-     margin-bottom: 0;
-   }
+  .form-column:last-child {
+    margin-bottom: 0;
+  }
 
-   .form__achievements,
-   .form__app {
-     background: @color-white;
-     margin: 0 40px 60px;
-     padding: 50px 20px;
-   }
+  .form__achievements,
+  .form__app {
+    padding: 50px 20px;
+    background: @color-white;
+  }
 
-   fieldset {
-     border: 2px solid #e5e5e5;
-     padding: 50px 60px;
-     margin-bottom: 60px;
-   }
+  fieldset {
+    margin-bottom: 60px;
+    padding: 50px 60px;
+    border: 2px solid #e5e5e5;
+  }
 
-   .form__contacts {
-     padding: 0;
-     border: none;
-   }
+  .form__contacts {
+    padding: 0;
+    border: none;
+  }
 
-   .form__contacts label {
-     padding: 0;
-     margin-right: 20px;
-   }
+  .form__contacts label {
+    margin-right: 20px;
+    padding: 0;
+  }
 
-   .emotions {
-     padding-bottom: 50px;
-     margin-bottom: 0;
-   }
+  .emotions {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+  }
 
-   legend {
-     position: relative;
-     padding: 0 20px;
-     margin-bottom: 0;
-     background: #ffffff;
-   }
+  legend {
+    position: relative;
+    margin-bottom: 0;
+    padding: 0 20px;
+    background: #fff;
+  }
 
-   .form__tel-email legend {
-     background: #ffffff;
-     display: inline-block;
-   }
+  .form__tel-email legend {
+    display: inline-block;
+    background: #fff;
+  }
 
-   .form__tel-email .form-row{
-     flex-direction: column-reverse;
-     margin: 0;
-   }
+  .form__tel-email .form-row {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
 
-   .form__tel-email .form-row:nth-child(2){
-     margin-bottom: 20px;
-   }
+  .form__tel-email .form-row:nth-child(2) {
+    margin-bottom: 20px;
+  }
 
-   .form__tel-email label{
-     align-self: flex-start;
-     margin-top: 20px;
-   }
+  .form__tel-email label {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
 
-   .required-line {
-     display: block;
-     float: right;
-     margin-top: 90px;
-     text-transform: uppercase;
-   }
+  .required-line {
+    display: block;
+    float: right;
+    margin-top: 90px;
+    text-transform: uppercase;
+  }
 
-   input[type="tel"] + label:before {
-     content: "";
-     display: block;
-     position: absolute;
-     background-color: @color-gray;
-     width: 62px;
-     height: 62px;
-     top: 0;
-     right: 0;
-   }
+  input[type='tel'] + label:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 62px;
+    height: 62px;
+    content: '';
+    background-color: @color-gray;
+  }
 
- .form__contacts{
-   display: flex;
-   order: 1;
- }
+  .form__contacts {
+    display: flex;
+    order: 1;
+  }
 
- .form__app{
-   display: flex;
-   order: 2;
- }
+  .form__app {
+    display: flex;
+    order: 2;
+  }
 
- .form__tel-email{
-   display: flex;
-   order: 3;
- }
+  .form__tel-email {
+    display: flex;
+    order: 3;
+  }
 
- .form__achievements{
-   display: flex;
-   order: 4;
- }
+  .form__achievements {
+    display: flex;
+    order: 4;
+  }
 
- .emotions{
-   display: flex;
-   order: 5;
- }
+  .emotions {
+    display: flex;
+    order: 5;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
- }
+  .wrapper-disabled {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 
- @media (min-width: 1200px) {
-   .wrapper{
-     width: 100%;
-     max-width: 960px;
-     margin: 0 auto;
-     padding: 0 20px;
-   }
+  fieldset {
+    padding: 50px 60px;
+  }
 
+  .form__contacts {
+    display: flex;
+    order: 1;
+  }
 
-   fieldset {
-     padding: 50px 60px;
-   }
- }
+  .form__app {
+    display: flex;
+    order: 2;
+  }
+
+  .form__tel-email {
+    display: flex;
+    order: 3;
+  }
+
+  .form__achievements {
+    display: flex;
+    order: 4;
+  }
+
+  .emotions {
+    display: flex;
+    order: 5;
+  }
+}

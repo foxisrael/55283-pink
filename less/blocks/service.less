@@ -1,86 +1,86 @@
-.service{
-  background: @color-gray;
-  padding: 65px 0 50px;
+.service {
   overflow: hidden;
+  padding: 65px 0 50px;
+  background: @color-gray;
 }
 
-table{
+table {
   position: relative;
   left: -520px;
-  border-collapse: collapse;
   margin-bottom: 40px;
-}
-
-th,
-td{
-  border: 3px solid #e5e5e5;
   border-collapse: collapse;
 }
 
-.service .empty{
-  background: @color-gray;
+td,
+th {
+  border-collapse: collapse;
+  border: 3px solid #e5e5e5;
+}
+
+.service .empty {
   border-top: none;
   border-left: none;
+  background: @color-gray;
 }
 
-th{
+th {
   font-family: @font-family-bold;
-  padding: 25px 0;
-  min-width: 280px;
-  background: @color-darkblue;
-  color: @color-white;
-  text-transform: uppercase;
   font-size: 18px;
   line-height: 30px;
+  min-width: 280px;
+  padding: 25px 0;
+  text-transform: uppercase;
+  color: @color-white;
+  background: @color-darkblue;
 }
 
-th span{
+th span {
   font-family: @font-family-light;
   font-size: 24px;
   line-height: 30px;
 }
 
-td{
+td {
   padding: 25px 23px;
   text-align: left;
-  background: @color-white;
   text-transform: uppercase;
   color: @color-darkblue;
+  background: @color-white;
 }
 
-.service-header{
+.service-header {
   display: block;
   float: left;
 }
 
-.service-element-ok,
-.service-element-no{
+.service-element-no,
+.service-element-ok {
   display: block;
   float: right;
 }
 
-.hit{
+.hit {
   position: relative;
 }
 
-.hit::before{
-  content:"";
-  display: block;
+.hit::before {
   position: absolute;
-  color: @color-white;
-  background: url("../img/bg-hit.svg") no-repeat;
-  width: 72px;
-  height: 72px;
   top: 0;
   left: 0;
+  display: block;
+  width: 72px;
+  height: 72px;
+  content: '';
+  color: @color-white;
+  background: url('../img/bg-hit.svg') no-repeat;
 }
 
-.hit::after{
-  content:"ХИТ";
-  display: block;
+.hit::after {
   position: absolute;
-  color: @color-white;
   top: 9px;
   left: 9px;
+  display: block;
+  content: 'ХИТ';
   transform: rotate(-45deg);
+  color: @color-white;
 }
