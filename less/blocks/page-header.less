@@ -11,7 +11,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: @color-darkblue;
 }
 
 .logo {
@@ -23,7 +22,7 @@
   height: 22px;
 }
 
-.page-header__menu-items{
+.page-header__menu-items {
   display: flex;
   flex-direction: column;
 }
@@ -35,10 +34,10 @@
 .menu-item {
   font-family: @font-family-bold;
   display: block;
-  padding: 25px 0;
   text-decoration: none;
   text-transform: uppercase;
   color: @color-white;
+  padding: 20px 0;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000;
 }
@@ -54,7 +53,7 @@
 
 .hand-with-mobile {
   position: relative;
-  top: 6px  ;
+  top: 6px;
   left: 0;
   display: block;
 }
@@ -90,26 +89,49 @@
 .main-apps__apps p {
   color: @color-white;
 }
+@media (min-width: 700px) {
+  .logo {
+    display: block;
+    margin: 25px 0 28px 30px;
+    border: none;
+    background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
+    width: 150px;
+    height: 40px;
+  }
 
- @media (min-width: 700px) {
-   .logo {
-     display: block;
-     margin: 25px 0 28px 30px;
-     border: none;
-     background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
-     width: 150px;
-     height: 40px;
-   }
-
-   .menu-item{
-   font-family: @font-family-bold;
-   font-size: 18px;
-   line-height: 32px;
-   display: block;
-   padding: 25px 0;
+  .menu-item {
+    font-family: @font-family-bold;
+    font-size: 18px;
+    line-height: 32px;
+    align-items: center;
+    padding: 20px 0;
  }
-
 }
- @media (min-width: 1200px) {
+@media (min-width: 1200px) {
+  .page-header{
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 110px;
+    top: 93px;
+    margin: -93px;
+  }
 
- }
+  .page-header__menu {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .page-header__menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 620px;
+  }
+
+  .menu-item {
+    font-family: @font-family-regular;
+  }
+}

@@ -463,47 +463,62 @@ input[type='radio']:checked:active + label:active::after {
     z-index: 1;
   }
 }
-// @media (min-width: 1200px) {
-//   .wrapper {
-//     width: 100%;
-//     max-width: 960px;
-//     margin: 0 auto;
-//     padding: 0 20px;
-//   }
-//
-//   .wrapper-disabled {
-//     width: 100%;
-//     max-width: 960px;
-//     margin: 0 auto;
-//     padding: 0 40px;
-//   }
-//
-//   fieldset {
-//     padding: 50px 60px;
-//   }
-//
-//   .form__contacts {
-//     display: flex;
-//     order: 1;
-//   }
-//
-//   .form__app {
-//     display: flex;
-//     order: 2;
-//   }
-//
-//   .form__tel-email {
-//     display: flex;
-//     order: 3;
-//   }
-//
-//   .form__achievements {
-//     display: flex;
-//     order: 4;
-//   }
-//
-//   .emotions {
-//     display: flex;
-//     order: 5;
-//   }
-// }
+
+
+ @media (min-width: 1200px) {
+   .form {
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: space-between;
+   }
+
+   .form__contacts {
+     display: flex;
+     width: 435px;
+     order: 1;
+     border: none;
+   }
+
+   .form__app {
+     display: flex;
+     background: @color-white;
+     width: 435px;
+     order: 2;
+     margin: 0 0 60px;
+     padding: 50px 60px;
+   }
+
+   .form__tel-email {
+     display: flex;
+     width: 100%;
+     order: 3;
+     margin: 0 0 60px;
+     flex-direction: row;
+   }
+
+   .form__tel-email .form-row{
+
+   }
+
+   .form__achievements {
+     display: flex;
+     background: @color-white;
+     order: 4;
+     margin: 0 0 60px;
+     padding: 50px 60px;
+   }
+
+   .emotions {
+     display: flex;
+     order: 5;
+     margin: 0;
+     padding-bottom: 50px;
+   }
+
+   .form__button {
+     display: flex;
+     justify-content: space-between;
+     order: 6;
+   }
+
+}

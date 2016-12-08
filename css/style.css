@@ -485,6 +485,69 @@ input[type='radio']:checked:active + label:active::after {
     z-index: 1;
   }
 }
+@media (min-width: 1200px) {
+  .form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .form__contacts {
+    display: -ms-flexbox;
+    display: flex;
+    width: 435px;
+    -ms-flex-order: 1;
+        order: 1;
+    border: none;
+  }
+  .form__app {
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    width: 435px;
+    -ms-flex-order: 2;
+        order: 2;
+    margin: 0 0 60px;
+    padding: 50px 60px;
+  }
+  .form__tel-email {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-order: 3;
+        order: 3;
+    margin: 0 0 60px;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  .form__achievements {
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    -ms-flex-order: 4;
+        order: 4;
+    margin: 0 0 60px;
+    padding: 50px 60px;
+  }
+  .emotions {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 5;
+        order: 5;
+    margin: 0;
+    padding-bottom: 50px;
+  }
+  .form__button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-order: 6;
+        order: 6;
+  }
+}
 .page-tour {
   height: 240px;
   padding: 100px 20px 60px;
@@ -505,6 +568,22 @@ input[type='radio']:checked:active + label:active::after {
     font-family: 'opensanslight', sans-serif;
     font-size: 50px;
     line-height: normal;
+  }
+}
+@media (min-width: 1200px) {
+  .page-tour {
+    height: 395px;
+    background: url("../img/bg-back-mobile@1x.jpg");
+    background-size: cover;
+    padding: 220px 100px 110px;
+  }
+  .page-tour h2 {
+    font-family: 'opensanslight', sans-serif;
+    margin: 0;
+    color: #fff;
+  }
+  .page-tour br {
+    display: none;
   }
 }
 .photopost {
@@ -829,6 +908,19 @@ input[type='reset']:active {
   color: #fff;
 }
 @media (min-width: 700px) {
+  .page-hero {
+    height: 100px;
+    padding: 190px 20px 150px;
+    background: url('../img/bg-back-mobile@1x.jpg');
+    background-size: cover;
+  }
+  .page-hero h2 {
+    font-size: 50px;
+    padding: 0 170px;
+    color: #fff;
+  }
+}
+@media (min-width: 1200px) {
   .page-hero {
     height: 100px;
     padding: 190px 20px 150px;
@@ -1255,7 +1347,6 @@ td {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  background: #283645;
 }
 .logo {
   display: block;
@@ -1277,10 +1368,10 @@ td {
 .menu-item {
   font-family: 'opensansbold', sans-serif;
   display: block;
-  padding: 25px 0;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+  padding: 20px 0;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000;
 }
@@ -1294,7 +1385,7 @@ td {
 }
 .hand-with-mobile {
   position: relative;
-  top: 6px  ;
+  top: 6px;
   left: 0;
   display: block;
 }
@@ -1337,8 +1428,41 @@ td {
     font-family: 'opensansbold', sans-serif;
     font-size: 18px;
     line-height: 32px;
-    display: block;
-    padding: 25px 0;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 20px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 110px;
+    top: 93px;
+    margin: -93px;
+  }
+  .page-header__menu {
+    width: 960px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .page-header__menu-items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-preferred-size: 620px;
+        flex-basis: 620px;
+  }
+  .menu-item {
+    font-family: 'opensans', sans-serif;
   }
 }
 .main-header {
