@@ -1,0 +1,109 @@
+.main-apps {
+  position: relative;
+  width: 100%;
+  min-height: 730px;
+  padding: 175px 0 0;
+  background: #1d2631 url('../img/bg-back-mobile@1x.jpg') repeat top center;
+  background-size: cover;
+}
+
+.hand-with-mobile {
+  position: relative;
+  top: 6px;
+  left: 0;
+  display: block;
+}
+
+.main-apps__apps {
+  display: block;
+  margin: 0 -20px;
+  padding: 25px 20px 30px;
+  background: @color-darkblue;
+}
+
+.page-header__apps h2 {
+  font-family: @font-family-light;
+  font-size: 40px;
+  display: none;
+  color: @color-white;
+}
+
+.apps {
+  margin-bottom: 28px;
+}
+
+.apps li {
+  display: inline;
+  margin-right: 35px;
+  vertical-align: top;
+}
+
+.apps li:last-child {
+  margin-right: 0;
+}
+
+.main-apps__apps p {
+  color: @color-white;
+}
+
+@media (min-width: 700px) {
+
+.main-apps{
+  position: relative;
+  min-height: 680px;
+}
+
+.hand-with-mobile{
+  display: block;
+  width: 470px;
+  top: -40px;
+  height: 545px;
+  float: right;
+  margin-right: 45px;
+}
+
+.main-apps__apps{
+  width: 315px;
+  position: absolute;
+  margin-left: 40px;
+  top: 85px;
+  background: none;
+}
+
+.main-apps__apps h2{
+  display: block;
+  color: white;
+  font-size: 40px;
+  padding: 0;
+  font-family: @font-family-light;
+  margin-bottom: 35px;
+}
+}
+
+@media (min-width: 960px) {
+  .main-apps{
+    min-height: 855px;
+  }
+
+  .main-apps__apps{
+    top: 225px;
+  }
+
+  .main-apps__apps h2{
+    margin-bottom: 60px;
+    font-size: 50px;
+  }
+
+  .apps {
+    margin-bottom: 55px;
+  }
+
+  .hand-with-mobile{
+    display: block;
+    width: 470px;
+    top: 135px;
+    height: 545px;
+    float: right;
+    margin-right: 45px;
+  }
+}
