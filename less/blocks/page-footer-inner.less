@@ -56,6 +56,7 @@
   display: inline-block;
   vertical-align: middle;
 }
+
 @media (min-width: 700px) {
   .wrapper {
     width: 100%;
@@ -79,4 +80,21 @@
     margin: 0 90px 0 0;
   }
 }
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .page-footer-inner{
+    padding: 0;
+  }
+
+  .page-footer-inner .wrapper {
+    display: flex;
+    padding: 70px 40px 90px;
+    justify-content: space-between;
+  }
+}

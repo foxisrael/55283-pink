@@ -385,7 +385,7 @@ input[type='radio']:checked:active + label:active::after {
     display: flex;
     -ms-flex-order: 1;
         order: 1;
-    margin: 0 0 60px;
+    width: 100%;
     padding: 0;
     border: none;
   }
@@ -395,6 +395,7 @@ input[type='radio']:checked:active + label:active::after {
     background: #fff;
     -ms-flex-order: 2;
         order: 2;
+    width: 100%;
     margin: 0 0 60px;
     padding: 50px 60px;
   }
@@ -403,7 +404,7 @@ input[type='radio']:checked:active + label:active::after {
     display: flex;
     -ms-flex-order: 3;
         order: 3;
-    margin: 0 0 60px;
+    width: 100%;
   }
   .form__achievements {
     display: -ms-flexbox;
@@ -411,6 +412,7 @@ input[type='radio']:checked:active + label:active::after {
     background: #fff;
     -ms-flex-order: 4;
         order: 4;
+    width: 100%;
     margin: 0 0 60px;
     padding: 50px 60px;
   }
@@ -419,7 +421,7 @@ input[type='radio']:checked:active + label:active::after {
     display: flex;
     -ms-flex-order: 5;
         order: 5;
-    margin: 0;
+    width: 100%;
     padding-bottom: 50px;
   }
   .form__button {
@@ -466,10 +468,10 @@ input[type='radio']:checked:active + label:active::after {
     content: '';
     display: block;
     position: absolute;
-    top: 40px;
-    right: 0;
-    width: 65px;
-    height: 65px;
+    top: 41px;
+    right: 2px;
+    width: 64px;
+    height: 64px;
     background-color: #f2f2f2;
     z-index: 1;
   }
@@ -477,10 +479,10 @@ input[type='radio']:checked:active + label:active::after {
     content: '';
     display: block;
     position: absolute;
-    top: 40px;
-    right: 0;
-    width: 65px;
-    height: 65px;
+    top: 41px;
+    right: 2px;
+    width: 64px;
+    height: 64px;
     background-color: #f2f2f2;
     z-index: 1;
   }
@@ -493,43 +495,62 @@ input[type='radio']:checked:active + label:active::after {
         flex-direction: row;
     -ms-flex-pack: justify;
         justify-content: space-between;
+    -ms-flex-align: start;
+        align-items: flex-start;
   }
   .form__contacts {
     display: -ms-flexbox;
     display: flex;
-    width: 435px;
+    position: relative;
+    top: 15px;
+    width: 45%;
     -ms-flex-order: 1;
         order: 1;
+    margin: 0;
     border: none;
   }
   .form__app {
     display: -ms-flexbox;
     display: flex;
-    background: #fff;
-    width: 435px;
+    width: 45%;
     -ms-flex-order: 2;
         order: 2;
-    margin: 0 0 60px;
+    background: #fff;
     padding: 50px 60px;
   }
   .form__tel-email {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
     -ms-flex-order: 3;
         order: 3;
     margin: 0 0 60px;
-    -ms-flex-direction: row;
-        flex-direction: row;
+  }
+  .form__tel-email .form-row {
+    width: 40%;
+    margin: 0;
   }
   .form__achievements {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: row;
+        flex-direction: row;
     background: #fff;
     -ms-flex-order: 4;
         order: 4;
     margin: 0 0 60px;
     padding: 50px 60px;
+  }
+  .form__achievements .column {
+    width: 30%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .emotions {
     display: -ms-flexbox;
@@ -1186,6 +1207,24 @@ input[type='reset']:active {
   .page-footer__social {
     position: relative;
     margin: 0 90px 0 0;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .page-footer-inner {
+    padding: 0;
+  }
+  .page-footer-inner .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 70px 40px 90px;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
   }
 }
 .service {

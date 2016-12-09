@@ -362,7 +362,7 @@ input[type='radio']:checked:active + label:active::after {
   .form__contacts {
     display: flex;
     order: 1;
-    margin: 0 0 60px;
+    width: 100%;
     padding: 0;
     border: none;
   }
@@ -371,6 +371,7 @@ input[type='radio']:checked:active + label:active::after {
     display: flex;
     background: @color-white;
     order: 2;
+    width: 100%;
     margin: 0 0 60px;
     padding: 50px 60px;
   }
@@ -378,13 +379,14 @@ input[type='radio']:checked:active + label:active::after {
   .form__tel-email {
     display: flex;
     order: 3;
-    margin: 0 0 60px;
+    width: 100%;
   }
 
   .form__achievements {
     display: flex;
     background: @color-white;
     order: 4;
+    width: 100%;
     margin: 0 0 60px;
     padding: 50px 60px;
   }
@@ -392,7 +394,7 @@ input[type='radio']:checked:active + label:active::after {
   .emotions {
     display: flex;
     order: 5;
-    margin: 0;
+    width: 100%;
     padding-bottom: 50px;
   }
 
@@ -443,10 +445,10 @@ input[type='radio']:checked:active + label:active::after {
     content: '';
     display: block;
     position: absolute;
-    top: 40px;
-    right: 0;
-    width: 65px;
-    height: 65px;
+    top: 41px;
+    right: 2px;
+    width: 64px;
+    height: 64px;
     background-color: @color-gray;
     z-index: 1;
   }
@@ -455,10 +457,10 @@ input[type='radio']:checked:active + label:active::after {
     content: '';
     display: block;
     position: absolute;
-    top: 40px;
-    right: 0;
-    width: 65px;
-    height: 65px;
+    top: 41px;
+    right: 2px;
+    width: 64px;
+    height: 64px;
     background-color: @color-gray;
     z-index: 1;
   }
@@ -470,43 +472,55 @@ input[type='radio']:checked:active + label:active::after {
      flex-wrap: wrap;
      flex-direction: row;
      justify-content: space-between;
+     align-items: flex-start;
    }
 
    .form__contacts {
      display: flex;
-     width: 435px;
+     position: relative;
+     top: 15px;
+     width: 45%;
      order: 1;
+     margin: 0;
      border: none;
    }
 
    .form__app {
      display: flex;
-     background: @color-white;
-     width: 435px;
+     width:  45%;
      order: 2;
-     margin: 0 0 60px;
+     background: @color-white;
      padding: 50px 60px;
    }
 
    .form__tel-email {
      display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
      width: 100%;
      order: 3;
      margin: 0 0 60px;
-     flex-direction: row;
    }
 
    .form__tel-email .form-row{
-
+     width: 40%;
+     margin: 0;
    }
 
    .form__achievements {
      display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
      background: @color-white;
      order: 4;
      margin: 0 0 60px;
      padding: 50px 60px;
    }
+
+   .form__achievements .column{
+     width: 30%;
+     flex-wrap: wrap;
+}
 
    .emotions {
      display: flex;
