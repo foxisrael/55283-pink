@@ -28,7 +28,7 @@
   display: none;
 }
 
-.main-about__24-hours{
+.main-24-hours{
   display: none;
 }
 
@@ -69,23 +69,31 @@
     bottom: -60px;
   }
 
-  .main-about__24-hours{
-    padding: 0 40px;
-    display: flex;
-    flex-direction: row;
-    min-height: 400px;
+
+
+
+
+  .main-24-hours{
+    padding: 60px 40px;
     overflow: hidden;
-    justify-content: space-between;
     text-align: left;
   }
 
-  .main-about__24-hours-photo {
+  .main-24-hours .wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-24-hours-photo {
     background: url("http://placehold.it/240x270") no-repeat;
     display: flex;
+    width: 240px;
+    height: 275px;
     order: 1;
   }
 
-  .main-about__24-hours-text {
+  .main-24-hours-text {
     display: flex;
     flex-direction: column;
     order: 2;
@@ -93,7 +101,7 @@
     width: 310px;
   }
 
-  .main-about__24-hours a{
+  .main-24-hours a{
     display: block;
     font-family: @font-family-light;
     font-size: 14px;
@@ -102,6 +110,5 @@
     color: @color-magenta;
     margin-top: 15px;
   }
-
 
 }
