@@ -473,6 +473,146 @@ input[type='radio']:checked:active + label:active::after {
     z-index: 1;
   }
 }
+@media (min-width: 1200px) {
+  .form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 100px;
+  }
+  .form-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .form-column {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+  }
+  .form__contacts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    padding: 0;
+    margin-bottom: 60px;
+    border: none;
+    -ms-flex-order: 1;
+        order: 1;
+    width: 40%;
+  }
+  .form__app {
+    background: #fff;
+    -ms-flex-order: 2;
+        order: 2;
+    margin-bottom: 60px;
+    padding: 50px 60px;
+    width: 40%;
+  }
+  .form__tel-email {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-order: 3;
+        order: 3;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  .form__tel-email .form-column {
+    width: 40%;
+  }
+  .form__achievements {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    background: #fff;
+    -ms-flex-order: 4;
+        order: 4;
+    margin-bottom: 60px;
+    padding: 50px 60px;
+  }
+  .form__comments {
+    -ms-flex-order: 5;
+        order: 5;
+    width: 100%;
+    padding: 50px 60px;
+  }
+  .form__button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-order: 6;
+        order: 6;
+  }
+  fieldset {
+    padding: 50px 60px;
+    border: 2px solid #e5e5e5;
+  }
+  .form__contacts label {
+    margin-right: 20px;
+    padding: 0;
+  }
+  legend {
+    position: relative;
+    top: -60px;
+    background: #fff;
+  }
+  .form__comments legend {
+    position: relative;
+    top: -60px;
+    background: #fff;
+  }
+  .form__tel-email legend {
+    display: inline-block;
+    top: 0;
+    background: #fff;
+  }
+  .required-line {
+    display: block;
+    margin-top: 90px;
+    text-transform: uppercase;
+  }
+  .label-email:before,
+  .label-tel:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 41px;
+    right: 2px;
+    width: 64px;
+    height: 64px;
+    background-color: #f2f2f2;
+    z-index: 1;
+  }
+}
 .page-tour {
   height: 240px;
   padding: 100px 20px 60px;
