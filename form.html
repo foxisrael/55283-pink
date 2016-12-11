@@ -12,7 +12,7 @@
 <body>
   <header class="page-header">
     <nav class="page-header__menu">
-      <div class="page-header__menu-nav clearfix">
+      <div class="page-header__menu-nav">
         <a class="logo" href="#"></a>
         <button type="button" class="btn-menu"></button>
       </div>
@@ -76,11 +76,11 @@
         </fieldset>
         <fieldset class="form__tel-email">
           <legend>Контактная информация</legend>
-          <div class="form-row">
+          <div class="form-column">
             <label for="form-tel" class="label-tel">НОМЕР ТЕЛЕФОНА</label>
             <input type="tel" class="tel" id="form-tel" name="tel" placeholder="Номер пожалуйста">
           </div>
-          <div class="form-row">
+          <div class="form-column">
             <label for="form-email" class="label-email">АДРЕСОК ПОЧТЫ</label>
             <input type="email" class="email" id="form-email" name="email" placeholder="Введите почту *" required>
           </div>
@@ -107,24 +107,26 @@
   </main>
   <footer class="page-footer-inner">
     <div class="wrapper">
-      <div class="page-footer-logo">
-        <a class="pink-logo" href="index.html" title="pink logo"><img src="img/logo-pink-blue-mobile.svg" width="170" height="40" alt="pink logo"></a>
-      </div>
-      <div class="page-footer__social">
-        <ul>
-          <li>
-            <a class="page-footer__twitter" href="#" title="twitter"></a>
-          </li>
-          <li>
-            <a class="page-footer__facebook" href="#" title="facebok"></a>
-          </li>
-          <li>
-            <a class="page-footer__youtube" href="#" title="youtube"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright">
-        <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="img/htmlacademy.svg" width="27" height="34" alt="logo html academy"></a>
+      <div class="page-footer__social page-footer__social-disabled">
+        <div class="footer-logo">
+          <a class="pink-logo" href="index.html" title="pink logo"><img src="img/logo-pink-blue-mobile.svg" width="170" height="40" alt="pink logo"></a>
+        </div>
+        <div class="footer-social">
+          <ul>
+            <li>
+              <a class="footer-social__twitter" href="#" title="twitter"></a>
+            </li>
+            <li>
+              <a class="footer-social__facebook" href="#" title="facebok"></a>
+            </li>
+            <li>
+              <a class="footer-social__youtube" href="#" title="youtube"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <a href="www.htmlacademy.ru" target="_blank">Разработано<img src="img/htmlacademy.svg" width="27" height="34" alt="logo html academy"></a>
+        </div>
       </div>
     </div>
   </footer>

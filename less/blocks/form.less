@@ -10,7 +10,7 @@
 }
 
 fieldset {
-  width: 100%;;
+  width: 100%;
   padding: 40px 0;
   border: none;
 }
@@ -128,8 +128,6 @@ input[type='tel'] {
   position: relative;
   display: block;
 }
-
-
 /* TEXTAREA */
 textarea {
   box-sizing: border-box;
@@ -330,41 +328,41 @@ input[type='radio']:checked:active + label:active::after {
   color: #283645;
 }
 
-
-
-
 @media (min-width: 700px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+  }
+
   .form-header {
     font-size: 18px;
     line-height: 30px;
     padding: 100px;
   }
 
-  .form {
-    padding: 0;
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
-  fieldset {
-    padding: 50px 60px;
-    border: 2px solid #e5e5e5;
+  .form-column {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .form__contacts {
     display: flex;
     flex-direction: row;
-    order: 1;
-    width: 100%;
     padding: 0;
     margin-bottom: 60px;
     border: none;
-  }
-
-  .form__contacts .form-row{
-    flex-direction: column;
+    order: 1;
   }
 
   .form__app {
-    display: flex;
     background: @color-white;
     order: 2;
     margin-bottom: 60px;
@@ -373,22 +371,25 @@ input[type='radio']:checked:active + label:active::after {
 
   .form__tel-email {
     display: flex;
+    flex-direction: column-reverse;
     order: 3;
     margin-bottom: 60px;
     width: 100%;
   }
 
+  fieldset {
+    padding: 50px 60px;
+    border: 2px solid #e5e5e5;
+  }
+
   .form__achievements {
-    display: flex;
     background: @color-white;
     order: 4;
-    width: 100%;
     margin-bottom: 60px;
     padding: 50px 60px;
   }
 
   .form__comments {
-    display: flex;
     order: 5;
     width: 100%;
     padding: 50px 60px;
@@ -396,6 +397,7 @@ input[type='radio']:checked:active + label:active::after {
 
   .form__button {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     order: 6;
   }
@@ -407,17 +409,19 @@ input[type='radio']:checked:active + label:active::after {
 
   legend {
     position: relative;
-    top: 0;
+    top: -60px;
     background: #fff;
   }
 
   .form__comments legend {
-    top: 0;
+    position: relative;
+    top: -60px;
     background: @color-white;
   }
 
   .form__tel-email legend {
     display: inline-block;
+    top: 0;
     background: #fff;
   }
 
@@ -427,8 +431,8 @@ input[type='radio']:checked:active + label:active::after {
     text-transform: uppercase;
   }
 
-  .label-tel:before,
-  .label-email:before   {
+  .label-email:before,
+  .label-tel:before {
     content: '';
     display: block;
     position: absolute;
@@ -439,10 +443,7 @@ input[type='radio']:checked:active + label:active::after {
     background-color: @color-gray;
     z-index: 1;
   }
-
 }
-
-
 //  @media (min-width: 1200px) {
 //    .form {
 //      flex-wrap: wrap;
