@@ -6,7 +6,7 @@
 
 table {
   position: relative;
-  left: -520px;
+  left: -540px;
   margin-bottom: 40px;
   border-collapse: collapse;
 }
@@ -27,7 +27,6 @@ th {
   font-family: @font-family-bold;
   font-size: 18px;
   line-height: 30px;
-  min-width: 280px;
   padding: 25px 0;
   text-transform: uppercase;
   color: @color-white;
@@ -41,6 +40,7 @@ th span {
 }
 
 td {
+  min-width: 280px;
   padding: 25px 23px;
   text-align: left;
   text-transform: uppercase;
@@ -83,4 +83,44 @@ td {
   content: 'ХИТ';
   transform: rotate(-45deg);
   color: @color-white;
+}
+
+@media (min-width: 700px){
+  .service {
+    overflow: hidden;
+    padding: 40px 0 70px;
+    background: @color-gray;
+  }
+
+  table {
+    left: 0;
+  }
+
+  th {
+    font-size: 16px;
+    padding: 20px 0 15px;
+  }
+
+  th span {
+    font-size: 18px;
+  }
+
+  td {
+    min-width: 170px;
+    padding: 13px 15px;
+    width: 150px;
+    text-transform: none;
+  }
+
+  .service-element-no,
+  .service-element-ok {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .service-item-text{
+    display: none;
+  }
+
 }

@@ -989,14 +989,6 @@ input[type='reset']:active {
     margin: 85px 45px 0 0;
   }
 }
-.page-footer {
-  width: 100%;
-  min-height: 615px;
-  background: url('../img/bg-map-mobile@1x.png') no-repeat;
-  background-color: #fff;
-  background-position: center bottom;
-  background-size: cover;
-}
 .page-footer__contacts {
   padding: 50px 0 40px;
   background: #fff;
@@ -1011,7 +1003,7 @@ input[type='reset']:active {
   margin: 25px 0 0;
   color: #283645;
 }
-.page-footer__contacts .call {
+.call {
   margin-top: 0;
 }
 .page-footer__contacts a,
@@ -1022,95 +1014,111 @@ input[type='reset']:active {
   text-decoration: none;
   color: #d22856;
 }
-.page-footer-inner {
-  width: 100%;
+.page-footer__map {
+  height: 200px;
+  background: url('../img/bg-map-mobile@1x.png') no-repeat;
+  background-color: #fff;
+  background-position: center bottom;
+  background-size: cover;
+}
+/* page-footer__SOCICAL */
+.page-footer__social {
   padding: 40px 0;
 }
-.page-footer__social {
+.footer-social {
   margin: 40px 0;
 }
-.page-footer__social li {
+.footer-social li {
   display: inline;
   vertical-align: middle;
 }
-.page-footer__twitter {
+.footer-social__facebook,
+.footer-social__twitter,
+.footer-social__youtube {
   display: inline-block;
   width: 45px;
   height: 45px;
   margin-right: 13px;
   border: 3px solid #e9ebec;
   border-radius: 50%;
+}
+.footer-social__twitter {
   background: url('../img/icon-twitter.svg') no-repeat;
   background-position: center;
 }
-.page-footer__facebook {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  margin-right: 13px;
-  border: 3px solid #e9ebec;
-  border-radius: 50%;
+.footer-social__facebook {
   background: url('../img/icon-facebook.svg') no-repeat;
   background-position: center;
 }
-.page-footer__youtube {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  border: 3px solid #e9ebec;
-  border-radius: 50%;
+.footer-social__youtube {
   background: url('../img/icon-youtube.svg') no-repeat;
   background-position: center;
 }
-.page-footer__copyright a {
+.footer-copyright a {
   font-size: 14px;
   line-height: 18px;
   display: inline-block;
   vertical-align: middle;
   color: #283645;
 }
-.page-footer__copyright img {
+.footer-copyright img {
   display: inline-block;
   vertical-align: middle;
 }
+.page-footer__social-disabled {
+  display: none;
+}
 @media (min-width: 700px) {
-  .wrapper {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-  .page-footer__inner-logo {
-    margin-right: 70px;
-  }
-  .page-footer-inner .wrapper {
+  .page-footer__contacts {
     display: -ms-flexbox;
     display: flex;
-    padding: 85px 40px 35px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 35px 0 50px;
+  }
+  .page-footer h2 {
+    font-size: 40px;
+    margin: 0 60px 55px;
+  }
+  .call,
+  .write-us {
+    width: 40%;
+    margin-bottom: 55px;
+  }
+  .adress {
+    width: 100%;
+  }
+  .page-footer__map {
+    height: 375px;
+  }
+  .page-footer__social {
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between;
   }
-  .page-footer__social {
+  .footer-logo {
+    margin-right: 70px;
+  }
+  .footer-social {
     position: relative;
     margin: 0 90px 0 0;
   }
 }
 @media (min-width: 1200px) {
-  .wrapper {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-  .page-footer-inner {
-    padding: 0;
-  }
-  .page-footer-inner .wrapper {
+  .page-footer__contacts {
     display: -ms-flexbox;
     display: flex;
-    padding: 70px 40px 90px;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 70px 0 85px;
+  }
+  .page-footer__map {
+    height: 500px;
   }
 }
 .service {
@@ -1120,7 +1128,7 @@ input[type='reset']:active {
 }
 table {
   position: relative;
-  left: -520px;
+  left: -540px;
   margin-bottom: 40px;
   border-collapse: collapse;
 }
@@ -1138,7 +1146,6 @@ th {
   font-family: 'opensansbold', sans-serif;
   font-size: 18px;
   line-height: 30px;
-  min-width: 280px;
   padding: 25px 0;
   text-transform: uppercase;
   color: #fff;
@@ -1150,6 +1157,7 @@ th span {
   line-height: 30px;
 }
 td {
+  min-width: 280px;
   padding: 25px 23px;
   text-align: left;
   text-transform: uppercase;
@@ -1187,6 +1195,38 @@ td {
   content: 'ХИТ';
   transform: rotate(-45deg);
   color: #fff;
+}
+@media (min-width: 700px) {
+  .service {
+    overflow: hidden;
+    padding: 40px 0 70px;
+    background: #f2f2f2;
+  }
+  table {
+    left: 0;
+  }
+  th {
+    font-size: 16px;
+    padding: 20px 0 15px;
+  }
+  th span {
+    font-size: 18px;
+  }
+  td {
+    min-width: 170px;
+    padding: 13px 15px;
+    width: 150px;
+    text-transform: none;
+  }
+  .service-element-no,
+  .service-element-ok {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+  .service-item-text {
+    display: none;
+  }
 }
 .slider-navigation li {
   display: inline;
@@ -1269,6 +1309,38 @@ td {
         justify-content: center;
   }
   .slider-navigation__round {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .comments__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin-bottom: 0;
+  }
+  .comments__item p {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 1;
+        order: 1;
+    padding: 0 70px;
+  }
+  .comments__item-header p {
+    display: block;
+  }
+  .comments__item h3 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 2;
+        order: 2;
+    font-size: 20px;
+    line-height: 30px;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .slider-navigation__round {
     display: none;
   }
   .slider-navigation__arrow {
@@ -1290,7 +1362,7 @@ td {
     background: url("http://placehold.it/80x65");
     width: 80px;
     height: 65px;
-    top: -300px;
+    top: -200px;
     display: block;
     position: relative;
     margin: 0 auto;
@@ -1361,47 +1433,6 @@ td {
     height: 545px;
     position: relative;
     bottom: -60px;
-  }
-  .main-24-hours {
-    padding: 60px 40px;
-    overflow: hidden;
-    text-align: left;
-  }
-  .main-24-hours .wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-  }
-  .main-24-hours-photo {
-    background: url("http://placehold.it/240x270") no-repeat;
-    display: -ms-flexbox;
-    display: flex;
-    width: 240px;
-    height: 275px;
-    -ms-flex-order: 1;
-        order: 1;
-  }
-  .main-24-hours-text {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-order: 2;
-        order: 2;
-    padding-top: 65px;
-    width: 310px;
-  }
-  .main-24-hours a {
-    display: block;
-    font-family: 'opensanslight', sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    text-decoration: underline;
-    color: #d22856;
-    margin-top: 15px;
   }
 }
 .page-header {
@@ -1544,7 +1575,7 @@ td {
 }
 .main-apps__apps {
   display: block;
-  margin: 0 -20px;
+  margin: 0 -40px;
   padding: 25px 20px 30px;
   background: #283645;
 }
@@ -1616,5 +1647,49 @@ td {
     top: 135px;
     height: 545px;
     float: right;
+  }
+}
+@media (min-width: 700px) {
+  .main-24-hours {
+    display: block;
+    padding: 60px 40px;
+    overflow: hidden;
+    text-align: left;
+  }
+  .main-24-hours .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .main-24-hours-photo {
+    background: url("http://placehold.it/240x270") no-repeat;
+    display: -ms-flexbox;
+    display: flex;
+    width: 240px;
+    height: 275px;
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .main-24-hours-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-order: 2;
+        order: 2;
+    padding-top: 65px;
+    width: 310px;
+  }
+  .main-24-hours a {
+    display: block;
+    font-family: 'opensanslight', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: underline;
+    color: #d22856;
+    margin-top: 15px;
   }
 }
