@@ -3,7 +3,7 @@
   padding: 55px 0 45px;
 }
 
-.comments .wrapper{
+.comments .wrapper {
   position: relative;
 }
 
@@ -20,58 +20,80 @@
   margin-bottom: 30px;
 }
 
-.comments__item-header p{
+.comments__item-header p {
   display: none;
 }
-
 @media (min-width: 700px) {
-  .comments__item{
+  .comments {
+    padding: 60px 0 20px;
+    text-align: center;
+  }
+
+  .comments__item {
     display: flex;
     flex-direction: column;
+  }
+
+  .comments__item-comment {
+    display: flex;
+    order: 1;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  .comments__item-header {
+    order: 2;
     margin-bottom: 0;
   }
 
-  .comments__item p{
-    display: flex;
-    order: 1;
-    padding: 0 70px;
-  }
-
-  .comments__item-header p{
+  .comments__item-header p {
+    color: @color-darkblue;
+    font-family: @font-family-regular;
     display: block;
   }
 
-  .comments__item h3{
-    display: flex;
-    order: 2;
+  .comments__item-header h3 {
     font-size: 20px;
     line-height: 30px;
-    justify-content: center;
+    color: @color-black;
+  }
+
+  .comments__item p {
+    color: @color-darkblue;
+    font-family: @font-family-regular;
   }
 }
-
 @media (min-width: 1200px) {
-  .comments__item{
-    display: flex;
-    flex-direction: column;
+  .comments {
+    padding: 200px 0 50px;
+  }
+
+  .comments__item {
     margin-bottom: 0;
   }
 
-  .comments__item p{
-    display: flex;
-    order: 1;
-    padding: 0 70px;
+  .comments__item-comment p {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 60px;
   }
 
-  .comments__item-header p{
+  .comments__item-header p {
+    color: @color-darkblue;
+    font-family: @font-family-regular;
     display: block;
   }
 
-  .comments__item h3{
-    display: flex;
-    order: 2;
-    font-size: 20px;
+  .comments__item-header h3 {
+    font-size: 24px;
     line-height: 30px;
-    justify-content: center;
+    color: @color-black;
+    margin-bottom: 20px;
+  }
+
+  .comments__item p {
+    font-size: 18px;
+    color: @color-darkblue;
+    font-family: @font-family-regular;
   }
 }

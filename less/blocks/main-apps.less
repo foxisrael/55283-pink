@@ -8,10 +8,8 @@
 }
 
 .hand-with-mobile {
-  position: relative;
-  top: 6px;
-  left: 0;
   display: block;
+  margin: 0 auto;
 }
 
 .main-apps__apps {
@@ -44,10 +42,10 @@
 
 .main-apps__apps p {
   color: @color-white;
+  padding: 0 40px;
 }
 
 @media (min-width: 700px) {
-
 .main-apps{
   position: relative;
   min-height: 680px;
@@ -55,6 +53,7 @@
 
 .hand-with-mobile{
   display: block;
+  position: relative;
   width: 470px;
   top: -40px;
   height: 545px;
@@ -63,29 +62,47 @@
 }
 
 .main-apps__apps{
-  width: 315px;
+  width: 300px;
   position: absolute;
-  top: 85px;
+  padding: 0;
+  top: 105px;
+  left: 80px;
   background: none;
+}
+
+.main-apps__apps p {
+  padding: 0;
 }
 
 .main-apps__apps h2{
   display: block;
   color: white;
   font-size: 40px;
-  padding: 0;
+  padding: 0 30px;
   font-family: @font-family-light;
   margin-bottom: 35px;
 }
 }
 
 @media (min-width: 960px) {
-  .main-apps{
-    min-height: 855px;
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
   }
 
+  .main-apps{
+    min-width: 300px;
+    min-height: 855px;
+}
+
   .main-apps__apps{
-    top: 225px;
+    left: 20px;
+    top: 45px;
+    padding: 0;
+    width: 310px;
   }
 
   .main-apps__apps h2{
@@ -99,9 +116,14 @@
 
   .hand-with-mobile{
     display: block;
-    width: 470px;
-    top: 135px;
-    height: 545px;
+    width: 550px;
+    top: 35px;
+    height: 645px;
     float: right;
+  }
+
+  .main-apps__apps p{
+    font-size: 18px;
+    line-height: 24px;
   }
 }

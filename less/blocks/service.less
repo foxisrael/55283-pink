@@ -1,13 +1,12 @@
 .service {
   overflow: hidden;
   padding: 65px 0 50px;
+  margin: 0 auto;
   background: @color-gray;
 }
 
 table {
-  position: relative;
-  left: -540px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   border-collapse: collapse;
 }
 
@@ -15,6 +14,19 @@ td,
 th {
   border-collapse: collapse;
   border: 3px solid #e5e5e5;
+}
+
+th {
+  border-top: 3px solid @color-darkblue;
+  border-left: 3px solid @color-darkblue;
+}
+
+th:not(:first-child) {
+  border-bottom: 3px solid @color-darkblue;
+}
+
+th:last-child {
+  border-right: 3px solid @color-darkblue;
 }
 
 .service .empty {
@@ -93,7 +105,8 @@ td {
   }
 
   table {
-    left: 0;
+    position: initial;
+    margin: 0 auto;
   }
 
   th {
@@ -108,7 +121,6 @@ td {
   td {
     min-width: 170px;
     padding: 13px 15px;
-    width: 150px;
     text-transform: none;
   }
 
@@ -120,6 +132,59 @@ td {
   }
 
   .service-item-text{
+    display: none;
+  }
+
+  .slider-navigation-table{
+    display: none;
+  }
+}
+
+
+@media (min-width: 960px){
+  .service {
+    padding: 70px 0 100px;
+  }
+
+  table {
+    position: initial;
+    margin: 0 auto;
+  }
+
+  th {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 20px 0 15px;
+  }
+
+  th span {
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 7px;
+  }
+
+  td {
+    min-width: 230px;
+    padding: 20px 28px 17px 28px;
+    width: 150px;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: none;
+  }
+
+  .service-element-no,
+  .service-element-ok {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .service-item-text{
+    display: none;
+  }
+
+  .slider-navigation-table{
     display: none;
   }
 

@@ -1,14 +1,14 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
   position: relative;
   top: 60px;
   margin-top: -60px;
   background: @color-darkblue;
+  z-index: 3;
 }
 
 .page-header__menu-nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -22,18 +22,13 @@
   height: 22px;
 }
 
-.page-header__menu-items {
-  display: flex;
-  flex-direction: column;
-}
-
 .page-header__menu-items li {
   list-style: none;
 }
 
 .menu-item {
-  font-family: @font-family-bold;
   display: block;
+  font-family: @font-family-bold;
   text-decoration: none;
   text-transform: uppercase;
   color: @color-white;
@@ -44,24 +39,19 @@
 
 @media (min-width: 700px) {
   .logo {
-    display: block;
-    margin: 25px 0 28px 30px;
-    border: none;
     background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
     width: 150px;
     height: 40px;
   }
 
   .menu-item {
-    font-family: @font-family-bold;
     font-size: 18px;
     line-height: 32px;
     align-items: center;
-    padding: 20px 0;
-    border-top: 1px solid #485461;
-    border-bottom: 1px solid #000;
+    text-transform: inherit;
  }
 }
+
 @media (min-width: 1200px) {
   .page-header{
     background: rgba(0, 0, 0, 0.3);
