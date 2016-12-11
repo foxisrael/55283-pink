@@ -1257,6 +1257,43 @@ td {
   background: #fff;
   background: #b5b9be;
 }
+.slider-navigation__arrow {
+  display: none;
+}
+@media (min-width: 700px) {
+  .slider-navigation__round {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .slider-navigation__round {
+    display: none;
+  }
+  .slider-navigation__arrow {
+    display: block;
+  }
+  .arrow-left {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 0;
+  }
+  .arrow-right {
+    display: block;
+    position: absolute;
+    top: 120px;
+    right: 0;
+  }
+  .slider-navigation__arrow-element {
+    background: url("http://placehold.it/80x65");
+    width: 80px;
+    height: 65px;
+    top: -200px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+  }
+}
 .comments {
   position: relative;
   padding: 55px 0 45px;
@@ -1275,9 +1312,6 @@ td {
   margin-bottom: 30px;
 }
 .comments__item-header p {
-  display: none;
-}
-.slider-navigation__arrow {
   display: none;
 }
 @media (min-width: 700px) {
@@ -1308,9 +1342,6 @@ td {
     -ms-flex-pack: center;
         justify-content: center;
   }
-  .slider-navigation__round {
-    display: block;
-  }
 }
 @media (min-width: 1200px) {
   .comments__item {
@@ -1339,33 +1370,6 @@ td {
     line-height: 30px;
     -ms-flex-pack: center;
         justify-content: center;
-  }
-  .slider-navigation__round {
-    display: none;
-  }
-  .slider-navigation__arrow {
-    display: block;
-  }
-  .arrow-left {
-    display: block;
-    position: absolute;
-    top: 120px;
-    left: 0;
-  }
-  .arrow-right {
-    display: block;
-    position: absolute;
-    top: 120px;
-    right: 0;
-  }
-  .slider-navigation__arrow-element {
-    background: url("http://placehold.it/80x65");
-    width: 80px;
-    height: 65px;
-    top: -200px;
-    display: block;
-    position: relative;
-    margin: 0 auto;
   }
 }
 .main-about {
@@ -1505,8 +1509,8 @@ td {
     background: rgba(0, 0, 0, 0.3);
     position: relative;
     height: 110px;
-    top: 93px;
-    margin: -93px;
+    top: 110px;
+    margin-top: -110px;
     z-index: 1;
   }
   .page-header__menu {
