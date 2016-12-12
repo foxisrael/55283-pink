@@ -104,11 +104,18 @@
     line-height: 30px;
   }
 
-  .post{
+  .post-footer {
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .post .wrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
+
 
   .header-panorama-photo{
     height: 510px;
@@ -120,21 +127,20 @@
 
   .post__item--panorama{
     width: 100%;
+    flex-grow: 2;
+
+    padding: 520px 0 20px;
+    margin: 0 20px 20px;
   }
 
   .post__item {
     width: 300px;
     height: 455px;
-    margin: 0 20px 20px 0;
   }
 
   .post__item-photo {
     width: 300px;
     height: 300px;
-  }
-
-  .post-footer {
-    margin-top: 20px;
   }
 }
 @media (min-width: 1200px) {

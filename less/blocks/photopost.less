@@ -1,7 +1,15 @@
 .photopost {
-  position: relative;
   padding: 20px 0;
-  background: #f2f2f2;
+  background: @color-gray;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.photopost__btn-editors{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .photopost-btn-range {
@@ -11,9 +19,7 @@
 .photopost__contrast,
 .photopost__crop,
 .photopost__fill {
-  display: inline-block;
   margin-bottom: 30px;
-  vertical-align: middle;
   border: none;
   background: none;
 }
@@ -91,14 +97,24 @@ input[type='reset']:active {
 .range-toggle:active {
   background: @color-magenta;
 }
+
+
 @media (min-width: 700px) {
   .photopost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 55px 40px;
   }
 
+  .photopos .wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .photopost__main-image {
-    display: block;
-    float: left;
     width: 300px;
     height: 400px;
     margin-right: 40px;
@@ -106,23 +122,36 @@ input[type='reset']:active {
   }
 
   .photopost__filtr {
-    position: relative;
-    display: block;
-    float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   }
 
-  .photopost__contrast,
-  .photopost__crop,
-  .photopost__fill {
-    display: block;
+  .photopost__btn-editors{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    order: 1;
+  }
+
+  .photopost__btn-range{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    order: 2;
+  }
+
+  .photopost__btn-submit{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    order: 3;
   }
 
   .photopost__range:first-child {
     position: absolute;
     top: 12px;
     right: 30px;
-    display: block;
-    float: left;
     width: 200px;
   }
 
@@ -130,8 +159,6 @@ input[type='reset']:active {
     position: absolute;
     top: 100px;
     right: 30px;
-    display: block;
-    float: left;
     width: 200px;
   }
 
@@ -139,8 +166,6 @@ input[type='reset']:active {
     position: absolute;
     top: 185px;
     right: 30px;
-    display: block;
-    float: left;
     width: 200px;
   }
 
@@ -159,6 +184,12 @@ input[type='reset']:active {
     margin: 0;
   }
 }
+
+
+
+
+
+
 @media (min-width: 1200px) {
   .photopost {
     width: 960px;
