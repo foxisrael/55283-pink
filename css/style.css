@@ -409,6 +409,13 @@ input[type='radio']:checked:active + label:active::after {
     margin-bottom: 60px;
     width: 100%;
   }
+  .form__tel-email .form-column {
+    margin-bottom: 20px;
+  }
+  .form__tel-email label {
+    margin: 10px 0 0 20px;
+    padding: 0;
+  }
   fieldset {
     padding: 50px 60px;
     border: 2px solid #e5e5e5;
@@ -456,7 +463,7 @@ input[type='radio']:checked:active + label:active::after {
     background: #fff;
   }
   .required-line {
-    display: block;
+    display: inline-block;
     margin-top: 90px;
     text-transform: uppercase;
   }
@@ -465,7 +472,7 @@ input[type='radio']:checked:active + label:active::after {
     content: '';
     display: block;
     position: absolute;
-    top: 41px;
+    top: -76px;
     right: 2px;
     width: 64px;
     height: 64px;
@@ -473,7 +480,7 @@ input[type='radio']:checked:active + label:active::after {
     z-index: 1;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .form {
     display: -ms-flexbox;
     display: flex;
@@ -490,39 +497,25 @@ input[type='radio']:checked:active + label:active::after {
     line-height: 30px;
     padding: 100px;
   }
-  .form-row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-align: center;
-        align-items: center;
-  }
-  .form-column {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-  }
   .form__contacts {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    padding: 0;
-    margin-bottom: 60px;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
     border: none;
     -ms-flex-order: 1;
         order: 1;
-    width: 40%;
+    width: 45%;
   }
   .form__app {
     background: #fff;
     -ms-flex-order: 2;
         order: 2;
-    margin-bottom: 60px;
-    padding: 50px 60px;
-    width: 40%;
+    margin: 0 0 60px;
+    padding: 35px 60px;
+    width: 45%;
   }
   .form__tel-email {
     display: -ms-flexbox;
@@ -531,10 +524,10 @@ input[type='radio']:checked:active + label:active::after {
         flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-order: 3;
         order: 3;
-    margin-bottom: 60px;
-    width: 100%;
   }
   .form__tel-email .form-column {
     width: 40%;
@@ -546,14 +539,14 @@ input[type='radio']:checked:active + label:active::after {
         flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-align: start;
         align-items: flex-start;
     background: #fff;
     -ms-flex-order: 4;
         order: 4;
-    margin-bottom: 60px;
+    margin: 0 0 60px;
     padding: 50px 60px;
   }
   .form__comments {
@@ -586,14 +579,12 @@ input[type='radio']:checked:active + label:active::after {
     background: #fff;
   }
   .form__comments legend {
-    position: relative;
-    top: -60px;
     background: #fff;
   }
-  .form__tel-email legend {
+  .form__tel-email legend,
+  .form__achievements legend {
     display: inline-block;
     top: 0;
-    background: #fff;
   }
   .required-line {
     display: block;
@@ -605,7 +596,7 @@ input[type='radio']:checked:active + label:active::after {
     content: '';
     display: block;
     position: absolute;
-    top: 41px;
+    top: -76px;
     right: 2px;
     width: 64px;
     height: 64px;
@@ -1089,8 +1080,6 @@ input[type='reset']:active {
     width: 300px;
   }
   .btn--submit {
-    display: block;
-    float: left;
     width: 300px;
     margin: 70px 0 0;
   }
