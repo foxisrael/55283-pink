@@ -353,9 +353,6 @@ input[type='radio']:checked:active + label:active::after {
   color: #283645;
 }
 @media (min-width: 700px) {
-  .wrapper {
-    padding: 0 40px;
-  }
   .form {
     display: -ms-flexbox;
     display: flex;
@@ -437,9 +434,9 @@ input[type='radio']:checked:active + label:active::after {
     padding: 50px 60px;
   }
   .form__button {
-    width: 100%;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     -ms-flex-direction: row;
         flex-direction: row;
     -ms-flex-pack: justify;
@@ -462,7 +459,7 @@ input[type='radio']:checked:active + label:active::after {
     background: #fff;
   }
   .form__tel-email legend {
-    display: block;
+    display: inline-block;
     top: 0;
     background: #fff;
   }
@@ -486,21 +483,93 @@ input[type='radio']:checked:active + label:active::after {
 }
 @media (min-width: 960px) {
   .form {
-    width: 100%;
-    -ms-flex-direction: column;
-        flex-direction: column;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 0;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 100px;
   }
   .form__contacts {
-    width: 40%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    border: none;
     -ms-flex-order: 1;
         order: 1;
+    width: 45%;
   }
   .form__app {
-    width: 40%;
+    background: #fff;
     -ms-flex-order: 2;
         order: 2;
+    margin: 0 0 60px;
+    padding: 35px 60px;
+    width: 45%;
+  }
+  .form__tel-email {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .form__tel-email .form-column {
+    width: 40%;
+  }
+  fieldset {
+    padding: 50px 60px;
+    border: 2px solid #e5e5e5;
+  }
+  .form__contacts label {
+    margin-right: 20px;
+    padding: 0;
+  }
+  legend {
+    position: relative;
+    top: -60px;
+    background: #fff;
+  }
+  .form__comments legend {
+    background: #fff;
+  }
+  .form__tel-email legend,
+  .form__achievements legend {
+    display: inline-block;
+    top: 0;
+  }
+  .required-line {
+    display: block;
+    margin-top: 90px;
+    text-transform: uppercase;
+  }
+  .label-email:before,
+  .label-tel:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -76px;
+    right: 2px;
+    width: 64px;
+    height: 64px;
+    background-color: #f2f2f2;
+    z-index: 1;
   }
 }
 .page-tour {
