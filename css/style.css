@@ -452,6 +452,10 @@ input[type="radio"]:checked:active + label:active::after {
     width: 45%;
   }
   .form__app {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
     -ms-flex-order: 2;
         order: 2;
     width: 45%;
