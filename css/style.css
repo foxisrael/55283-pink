@@ -687,14 +687,16 @@ input[type='radio']:checked:active + label:active::after {
 }
 .range-toggle {
   position: absolute;
-  top: -5px;
-  left: 185px;
   width: 12px;
   height: 12px;
   cursor: pointer;
   border: 2px solid #d22856;
   border-radius: 50%;
   background: #f2f2f2;
+}
+.toggle-1 {
+  top: -5px;
+  left: 185px;
 }
 .range-toggle:active {
   background: #d22856;
@@ -723,26 +725,21 @@ input[type='reset']:active {
   .photopost {
     -ms-flex-direction: row;
         flex-direction: row;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding: 40px 60px;
+    margin: 0 -40px;
   }
   .photopost::after {
     display: none;
   }
   .photopost__main-image {
-    width: 300px;
+    width: 45%;
     height: 400px;
     margin: 0 50px 0 0;
   }
-  .photopost .wrapper {
-    width: 275px;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
   .photopost__filtr {
+    width: 45%;
     -ms-flex-direction: row;
         flex-direction: row;
     -ms-flex-wrap: wrap;
@@ -778,34 +775,35 @@ input[type='reset']:active {
   .photopost__range:nth-child(3) {
     position: relative;
     display: block;
-    top: 145px;
+    top: 120px;
   }
-  .range-toggle {
-    position: absolute;
+  .toggle-1 {
     top: -5px;
     left: 125px;
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-    border: 2px solid #d22856;
-    border-radius: 50%;
-    background: #f2f2f2;
   }
-  .range-toggle:last-child {
-    position: absolute;
+  .toggle-2 {
     top: -5px;
-    left: 155px;
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-    border: 2px solid #d22856;
-    border-radius: 50%;
-    background: #f2f2f2;
+    left: 25px;
   }
-  .photopost__range--active {
+  .toggle-3 {
+    top: -5px;
+    left: 85px;
+  }
+  .photopost__range {
     position: relative;
     width: 180px;
     margin: 20px 0;
+  }
+  .photopost__range::after {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    display: block;
+    width: 290px;
+    height: 2px;
+    margin-bottom: 38px;
+    content: '';
+    background: #dddfe0;
   }
   .photopost__btn-submit {
     display: -ms-flexbox;
@@ -814,6 +812,7 @@ input[type='reset']:active {
         flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
   input[type='reset'] {
     display: block;
@@ -823,6 +822,54 @@ input[type='reset']:active {
   }
   input[type='reset']:active {
     width: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .photopost {
+    padding: 60px 80px;
+    margin: 0;
+  }
+  .photopost__main-image {
+    width: 35%;
+  }
+  .photopost__filtr {
+    width: 53%;
+  }
+  .photopost__range {
+    position: relative;
+    width: 290px;
+    margin: 20px 0;
+  }
+  .toggle-1 {
+    top: -5px;
+    left: 60px;
+  }
+  .toggle-2 {
+    top: -5px;
+    left: 165px;
+  }
+  .toggle-3 {
+    top: -5px;
+    left: 125px;
+  }
+  .photopost__range::after {
+    width: 410px;
+    left: -80px;
+  }
+  input[type='reset'] {
+    display: block;
+    width: 180px;
+    margin: 0;
+  }
+  input[type='reset']:hover {
+    display: block;
+    width: 180px;
+    margin: 0;
+  }
+  input[type='reset']:active {
+    display: block;
+    width: 180px;
+    margin: 0;
   }
 }
 .post {
@@ -1119,16 +1166,16 @@ input[type='reset']:active {
     margin: 70px 0 0;
   }
   .btn--post {
-    width: 260px;
-    margin: 0 0 25px;
+    width: 100%;
+    margin: 0 0 15px;
   }
   .btn--post:hover {
-    width: 260px;
-    margin: 0 0 25px;
+    width: 100%;
+    margin: 0 0 15px;
   }
   .btn--post:active {
-    width: 260px;
-    margin: 0 0 25px;
+    width: 100%;
+    margin: 0 0 15px;
   }
 }
 @media (min-width: 1200px) {
@@ -1145,19 +1192,16 @@ input[type='reset']:active {
     display: none;
   }
   .btn--post {
-    display: inline-block;
     width: 180px;
-    margin: 85px 45px 0 0;
+    margin: 0;
   }
   .btn--post:hover {
-    display: inline-block;
     width: 180px;
-    margin: 85px 45px 0 0;
+    margin: 0;
   }
   .btn--post:active {
-    display: inline-block;
     width: 180px;
-    margin: 85px 45px 0 0;
+    margin: 0;
   }
 }
 .page-footer {
