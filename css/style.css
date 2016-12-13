@@ -982,6 +982,10 @@ input[type='reset']:active {
     width: 300px;
     height: 455px;
   }
+  .post__item:nth-child(6),
+  .post__item:nth-child(7) {
+    margin-bottom: 0;
+  }
   .post__item-photo {
     width: 300px;
     height: 300px;
@@ -991,6 +995,7 @@ input[type='reset']:active {
     -ms-flex-positive: 2;
         flex-grow: 2;
     height: 660px;
+    margin: 0 20px 20px;
   }
   .header-panorama-photo {
     width: 100%;
