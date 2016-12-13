@@ -2,28 +2,24 @@
   padding: 55px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.form-header {
-  padding: 0 20px;
-}
-
-fieldset {
-  width: 100%;
-  padding: 40px 0;
-  border: none;
-}
-
-.form__comments {
-  padding: 75px 0 0;
+.form__contacts,
+.form__tel-email {
+  padding-top: 40px;
+  margin: 0;
 }
 
 .form__achievements,
 .form__app {
   margin: 0 -20px;
-  padding: 110px 20px 40px;
+  padding: 110px 40px 40px;
   background: @color-gray;
+}
+
+.form__comments {
+  margin-bottom: 0;
 }
 
 .form-row {
@@ -42,26 +38,25 @@ fieldset {
   margin-bottom: 0;
 }
 
+.form__comments {
+  padding: 75px 0 40px;
+}
+
+fieldset {
+  padding: 110px 20px 40px;
+  border: 0;
+  margin-bottom: 40px;
+}
+
 legend {
   position: relative;
-  top: -60px;
-  padding: 0 20px;
+  top: 60px;
   font-family: @font-family-regular;
   font-size: 14px;
   line-height: 18px;
-  display: inline-block;
   text-transform: uppercase;
   color: @color-magenta;
   background: @color-gray;
-}
-
-.form__tel-email legend {
-  display: none;
-}
-
-.form__comments legend {
-  top: -40px;
-  background: @color-white;
 }
 
 label {
@@ -72,6 +67,14 @@ label {
   display: block;
   text-align: left;
   color: @color-magenta;
+}
+
+.form__tel-email legend {
+  display: none;
+}
+
+.form__comments legend {
+  background: @color-white;
 }
 
 .form__contacts label,
@@ -92,9 +95,9 @@ label {
   color: @color-darkblue;
 }
 
-input[type='email'],
-input[type='tel'],
-input[type='text'],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
 textarea {
   font-family: @font-family-regular;
   font-size: 18px;
@@ -107,24 +110,24 @@ textarea {
   border: 2px solid #e7e7e7;
 }
 
-input[type='email']:hover,
-input[type='tel']:hover,
-input[type='text']:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover,
 textarea:hover {
   border: 2px solid @color-darkblue;
   outline: none;
 }
 
-input[type='email']:active,
-input[type='tel']:active,
-input[type='text']:active,
+input[type="email"]:active,
+input[type="tel"]:active,
+input[type="text"]:active,
 textarea:active {
   border: 2px solid @color-magenta;
   outline: none;
 }
 
-input[type='email'],
-input[type='tel'] {
+input[type="email"],
+input[type="tel"] {
   position: relative;
   display: block;
 }
@@ -145,13 +148,13 @@ textarea:active {
   border: 2px solid @color-darkblue;
 }
 /* CHECKBOX */
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   display: none;
 }
 
-input[type='checkbox'] + label,
-input[type='radio'] + label {
+input[type="checkbox"] + label,
+input[type="radio"] + label {
   position: relative;
   display: block;
   margin-bottom: 45px;
@@ -159,149 +162,95 @@ input[type='radio'] + label {
   cursor: pointer;
 }
 
-input[type='checkbox'] + label:last-child,
-input[type='radio'] + label:last-child {
+input[type="checkbox"] + label:last-child,
+input[type="radio"] + label:last-child {
   margin-bottom: 0;
 }
-
-input[type='checkbox'] + label::before {
+/* checkbox before */
+input[type="checkbox"] + label::before {
   position: absolute;
   top: -4px;
   left: 0;
   display: block;
   width: 35px;
   height: 35px;
-  content: '';
+  content: "";
   border: 2px solid #e5e5e5;
   background-color: @color-white;
 }
 
-input[type='checkbox']:hover + label:hover::before {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  display: block;
-  width: 35px;
-  height: 35px;
-  content: '';
+input[type="checkbox"]:hover + label:hover::before {
   border: 2px solid @color-darkblue;
-  outline: none;
-  background-color: @color-white;
 }
 
-input[type='checkbox']:active + label:active::before {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  display: block;
-  width: 35px;
-  height: 35px;
-  content: '';
+input[type="checkbox"]:active + label:active::before {
   border: 2px solid @color-magenta;
-  outline: none;
-  background-color: @color-white;
 }
-
-input[type='checkbox']:active + label::after {
+/* checkbox after */
+input[type="checkbox"]:active + label::after {
   position: absolute;
   top: 6px;
   left: 7px;
   display: block;
   width: 22px;
   height: 16px;
-  content: '';
+  content: "";
   outline: none;
-  background: url('../img/icon-yes.svg');
+  background: url("../img/icon-yes.svg");
   background-repeat: no-repeat;
 }
 
-input[type='checkbox']:checked + label::after {
+input[type="checkbox"]:checked + label::after {
   position: absolute;
   top: 6px;
   left: 7px;
   display: block;
   width: 22px;
   height: 16px;
-  content: '';
+  content: "";
   outline: none;
-  background: url('../img/icon-yes.svg');
+  background: url("../img/icon-yes.svg");
   background-repeat: no-repeat;
 }
-/* RADIO */
-input[type='radio'] + label::before {
+/* radio before */
+input[type="radio"] + label::before {
   position: absolute;
   top: -4px;
   left: 0;
   display: block;
   width: 35px;
   height: 35px;
-  content: '';
+  content: "";
   border: 2px solid #e5e5e5;
   border-radius: 50%;
   background-color: @color-white;
 }
 
-input[type='radio']:hover + label:hover::before {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  display: block;
-  width: 35px;
-  height: 35px;
-  content: '';
+input[type="radio"]:hover + label:hover::before {
   border: 2px solid @color-darkblue;
-  border-radius: 50%;
-  outline: none;
-  background-color: @color-white;
 }
 
-input[type='radio']:active + label:active::before {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  display: block;
-  width: 35px;
-  height: 35px;
-  content: '';
+input[type="radio"]:active + label:active::before {
   border: 2px solid @color-magenta;
-  border-radius: 50%;
-  outline: none;
-  background-color: @color-white;
 }
-
-input[type='radio']:checked + label::after {
+/* radio after */
+input[type="radio"]:checked + label::after {
   position: absolute;
   top: 6px;
   left: 10px;
   display: block;
   width: 15px;
   height: 15px;
-  content: '';
+  content: "";
   border-radius: 50%;
   background-color: #d22856;
 }
 
-input[type='radio']:checked:hover + label:hover::after {
-  position: absolute;
-  top: 6px;
-  left: 10px;
-  display: block;
-  width: 15px;
-  height: 15px;
-  content: '';
-  border-radius: 50%;
+input[type="radio"]:checked:hover + label:hover::after {
   background-color: @color-magenta;
 }
 
-input[type='radio']:checked:active + label:active::after {
-  position: absolute;
-  top: 6px;
-  left: 10px;
-  display: block;
-  width: 15px;
-  height: 15px;
-  content: '';
-  border-radius: 50%;
+input[type="radio"]:checked:active + label:active::after {
   background-color: @color-magenta;
 }
 
@@ -313,248 +262,274 @@ input[type='radio']:checked:active + label:active::after {
 }
 
 ::-webkit-input-placeholder {
-  color: #283645;
+  color: @color-darkblue;
 }
 
 ::-moz-placeholder {
-  color: #283645;
+  color: @color-darkblue;
 }
 
 :-moz-placeholder {
-  color: #283645;
+  color: @color-darkblue;
 }
 
 :-ms-input-placeholder {
-  color: #283645;
+  color: @color-darkblue;
 }
 
-@media (min-width: 700px) {
-  .form {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    justify-content: space-between;
-  }
 
+@media (min-width: 700px) {
   .form-header {
     font-size: 18px;
     line-height: 30px;
-    padding: 100px;
+    margin-bottom: 75px;
+    padding: 0 20px;
   }
 
-  .form-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .form-column {
-    display: flex;
-    flex-direction: column-reverse;
+  .form {
+    padding: 100px 0 0;
   }
 
   .form__contacts {
     display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin-bottom: 60px;
-    border: none;
     order: 1;
   }
 
   .form__app {
-    background: @color-white;
+    display: flex;
     order: 2;
-    margin-bottom: 60px;
-    padding: 50px 60px;
   }
 
   .form__tel-email {
     display: flex;
     flex-direction: column-reverse;
     order: 3;
-    margin-bottom: 60px;
     width: 100%;
-  }
-
-  .form__tel-email .form-column {
-    margin-bottom: 20px;
-  }
-
-  .form__tel-email label{
-    margin: 10px 0 0 20px;
-    padding: 0;
-  }
-
-  fieldset {
-    padding: 50px 60px;
-    border: 2px solid #e5e5e5;
   }
 
   .form__achievements {
-    background: @color-white;
+    display: flex;
     order: 4;
-    margin-bottom: 60px;
-    padding: 50px 60px;
   }
 
   .form__comments {
+    display: flex;
     order: 5;
-    width: 100%;
-    padding: 50px 60px;
   }
 
   .form__button {
-    display: flex;
     width: 100%;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     order: 6;
   }
 
-  .form__contacts label {
-    margin-right: 20px;
-    padding: 0;
+  .form__contacts .form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  legend {
-    position: relative;
-    top: -60px;
-    background: #fff;
+  .form__contacts,
+  .form__tel-email {
+    padding: 40px 60px;
+    margin: 0 0 60px;
   }
 
-  .form__comments legend {
-    position: relative;
-    top: -60px;
+  .form__achievements,
+  .form__app {
+    margin: 0 0 60px;
+    padding: 40px 60px;
     background: @color-white;
   }
 
-  .form__tel-email legend {
-    display: inline-block;
-    top: 0;
-    background: #fff;
+  .form__comments {
+    padding: 40px 60px;
+    margin-bottom: 0;
   }
 
-  .required-line {
-    display: inline-block;;
-    margin-top: 90px;
-    text-transform: uppercase;
+  fieldset {
+    padding: 110px 20px 40px;
+    border: 2px solid #e5e5e5;
+    margin-bottom: 40px;
   }
 
-  .label-email:before,
-  .label-tel:before {
-    content: '';
+  fieldset.form__contacts {
+    border: none;
+    padding: 0;
+  }
+
+  .form__comments legend,
+  .form__tel-email legend,
+  legend {
     display: block;
-    position: absolute;
-    top: -76px;
-    right: 2px;
-    width: 64px;
-    height: 64px;
-    background-color: @color-gray;
-    z-index: 1;
+    position: relative;
+    top: 0;
+    padding: 0 20px;
+    background: @color-white;
+  }
+
+  .form__contacts label,
+  .form__tel-email label {
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  .form__contacts label:first-of-type,
+  .form__tel-email label:first-of-type {
+    padding-top: 0;
+  }
+
+  .form__achievements label,
+  .form__app label {
+    font-family: @font-family-regular;
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-darkblue;
+  }
+
+  .form span {
+    font-family: @font-family-regular;
+    font-size: 14px;
+    line-height: 30px;
+    color: @color-magenta;
   }
 }
 
-@media (min-width: 960px) {
 
+@media (min-width: 960px) {
   .form {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0;
-    justify-content: space-between;
-  }
-
-  .form-header {
-    font-size: 18px;
-    line-height: 30px;
-    padding: 100px;
   }
 
   .form__contacts {
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-    border: none;
+    justify-content: space-between;
     order: 1;
     width: 45%;
   }
 
   .form__app {
-    background: @color-white;
     order: 2;
-    margin: 0 0 60px;
-    padding: 35px 60px;
     width: 45%;
   }
 
   .form__tel-email {
     display: flex;
     flex-direction: row;
+    align-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-between;
     order: 3;
+    width: 100%;
   }
 
   .form__tel-email .form-column{
-    width: 40%;
+    display: block;
+    width: 45%;
   }
 
-  // .form__achievements {
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  //   align-items: flex-start;
-  //   background: @color-white;
-  //   order: 4;
-  //   margin: 0 0 60px;
-  //   padding: 50px 60px;
-  //   width: 100%;
-  // }
+  .form__achievements {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+    order: 4;
+    width: 100%;
+  }
+
+  .form__achievements .form-column{
+    width: 30%;
+  }
+
+  .form__comments {
+    display: flex;
+    order: 5;
+    width: 100%;
+  }
+
+  .form__button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    order: 6;
+  }
+
+  .form__contacts .form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__contacts,
+  .form__tel-email {
+    padding: 40px 60px;
+    margin: 0 0 60px;
+  }
+
+  .form__achievements,
+  .form__app {
+    margin: 0 0 60px;
+    padding: 40px 60px;
+    background: @color-white;
+  }
+
+  .form__comments {
+    padding: 40px 60px;
+    margin-bottom: 0;
+  }
 
   fieldset {
-    padding: 50px 60px;
+    padding: 110px 20px 40px;
     border: 2px solid #e5e5e5;
+    margin-bottom: 40px;
   }
 
-  .form__contacts label {
-    margin-right: 20px;
+  fieldset.form__contacts {
+    border: none;
     padding: 0;
   }
 
-  legend {
-    position: relative;
-    top: -60px;
-    background: @color-white;
-  }
-
-  .form__comments legend {
-    background: @color-white;
-  }
-
+  .form__comments legend,
   .form__tel-email legend,
-  .form__achievements legend {
-    display: inline-block;
+  legend {
+    display: block;
+    position: relative;
     top: 0;
+    padding: 0 20px;
+    background: @color-white;
   }
 
-  .required-line {
-    display: block;
-    margin-top: 90px;
-    text-transform: uppercase;
+  .form__contacts label,
+  .form__tel-email label {
+    padding: 0;
+    margin-right: 20px;
   }
 
-  .label-email:before,
-  .label-tel:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: -76px;
-    right: 2px;
-    width: 64px;
-    height: 64px;
-    background-color: @color-gray;
-    z-index: 1;
+  .form__contacts label:first-of-type,
+  .form__tel-email label:first-of-type {
+    padding-top: 0;
+  }
+
+  .form__achievements label,
+  .form__app label {
+    font-family: @font-family-regular;
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-darkblue;
+  }
+
+  .form span {
+    font-family: @font-family-regular;
+    font-size: 14px;
+    line-height: 30px;
+    color: @color-magenta;
   }
 }
