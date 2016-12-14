@@ -952,11 +952,12 @@ input[type='reset']:active {
 .header-panorama-photo {
   width: 100vw;
   position: relative;
-  height: 138px;
+  height: auto;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  overflow: hidden;
 }
 .post-footer,
 .post-header {
@@ -1447,8 +1448,11 @@ input[type='reset']:active {
   background: #f2f2f2;
 }
 table {
-  margin: 0 auto 40px;
+  width: 940px;
   border-collapse: collapse;
+  position: relative;
+  left: 50%;
+  transform: translateX(-62.5%);
 }
 td,
 th {
@@ -1532,7 +1536,8 @@ td {
   }
   table {
     position: initial;
-    margin: 0 auto;
+    width: 620px;
+    transform: none;
   }
   th {
     font-size: 16px;
@@ -1564,8 +1569,11 @@ td {
     padding: 70px 0 100px;
   }
   table {
-    position: initial;
-    margin: 0 auto;
+    width: 940px;
+    position: relative;
+    left: -50%;
+    transform: translateX(45%);
+    padding: 0;
   }
   th {
     font-size: 18px;
