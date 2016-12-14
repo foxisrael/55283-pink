@@ -1,24 +1,78 @@
-.slider-navigation li{
+.slider-navigation li {
   display: inline;
 }
 
-.slider-navigation__control{
+.slider-navigation__control {
   display: inline-block;
-  vertical-align: middle;
   width: 6px;
   height: 6px;
-  border-radius: 50%;
-  background: #b5b9be;
   margin-right: 15px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #bec2c7;
 }
 
-.slider-navigation__control--active{
+.slider-navigation__control:hover {
+  background: #7e868f;
+}
+
+.slider-navigation__control:active {
+  background: #e9ebec;
+}
+
+.slider-navigation__control--active {
   display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 15px;
   vertical-align: middle;
-  width: 6px;
-  height: 6px;
   border: 3px solid @color-darkblue;
   border-radius: 50%;
   background: @color-white;
-  margin-right: 15px;
+  background: #b5b9be;
+}
+
+.slider-navigation__arrow{
+  display: none;
+}
+
+@media (min-width: 700px) {
+
+    .slider-navigation__round{
+      display: block;
+    }
+}
+
+@media (min-width: 960px) {
+  .slider-navigation__round{
+    display: none;
+  }
+
+  .slider-navigation__arrow{
+    display: block;
+  }
+
+  .arrow-left{
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 0;
+  }
+
+  .arrow-right{
+    display: block;
+    position: absolute;
+    top: 90px;
+    right: 0;
+  }
+
+  .slider-navigation__arrow-element{
+    background: url("http://placehold.it/80x65");
+    width: 80px;
+    height: 65px;
+    top: -360px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+  }
 }

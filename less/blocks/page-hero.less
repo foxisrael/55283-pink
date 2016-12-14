@@ -1,9 +1,40 @@
-.page-hero{
-  height: 85px;
-  background: url("../img/bg-back-mobile@1x.jpg");
-  padding: 70px 20px 80px;
+.page-hero {
+  height: 235px;
+  padding: 100px 75px 85px;
+  background: url('../img/bg-back-mobile@1x.jpg');
 }
 
-.page-hero h2{
+.page-hero h2 {
   color: @color-white;
+}
+
+@media (min-width: 700px) {
+  .page-hero {
+    height: 100px;
+    padding: 190px 20px 150px;
+    background: url('../img/bg-back-mobile@1x.jpg');
+    background-size: cover;
+  }
+
+  .page-hero h2 {
+    font-size: 50px;
+    padding: 0 170px;
+    color: @color-white;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .page-hero {
+    height: 100px;
+    padding: 190px 20px 150px;
+    background: url('../img/bg-back-mobile@1x.jpg');
+    background-size: cover;
+  }
+
+  .page-hero h2 {
+    font-size: 50px;
+    padding: 0 170px;
+    color: @color-white;
+  }
 }

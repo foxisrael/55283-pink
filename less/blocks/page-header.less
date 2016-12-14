@@ -1,76 +1,82 @@
 .page-header {
-  background: #1d2631;
-}
-
-.page-header p {
-  font-family: @font-family-light;
-  line-height: 24px;
-  color: @color-white;
-}
-
-.page-header__nav{
-  padding: 20px;
+  position: relative;
+  top: 60px;
+  margin-top: -60px;
   background: @color-darkblue;
+  z-index: 3;
 }
 
-.page-header__logo {
+.page-header__menu-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
   display: block;
-  float: left;
+  margin: 25px 0 28px 30px;
   border: none;
+  background: url("../img/logo-pink-white-mobile.svg") no-repeat;
+  width: 75px;
+  height: 22px;
 }
 
-.btn-menu {
-  background-image: url("../img/icon-menu-burger.svg") no-repeat;
-  float: right;
-  width: 24px;
-  height: 12px;
-}
-
-.page-header__menu{
-  background: @color-darkblue;
-}
-
-.page-header__menu li{
+.page-header__menu-items li {
   list-style: none;
 }
 
 .menu-item {
-  font-family: @font-family-bold;
   display: block;
+  font-family: @font-family-bold;
   text-decoration: none;
-  color: @color-white;
   text-transform: uppercase;
-  padding: 25px 0;
+  color: @color-white;
+  padding: 20px 0;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000;
 }
+@media (min-width: 700px) {
+  .logo {
+    background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
+    width: 150px;
+    height: 40px;
+  }
 
-.page-header__photo {
-  position: relative;
-  background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
-  height: 460px;
+  .menu-item {
+    font-size: 18px;
+    line-height: 32px;
+    align-items: center;
+    text-transform: inherit;
+  }
 }
+@media (min-width: 1200px) {
+  .page-header {
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 110px;
+    top: 110px;
+    margin-top: -110px;
+    z-index: 1;
+  }
 
-.page-header__photo img {
-  display: block;
-  position: absolute;
-  bottom: 0;
-}
+  .page-header__menu {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
 
-.btn--download {
-  margin-bottom: 20px;
-}
+  .page-header__menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 620px;
+  }
 
-.page-header__apps {
-  padding: 25px 20px 35px;
-}
-
-.page-header__apps li {
-  display: inline;
-  vertical-align: top;
-  margin-right: 35px;
-}
-
-.page-header__apps li:last-child {
-  margin-right: 0;
+  .menu-item {
+    font-family: @font-family-regular;
+    border: none;
+  }
 }
