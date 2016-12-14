@@ -302,9 +302,23 @@ input[type="radio"]:checked:active + label:active::after {
 
   .form__tel-email {
     display: flex;
-    flex-direction: column-reverse;
     order: 3;
-    width: 100%;
+  }
+
+  .tel-email-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .tel-email-container .form-column{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+
+  .form-column:last-child{
+    margin-bottom: 43px;
   }
 
   .form__achievements {
@@ -372,10 +386,14 @@ input[type="radio"]:checked:active + label:active::after {
     background: @color-white;
   }
 
-  .form__contacts label,
-  .form__tel-email label {
+  .form__contacts label{
     padding: 0;
     margin-right: 20px;
+  }
+
+  .form__tel-email label {
+    padding: 0;
+    margin-left: 20px;
   }
 
   .form__contacts label:first-of-type,
@@ -414,7 +432,6 @@ input[type="radio"]:checked:active + label:active::after {
     width: 45%;
   }
 
-
   .form__app{
     display: flex;
     flex-direction: column;
@@ -424,29 +441,71 @@ input[type="radio"]:checked:active + label:active::after {
 
   .form__tel-email {
     display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    flex-wrap: wrap;
     order: 3;
     width: 100%;
+    padding: 40px 60px 0;
   }
 
-  .form__tel-email .form-column{
-    display: block;
+  .tel-email-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0;
+  }
+
+  .tel-email-container .form-column{
     width: 45%;
   }
 
   .form__achievements {
     display: flex;
+    order: 4;
+    width: 100%;
+    padding: 40px 60px 20px;
+  }
+
+  .achievements-container{
+    display: flex;
     flex-direction: row;
     align-content: space-between;
     flex-wrap: wrap;
-    order: 4;
-    width: 100%;
+    padding: 0;
   }
 
-  .form__achievements .form-column{
-    width: 30%;
+  .achievements-container .form-column:nth-child(1){
+    order: 1;
+    width: 37%;
+  }
+
+  .achievements-container .form-column:nth-child(2){
+    order: 4;
+    width: 37%;
+  }
+
+  .achievements-container .form-column:nth-child(3){
+    order: 2;
+    width: 34%;
+  }
+
+  .achievements-container .form-column:nth-child(4){
+    order: 5;
+    width: 34%;
+  }
+
+  .achievements-container .form-column:nth-child(5){
+    order: 3;
+    width: 27%;
+  }
+
+  .achievements-container .form-column:nth-child(6){
+    order: 6;
+    width: 27%;
+  }
+
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    padding-left: 55px;
   }
 
   .form__comments {
@@ -473,7 +532,6 @@ input[type="radio"]:checked:active + label:active::after {
 
   .form__contacts,
   .form__tel-email {
-    padding: 40px 60px;
     margin: 0 0 60px;
   }
 

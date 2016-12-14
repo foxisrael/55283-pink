@@ -336,11 +336,26 @@ input[type="radio"]:checked:active + label:active::after {
   .form__tel-email {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
     -ms-flex-order: 3;
         order: 3;
-    width: 100%;
+  }
+  .tel-email-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .tel-email-container .form-column {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+  .form-column:last-child {
+    margin-bottom: 43px;
   }
   .form__achievements {
     display: -ms-flexbox;
@@ -410,10 +425,13 @@ input[type="radio"]:checked:active + label:active::after {
     padding: 0 20px;
     background: #fff;
   }
-  .form__contacts label,
-  .form__tel-email label {
+  .form__contacts label {
     padding: 0;
     margin-right: 20px;
+  }
+  .form__tel-email label {
+    padding: 0;
+    margin-left: 20px;
   }
   .form__contacts label:first-of-type,
   .form__tel-email label:first-of-type {
@@ -463,21 +481,34 @@ input[type="radio"]:checked:active + label:active::after {
   .form__tel-email {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -ms-flex-order: 3;
         order: 3;
     width: 100%;
+    padding: 40px 60px 0;
   }
-  .form__tel-email .form-column {
-    display: block;
+  .tel-email-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: baseline;
+        align-items: baseline;
+    padding: 0;
+  }
+  .tel-email-container .form-column {
     width: 45%;
   }
   .form__achievements {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-order: 4;
+        order: 4;
+    width: 100%;
+    padding: 40px 60px 20px;
+  }
+  .achievements-container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -486,12 +517,41 @@ input[type="radio"]:checked:active + label:active::after {
         align-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 0;
+  }
+  .achievements-container .form-column:nth-child(1) {
+    -ms-flex-order: 1;
+        order: 1;
+    width: 37%;
+  }
+  .achievements-container .form-column:nth-child(2) {
     -ms-flex-order: 4;
         order: 4;
-    width: 100%;
+    width: 37%;
   }
-  .form__achievements .form-column {
-    width: 30%;
+  .achievements-container .form-column:nth-child(3) {
+    -ms-flex-order: 2;
+        order: 2;
+    width: 34%;
+  }
+  .achievements-container .form-column:nth-child(4) {
+    -ms-flex-order: 5;
+        order: 5;
+    width: 34%;
+  }
+  .achievements-container .form-column:nth-child(5) {
+    -ms-flex-order: 3;
+        order: 3;
+    width: 27%;
+  }
+  .achievements-container .form-column:nth-child(6) {
+    -ms-flex-order: 6;
+        order: 6;
+    width: 27%;
+  }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    padding-left: 55px;
   }
   .form__comments {
     display: -ms-flexbox;
@@ -525,7 +585,6 @@ input[type="radio"]:checked:active + label:active::after {
   }
   .form__contacts,
   .form__tel-email {
-    padding: 40px 60px;
     margin: 0 0 60px;
   }
   .form__achievements,
