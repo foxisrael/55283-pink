@@ -1,278 +1,596 @@
-.form{
-  padding: 55px 0 60px;
+.form {
+  padding: 55px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.form-header{
-  margin-bottom: 25px;
-}
-
-.form span{
-  font-family: @font-family-regular;
-  font-size: 14px;
-  color: @color-magenta;
-  line-height: 30px;
-}
-
-.page-tour{
-  font-size: 14px;
-  line-height: 30px;
-}
-
-fieldset{
-  border: none;
-  margin: 0 auto;
-  padding: 0;
-}
-
-legend{
-  font-family: @font-family-regular;
-  font-size: 14px;
-  line-height: 18px;
-  color: @color-magenta;
-  text-transform: uppercase;
-  padding: 40px 0;
+.form__contacts,
+.form__tel-email {
+  padding-top: 40px;
+  margin: 0;
 }
 
 .form__achievements,
-.form__app{
-  background: #f2f2f2;
-  padding-bottom: 50px;
+.form__app {
+  margin: 0 -20px;
+  padding: 110px 40px 40px;
+  background: @color-gray;
 }
 
-.form__tel-email{
-  padding: 40px 0 50px;
+.form__comments {
+  margin-bottom: 0;
 }
 
-label{
-  display: block;
+.form-row {
+  margin-bottom: 25px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-column {
+  margin-bottom: 43px;
+}
+
+.form-column:last-child {
+  margin-bottom: 0;
+}
+
+.form__comments {
+  padding: 75px 0 40px;
+}
+
+fieldset {
+  padding: 110px 20px 40px;
+  border: 0;
+  margin-bottom: 40px;
+}
+
+legend {
   position: relative;
+  top: 60px;
+  font-family: @font-family-regular;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @color-magenta;
+  background: @color-gray;
+}
+
+label {
   font-family: @font-family-regular;
   font-size: @font-size-label;
-  color: @color-magenta;
   line-height: @line-height-label;
+  position: relative;
+  display: block;
   text-align: left;
+  color: @color-magenta;
+}
+
+.form__tel-email legend {
+  display: none;
+}
+
+.form__comments legend {
+  background: @color-white;
 }
 
 .form__contacts label,
-.form__tel-email label{
+.form__tel-email label {
   padding: 25px 0 15px 20px;
 }
 
-.form__tel-email label:first-child{
+.form__contacts label:first-of-type,
+.form__tel-email label:first-of-type {
   padding-top: 0;
 }
 
 .form__achievements label,
-.form__app label{
+.form__app label {
   font-family: @font-family-regular;
-  font-size:18px;
-  color: @color-darkblue;
+  font-size: 18px;
   line-height: 30px;
+  color: @color-darkblue;
 }
 
-input[type="text"],
-input[type="tel"],
 input[type="email"],
-textarea{
+input[type="tel"],
+input[type="text"],
+textarea {
   font-family: @font-family-regular;
-  padding: 20px 20px;
-  text-align: left;
   font-size: 18px;
   line-height: 18px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
   color: @color-darkblue;
   border: 2px solid #e7e7e7;
 }
 
-input[type="text"]:hover,
-input[type="tel"]:hover,
 input[type="email"]:hover,
-textarea:hover{
+input[type="tel"]:hover,
+input[type="text"]:hover,
+textarea:hover {
   border: 2px solid @color-darkblue;
   outline: none;
 }
 
-input[type="text"]:active,
-input[type="tel"]:active,
 input[type="email"]:active,
-textarea:active{
+input[type="tel"]:active,
+input[type="text"]:active,
+textarea:active {
   border: 2px solid @color-magenta;
   outline: none;
 }
 
+input[type="email"],
+input[type="tel"] {
+  position: relative;
+  display: block;
+}
 /* TEXTAREA */
-textarea{
-  width: 236px;
-  height: 156px;
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 201px;
   padding: 20px;
+  color: @color-darkblue;
 }
-textarea:hover{
+
+textarea:hover {
   border: 2px solid @color-darkblue;
 }
 
-textarea:active{
+textarea:active {
   border: 2px solid @color-darkblue;
 }
-
-
 /* CHECKBOX */
-
 input[type="checkbox"],
-input[type="radio"]{
+input[type="radio"] {
   display: none;
 }
 
 input[type="checkbox"] + label,
-input[type="radio"] + label{
-  display: block;
+input[type="radio"] + label {
   position: relative;
-  cursor: pointer;
-  padding-left: 70px;
+  display: block;
   margin-bottom: 45px;
+  padding-left: 70px;
+  cursor: pointer;
 }
 
 input[type="checkbox"] + label:last-child,
-input[type="radio"] + label:last-child{
+input[type="radio"] + label:last-child {
   margin-bottom: 0;
 }
-
-input[type="checkbox"] + label::before{
-  content: "";
-  display: block;
+/* checkbox before */
+input[type="checkbox"] + label::before {
   position: absolute;
-  background-color: @color-white;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: "";
   border: 2px solid #e5e5e5;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0px;
+  background-color: @color-white;
 }
 
-input[type="checkbox"]:hover + label:hover::before{
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: @color-white;
+input[type="checkbox"]:hover + label:hover::before {
   border: 2px solid @color-darkblue;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0px;
-  outline: none;
 }
 
-input[type="checkbox"]:active + label:active::before{
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: @color-white;
+input[type="checkbox"]:active + label:active::before {
   border: 2px solid @color-magenta;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0px;
-  outline: none;
 }
-
-input[type="checkbox"]:active + label::after{
-  content: "";
-  display: block;
+/* checkbox after */
+input[type="checkbox"]:active + label::after {
   position: absolute;
-  background: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
+  top: 6px;
+  left: 7px;
+  display: block;
   width: 22px;
   height: 16px;
-  top: 7px;
-  left: 10px;
-  outline: none;
-}
-
-input[type="checkbox"]:checked + label::after{
   content: "";
-  display: block;
-  position: absolute;
+  outline: none;
   background: url("../img/icon-yes.svg");
   background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  display: block;
   width: 22px;
   height: 16px;
-  top: 7px;
-  left: 10px;
-  outline: none;
-}
-
-/* RADIO */
-input[type="radio"] + label::before{
   content: "";
-  display: block;
+  outline: none;
+  background: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+}
+/* radio before */
+input[type="radio"] + label::before {
   position: absolute;
-  background-color: @color-white;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: "";
   border: 2px solid #e5e5e5;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0px;
+  background-color: @color-white;
 }
 
-input[type="radio"]:hover + label:hover::before{
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: @color-white;
+input[type="radio"]:hover + label:hover::before {
   border: 2px solid @color-darkblue;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0px;
-  outline: none;
 }
 
-input[type="radio"]:active + label:active::before{
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: @color-white;
+input[type="radio"]:active + label:active::before {
   border: 2px solid @color-magenta;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  top: -4px;
-  left: 0px;
-  outline: none;
 }
-
-input[type="radio"]:checked + label::after{
-  content: "";
-  display: block;
+/* radio after */
+input[type="radio"]:checked + label::after {
   position: absolute;
+  top: 6px;
+  left: 10px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  content: "";
+  border-radius: 50%;
   background-color: #d22856;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  top: 8px;
-  left: 12px;
 }
 
-input[type="radio"]:checked:hover + label:hover::after{
-  content: "";
-  display: block;
-  position: absolute;
+input[type="radio"]:checked:hover + label:hover::after {
   background-color: @color-magenta;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  top: 8px;
-  left: 12px;
 }
 
-input[type="radio"]:checked:active + label:active::after{
-  content: "";
-  display: block;
-  position: absolute;
+input[type="radio"]:checked:active + label:active::after {
   background-color: @color-magenta;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  top: 8px;
-  left: 12px;
+}
+
+.form span {
+  font-family: @font-family-regular;
+  font-size: 14px;
+  line-height: 30px;
+  color: @color-magenta;
+}
+
+::-webkit-input-placeholder {
+  color: @color-darkblue;
+}
+
+::-moz-placeholder {
+  color: @color-darkblue;
+}
+
+:-moz-placeholder {
+  color: @color-darkblue;
+}
+
+:-ms-input-placeholder {
+  color: @color-darkblue;
+}
+
+
+@media (min-width: 700px) {
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 75px;
+    padding: 0 20px;
+  }
+
+  .form {
+    padding: 100px 0 0;
+  }
+
+  .form__contacts {
+    display: flex;
+    order: 1;
+  }
+
+  .form__app {
+    display: flex;
+    order: 2;
+  }
+
+  .form__tel-email {
+    display: flex;
+    order: 3;
+  }
+
+  .tel-email-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .tel-email-container .form-column{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+
+  .form-column:last-child{
+    margin-bottom: 43px;
+  }
+
+  .form__achievements {
+    display: flex;
+    order: 4;
+  }
+
+  .form__comments {
+    display: flex;
+    order: 5;
+  }
+
+  .form__button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    order: 6;
+  }
+
+  .form__contacts .form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__contacts,
+  .form__tel-email {
+    padding: 40px 60px;
+    margin: 0 0 60px;
+  }
+
+  .form__achievements,
+  .form__app {
+    margin: 0 0 60px;
+    padding: 40px 60px;
+    background: @color-white;
+  }
+
+  .form__comments {
+    padding: 40px 60px;
+    margin-bottom: 0;
+  }
+
+  fieldset {
+    padding: 110px 20px 40px;
+    border: 2px solid #e5e5e5;
+    margin-bottom: 40px;
+  }
+
+  fieldset.form__contacts {
+    border: none;
+    padding: 0;
+  }
+
+  .form__comments legend,
+  .form__tel-email legend,
+  legend {
+    display: block;
+    position: relative;
+    top: 0;
+    padding: 0 20px;
+    background: @color-white;
+  }
+
+  .form__contacts label{
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  .form__tel-email label {
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .form__contacts label:first-of-type,
+  .form__tel-email label:first-of-type {
+    padding-top: 0;
+  }
+
+  .form__achievements label,
+  .form__app label {
+    font-family: @font-family-regular;
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-darkblue;
+  }
+
+  .form span {
+    font-family: @font-family-regular;
+    font-size: 14px;
+    line-height: 30px;
+    color: @color-magenta;
+  }
+}
+
+
+@media (min-width: 960px) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    order: 1;
+    width: 45%;
+  }
+
+  .form__app{
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    width: 45%;
+  }
+
+  .form__tel-email {
+    display: flex;
+    order: 3;
+    width: 100%;
+    padding: 40px 60px 0;
+  }
+
+  .tel-email-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0;
+  }
+
+  .tel-email-container .form-column{
+    width: 45%;
+  }
+
+  .form__achievements {
+    display: flex;
+    order: 4;
+    width: 100%;
+    padding: 40px 60px 20px;
+  }
+
+  .achievements-container{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .achievements-container .form-column:nth-child(1){
+    order: 1;
+    width: 37%;
+  }
+
+  .achievements-container .form-column:nth-child(2){
+    order: 4;
+    width: 37%;
+  }
+
+  .achievements-container .form-column:nth-child(3){
+    order: 2;
+    width: 34%;
+  }
+
+  .achievements-container .form-column:nth-child(4){
+    order: 5;
+    width: 34%;
+  }
+
+  .achievements-container .form-column:nth-child(5){
+    order: 3;
+    width: 27%;
+  }
+
+  .achievements-container .form-column:nth-child(6){
+    order: 6;
+    width: 27%;
+  }
+
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    padding-left: 55px;
+  }
+
+  .form__comments {
+    display: flex;
+    order: 5;
+    width: 100%;
+  }
+
+  .form__button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    order: 6;
+  }
+
+  .form__contacts .form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__contacts,
+  .form__tel-email {
+    margin: 0 0 60px;
+  }
+
+  .form__achievements,
+  .form__app {
+    margin: 0 0 60px;
+    padding: 40px 60px;
+    background: @color-white;
+  }
+
+  .form__comments {
+    padding: 40px 60px;
+    margin-bottom: 0;
+  }
+
+  fieldset {
+    padding: 110px 20px 40px;
+    border: 2px solid #e5e5e5;
+    margin-bottom: 40px;
+  }
+
+  fieldset.form__contacts {
+    border: none;
+    padding: 0;
+  }
+
+  .form__comments legend,
+  .form__tel-email legend,
+  legend {
+    display: block;
+    position: relative;
+    top: 0;
+    padding: 0 20px;
+    background: @color-white;
+  }
+
+  .form__contacts label,
+  .form__tel-email label {
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  .form__contacts label:first-of-type,
+  .form__tel-email label:first-of-type {
+    padding-top: 0;
+  }
+
+  .form__achievements label,
+  .form__app label {
+    font-family: @font-family-regular;
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-darkblue;
+  }
+
+  .form span {
+    font-family: @font-family-regular;
+    font-size: 14px;
+    line-height: 30px;
+    color: @color-magenta;
+  }
 }
