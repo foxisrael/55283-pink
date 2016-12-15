@@ -3,8 +3,15 @@
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
-  padding: 20px 0;
+  padding: 20px 20px;
+  margin: 0 -20px;
   background: @color-gray;
+}
+
+.photopost-image-container{
+  height: 375px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .photopost::after {
@@ -20,7 +27,8 @@
 }
 
 .photopost__main-image {
-  margin: 0 auto 40px;
+  width: 100%;
+  height: auto;
 }
 
 .photopost__filtr {
@@ -110,7 +118,7 @@ input[type='reset']:active {
 @media (min-width: 700px) {
   .photopost {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 40px 60px;
     margin: 0 -40px;
   }
@@ -119,14 +127,14 @@ input[type='reset']:active {
     display: none;
   }
 
-  .photopost__main-image {
-    width: 45%;
+  .photopost-image-container{
+    width: 47%;
     height: 400px;
-    margin: 0 50px 0 0;
+    margin-bottom: 0;
   }
 
   .photopost__filtr {
-    width: 45%;
+    width: 47%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -203,15 +211,16 @@ input[type='reset']:active {
   }
 
   input[type='reset'] {
+    width: 100%;
     display: block;
   }
 
   input[type='reset']:hover {
-    width: 180px;
+    width: 100%;
   }
 
   input[type='reset']:active {
-    width: 180px;
+    width: 100%;
   }
 }
 
@@ -221,17 +230,19 @@ input[type='reset']:active {
     margin: 0;
   }
 
-  .photopost__main-image {
-    width: 35%;
+  .photopost-image-container{
+    width: 40%;
+    height: 400px;
+    margin-bottom: 0;
   }
 
   .photopost__filtr {
-    width: 53%;
+    width: 50%;
   }
 
   .photopost__range {
     position: relative;
-    width: 290px;
+    width: 245px;
     margin: 20px 0;
   }
 
@@ -251,8 +262,8 @@ input[type='reset']:active {
   }
 
   .photopost__range::after {
-    width: 410px;
-    left: -80px;
+    width: 380px;
+    left: -110px;
   }
 
   .photopost__btn-submit {
@@ -266,18 +277,24 @@ input[type='reset']:active {
   input[type='reset'] {
     display: block;
     width: 180px;
+    height: 56px;
+    padding: 15px;
     margin: 0;
   }
 
   input[type='reset']:hover {
     display: block;
     width: 180px;
+    height: 56px;
+    padding: 15px;
     margin: 0;
   }
 
   input[type='reset']:active {
     display: block;
     width: 180px;
+    height: 56px;
+    padding: 15px;
     margin: 0;
   }
 }

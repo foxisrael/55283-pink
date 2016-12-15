@@ -32,11 +32,19 @@
 }
 
 .page-footer__map {
+  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.map-image-container{
   height: 200px;
-  background: url('../img/bg-map-mobile@1x.png') no-repeat;
-  background-color: @color-white;
-  background-position: center bottom;
-  background-size: cover;
+  overflow: hidden;
+}
+
+.map-image{
+  width: 100%;
+  height: auto;
 }
 
 /* page-footer__SOCICAL */
@@ -121,7 +129,7 @@
     width: 100%;
   }
 
-  .page-footer__map {
+  .map-image-container{
     height: 375px;
   }
 
@@ -166,7 +174,8 @@
     margin: 0 0 15px;
   }
 
-  .page-footer__map {
+  .map-image-container{
     height: 500px;
+    overflow: hidden;
   }
 }

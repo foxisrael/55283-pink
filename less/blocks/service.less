@@ -1,7 +1,7 @@
 .service {
   overflow: hidden;
   padding: 65px 0 50px;
-  margin: 0 auto;
+  margin: 0 -20px;
   background: @color-gray;
 }
 
@@ -103,15 +103,20 @@ td {
 @media (min-width: 700px){
   .service {
     overflow: hidden;
-    padding: 40px 0 70px;
+    min-height: 375px;
+    padding: 90px 40px 70px;
+    margin: 0 -40px;
     background: @color-gray;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
   }
 
   table {
-    position: initial;
+    position: static;
     width: 100%;
     transform: none;
-    left: none;
+    left: auto  ;
   }
 
   th {
@@ -148,11 +153,9 @@ td {
 
 @media (min-width: 960px){
   .service {
-    padding: 70px 0 100px;
-  }
-
-  table {
-    margin-left: -20px;
+    min-height: 525px;
+    padding: 150px 60px 100px;
+    margin: 0 -40px;
   }
 
   th {
@@ -169,7 +172,6 @@ td {
   }
 
   td {
-    min-width: 230px;
     padding: 20px 28px 17px 28px;
     width: 150px;
     font-size: 18px;
