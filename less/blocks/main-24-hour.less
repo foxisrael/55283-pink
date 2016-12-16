@@ -1,15 +1,15 @@
-.main-24-hours{
+.main-24-hours {
   display: none;
 }
 
-@media (min-width: 700px){
-  .main-24-hours{
-    padding: 60px 40px;
-    margin: 0 -40px;
+@media (min-width: 700px) {
+  .main-24-hours {
+    display: flex;
+    padding: 60px 0;
     text-align: left;
   }
 
-  .main-24-hours {
+  .main-24-hours .wrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,20 +28,20 @@
     flex-direction: column;
     order: 2;
     padding-top: 30px;
-    width: 310px;
+    width: 315px;
   }
 
-  .main-24-hours-text p{
+  .main-24-hours-text p {
     color: @color-darkblue;
   }
 
-  .main-24-hours-text h3{
+  .main-24-hours-text h3 {
     font-size: 30px;
     margin-bottom: 25px;
     color: @color-black;
   }
 
-  .main-24-hours a{
+  .main-24-hours a {
     display: block;
     font-family: @font-family-light;
     font-size: 14px;
@@ -51,10 +51,17 @@
     margin-top: 15px;
   }
 }
-
-@media (min-width: 960px){
-  .main-24-hours{
+@media (min-width: 960px) {
+  .main-24-hours {
     background: @color-gray;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    padding: 0 40px;
   }
 
   .main-24-hours-photo {
@@ -66,7 +73,7 @@
     order: 1;
   }
 
-  .main-24-hours .wrapper{
+  .main-24-hours .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -80,13 +87,12 @@
     width: 581px;
   }
 
-  .main-24-hours-text h3{
+  .main-24-hours-text h3 {
     font-size: 30px;
     margin-bottom: 40px;
   }
 
-  .main-24-hours-text br{
+  .main-24-hours-text br {
     display: none;
   }
-
 }

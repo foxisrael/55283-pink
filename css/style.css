@@ -64,6 +64,7 @@ ul {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 40px;
+    border: 1px solid red;
   }
 }
 .form {
@@ -684,7 +685,7 @@ input[type="radio"]:checked:active + label:active::after {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  padding: 20px 20px;
+  padding: 20px;
   margin: 0 -20px;
   background: #f2f2f2;
 }
@@ -1003,7 +1004,7 @@ input[type='reset']:active {
   line-height: 24px;
   position: absolute;
   z-index: 2;
-  top: 0px;
+  top: 0;
   right: 20px;
   display: block;
   width: 140px;
@@ -1048,8 +1049,8 @@ input[type='reset']:active {
   background: url('../img/icon-heart.svg');
 }
 @media (min-width: 700px) {
-  .post-header,
-  .post-footer {
+  .post-footer,
+  .post-header {
     font-size: 18px;
     line-height: 30px;
     padding: 75px 70px;
@@ -1096,8 +1097,8 @@ input[type='reset']:active {
   }
 }
 @media (min-width: 960px) {
-  .post-header,
-  .post-footer {
+  .post-footer,
+  .post-header {
     padding: 100px 70px 95px;
   }
   .post__item {
@@ -1165,7 +1166,7 @@ input[type='reset']:active {
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 16px;
   cursor: pointer;
   text-align: center;
   color: #fff;
@@ -1250,12 +1251,15 @@ input[type='reset']:active {
 @media (min-width: 700px) {
   .btn--download {
     width: 300px;
+    margin: 0 auto 45px;
   }
   .btn--download:hover {
     width: 300px;
+    margin: 0 auto 45px;
   }
   .btn--download:active {
     width: 300px;
+    margin: 0 auto 45px;
   }
   .btn--submit {
     width: 300px;
@@ -1282,7 +1286,7 @@ input[type='reset']:active {
     margin: 0 0 15px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .btn--download {
     margin-bottom: 65px;
   }
@@ -1454,14 +1458,14 @@ input[type='reset']:active {
     margin: 0 60px;
     padding: 0 100px;
   }
+  .adress,
   .call,
-  .write-us,
-  .adress {
+  .write-us {
     width: 30%;
   }
+  .adress p,
   .call p,
-  .write-us p,
-  .adress p {
+  .write-us p {
     display: block;
     margin: 0 0 15px;
   }
@@ -1565,6 +1569,7 @@ td {
     margin: 0 -40px;
     background: #f2f2f2;
     background-image: url("../img/bg-triangle-white.svg");
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
   }
@@ -1572,7 +1577,7 @@ td {
     position: static;
     width: 100%;
     transform: none;
-    left: auto  ;
+    left: auto;
   }
   th {
     font-size: 16px;
@@ -1617,7 +1622,7 @@ td {
     margin-top: 7px;
   }
   td {
-    padding: 20px 28px 17px 28px;
+    padding: 20px 28px 17px;
     width: 150px;
     font-size: 18px;
     line-height: 30px;
@@ -1798,7 +1803,7 @@ td {
   min-height: 750px;
   margin: 0 -20px;
 }
-.main-about .wrapper {
+.main-about {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1823,11 +1828,11 @@ td {
 }
 @media (min-width: 700px) {
   .main-about {
-    margin: 0 -40px;
     min-height: 480px;
-    padding: 55px 60px 50px;
+    padding: 55px 40px 50px;
     text-align: left;
     background-image: url("../img/bg-triangle-white.svg");
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
   }
@@ -1858,6 +1863,11 @@ td {
 }
 @media (min-width: 960px) {
   .main-about {
+    min-height: 580px;
+    padding: 60px 60px 40px;
+    text-align: center;
+  }
+  .main-about .wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -1866,9 +1876,6 @@ td {
         flex-wrap: nowrap;
     -ms-flex-pack: justify;
         justify-content: space-between;
-    min-height: 580px;
-    padding: 0 60px 40px;
-    text-align: center;
   }
   .main-about__item {
     -ms-flex-direction: column;
@@ -1908,6 +1915,7 @@ td {
   z-index: 3;
 }
 .page-header__menu-nav {
+  height: 69px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -1918,8 +1926,7 @@ td {
       align-items: center;
 }
 .logo {
-  display: block;
-  margin: 25px 0 28px 30px;
+  margin-left: 30px;
   border: none;
   background: url("../img/logo-pink-white-mobile.svg") no-repeat;
   width: 75px;
@@ -1927,32 +1934,31 @@ td {
 }
 .page-header__menu-items li {
   list-style: none;
+  text-transform: uppercase;
 }
 .menu-item {
   display: block;
+  font-size: 18px;
+  line-height: 30px;
   font-family: 'opensansbold', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  padding: 20px 0;
+  padding: 16px 0;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000;
 }
 @media (min-width: 700px) {
+  .page-header__menu-nav {
+    height: 109px;
+  }
   .logo {
+    margin-left: 30px;
     background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
-    width: 150px;
     height: 40px;
   }
-  .menu-item {
-    font-size: 18px;
-    line-height: 32px;
-    -ms-flex-align: center;
-        align-items: center;
-    text-transform: inherit;
-  }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .page-header {
     background: rgba(0, 0, 0, 0.3);
     position: relative;
@@ -1961,13 +1967,20 @@ td {
     margin-top: -110px;
     z-index: 1;
   }
+  .logo {
+    margin-left: 0;
+    background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
+    height: 40px;
+  }
   .page-header__menu {
     width: 960px;
     margin: 0 auto;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
   }
   .page-header__menu-items {
     display: -ms-flexbox;
@@ -1984,6 +1997,8 @@ td {
   .menu-item {
     font-family: 'opensans', sans-serif;
     border: none;
+    line-height: 18px;
+    text-transform: none;
   }
 }
 .main-header {
@@ -2014,7 +2029,7 @@ td {
 .main-apps {
   position: relative;
   width: 100%;
-  min-height: 730px;
+  height: 462px;
   padding: 175px 0 0;
   background: #1d2631 url('../img/bg-back-mobile@1x.jpg') repeat top center;
   background-size: cover;
@@ -2053,72 +2068,65 @@ td {
 @media (min-width: 700px) {
   .main-apps {
     position: relative;
-    min-height: 680px;
+    height: 680px;
   }
   .hand-with-mobile {
     display: block;
     position: relative;
-    width: 470px;
-    top: -40px;
-    height: 545px;
+    width: 445px;
+    top: 10px;
+    height: 495px;
     float: right;
     margin-right: 45px;
   }
   .main-apps__apps {
-    width: 300px;
+    width: 310px;
     position: absolute;
     padding: 0;
-    top: 155px;
-    left: 80px;
+    top: 210px;
+    left: 82px;
     background: none;
   }
   .main-apps__apps p {
     padding: 0;
+    font-size: 18px;
+    line-height: 30px;
   }
   .main-apps__apps h2 {
-    display: block;
     color: white;
     font-size: 40px;
-    padding: 0 30px;
+    padding: 0 40px;
     font-family: 'opensanslight', sans-serif;
     margin-bottom: 35px;
   }
 }
 @media (min-width: 960px) {
   .wrapper {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 40px;
     position: relative;
   }
   .main-apps {
     min-width: 300px;
-    min-height: 855px;
+    min-height: 800px;
   }
   .main-apps__apps {
-    left: 20px;
+    left: 30px;
     top: 45px;
     padding: 0;
     width: 310px;
   }
   .main-apps__apps h2 {
-    margin-bottom: 60px;
     font-size: 50px;
+    line-height: 57px;
+    margin-bottom: 60px;
   }
   .apps {
     margin-bottom: 55px;
   }
   .hand-with-mobile {
-    display: block;
-    width: 550px;
+    width: 530px;
     top: 35px;
-    height: 645px;
-    float: right;
-  }
-  .main-apps__apps p {
-    font-size: 18px;
-    line-height: 24px;
+    height: 590px;
+    margin: 0;
   }
 }
 .main-24-hours {
@@ -2126,11 +2134,12 @@ td {
 }
 @media (min-width: 700px) {
   .main-24-hours {
-    padding: 60px 40px;
-    margin: 0 -40px;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 0;
     text-align: left;
   }
-  .main-24-hours {
+  .main-24-hours .wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -2155,7 +2164,7 @@ td {
     -ms-flex-order: 2;
         order: 2;
     padding-top: 30px;
-    width: 310px;
+    width: 315px;
   }
   .main-24-hours-text p {
     color: #283645;
@@ -2178,6 +2187,14 @@ td {
 @media (min-width: 960px) {
   .main-24-hours {
     background: #f2f2f2;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    padding: 0 40px;
   }
   .main-24-hours-photo {
     background: url("http://placehold.it/300x345") no-repeat;

@@ -7,7 +7,7 @@
   margin: 0 -20px;
 }
 
-.main-about .wrapper{
+.main-about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,84 +27,84 @@
 }
 
 .photo-item:nth-of-type(2),
-.photo-item:nth-of-type(3){
+.photo-item:nth-of-type(3) {
   display: none;
 }
-
 @media (min-width: 700px) {
   .main-about {
-    margin: 0 -40px;
     min-height: 480px;
-    padding: 55px 60px 50px;
+    padding: 55px 40px 50px;
     text-align: left;
     background-image: url("../img/bg-triangle-white.svg");
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
-}
+  }
 
-.main-about__item{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  .main-about__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-.main-about__item-text{
-  width: 315px;
-}
+  .main-about__item-text {
+    width: 315px;
+  }
 
-.photo-item{
-  width: 270px;
-  height: 545px;
-  left: auto;
-  transform: none;
-}
+  .photo-item {
+    width: 270px;
+    height: 545px;
+    left: auto;
+    transform: none;
+  }
 
-.main-about h3 {
-  margin: 25px 0;
-  font-size: 18px;
-  line-height: 18px;
+  .main-about h3 {
+    margin: 25px 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
-}
-
-@media (min-width: 960px){
+@media (min-width: 960px) {
   .main-about {
+    min-height: 580px;
+    padding: 60px 60px 40px;
+    text-align: center;
+  }
+
+  .main-about .wrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    min-height: 580px;
-    padding: 0 60px 40px;
-    text-align: center;
-}
+  }
 
-.main-about__item{
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: flex-start;
-  width: 30%;
-}
+  .main-about__item {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    width: 30%;
+  }
 
-.main-about__item-text{
-  width: 240px;
-}
+  .main-about__item-text {
+    width: 240px;
+  }
 
-.photo-item{
-  width: 190px;
-  height: 380px;
- }
+  .photo-item {
+    width: 190px;
+    height: 380px;
+  }
 
-.main-about h3 {
-  margin: 65px 0 40px;
-  font-size: 30px;
-  line-height: 30px;
-}
+  .main-about h3 {
+    margin: 65px 0 40px;
+    font-size: 30px;
+    line-height: 30px;
+  }
 
-.photo-item{
-  position: static;
-  display: block;
-}
-
+  .photo-item {
+    position: static;
+    display: block;
+  }
 }
