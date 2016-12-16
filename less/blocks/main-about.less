@@ -1,25 +1,30 @@
 .main-about {
   overflow: hidden;
   position: relative;
-  padding: 30px 25px 0;
+  padding: 80px 20px 0;
   background: @color-gray;
-  min-height: 750px;
+  min-height: 785px;
   margin: 0 -20px;
-}
-
-.main-about {
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .main-about h3 {
-  margin: 25px 0;
+  margin: 0 0 13px;
+}
+
+.main-about__item {
+  margin-bottom: 33px;
 }
 
 .photo-item {
   display: block;
-  bottom: -60px;
+  bottom: -35px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -33,12 +38,8 @@
 @media (min-width: 700px) {
   .main-about {
     min-height: 480px;
-    padding: 55px 40px 50px;
+    padding: 78px 60px 50px;
     text-align: left;
-    background-image: url("../img/bg-triangle-white.svg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: top center;
   }
 
   .main-about__item {
@@ -48,6 +49,10 @@
     justify-content: space-between;
   }
 
+  .main-about__item:last-of-type {
+    margin-bottom: 0;
+  }
+
   .main-about__item-text {
     width: 315px;
   }
@@ -55,14 +60,15 @@
   .photo-item {
     width: 270px;
     height: 545px;
-    left: auto;
+    left: 50px;
+    top: 5px;
     transform: none;
   }
 
   .main-about h3 {
-    margin: 25px 0;
+    margin: 0 0 15px;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 20px;
   }
 }
 @media (min-width: 960px) {
@@ -72,7 +78,7 @@
     text-align: center;
   }
 
-  .main-about .wrapper{
+  .main-about .wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -86,6 +92,15 @@
     align-items: center;
     align-content: flex-start;
     width: 30%;
+  }
+
+  .main-about__item-photo {
+    position: relative;
+    top: -110px;
+    left: -35px;
+    overflow: hidden;
+    height: 350px;
+    width: 270px;
   }
 
   .main-about__item-text {
@@ -104,7 +119,7 @@
   }
 
   .photo-item {
-    position: static;
-    display: block;
+    position: relative;;
+    top: 50px;
   }
 }

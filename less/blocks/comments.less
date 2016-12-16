@@ -1,6 +1,7 @@
 .comments {
   position: relative;
-  padding: 55px 0 45px;
+  padding: 45px 10px 45px;
+  margin: 0 -20px;
 }
 
 .comments .wrapper {
@@ -13,19 +14,24 @@
 }
 
 .comments__item {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .comments__item-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .comments__item-header p {
   display: none;
 }
+
+.comments__item-comment p{
+  line-height: 30px;
+}
+
 @media (min-width: 700px) {
   .comments {
-    padding: 60px 0 20px;
+    padding: 35px 0 30px;
     text-align: center;
   }
 
@@ -38,7 +44,12 @@
     display: flex;
     order: 1;
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
+  }
+
+  .comments__item-comment p{
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .comments__item-header {
@@ -54,7 +65,7 @@
 
   .comments__item-header h3 {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 35px;
     color: @color-black;
   }
 
