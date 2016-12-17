@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 10px 0 0;
+  padding: 40px 0 0;
 }
 
 .page-footer__contacts {
@@ -9,12 +9,13 @@
 
 .page-footer h2 {
   padding: 0 20px;
+  line-height: 30px;
 }
 
 .page-footer__contacts p {
   font-family: @font-family-bold;
   font-size: 18px;
-  margin: 25px 0 0;
+  margin: 23px 0 0;
   color: @color-darkblue;
 }
 
@@ -27,7 +28,7 @@
   color: @color-magenta;
 }
 
-.page-footer__contacts address{
+.page-footer__contacts address {
   line-height: 30px;
 }
 
@@ -48,7 +49,7 @@
 }
 /* page-footer__SOCICAL */
 .page-footer__social {
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .footer-social {
@@ -103,20 +104,26 @@
   display: none;
 }
 @media (min-width: 700px) {
-  .page-footer{
+  .page-footer {
     padding: 50px 0 0;
+  }
+
+  .page-footer__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .page-footer__contacts {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px 0 50px;
-    margin: 0 -20px;
   }
 
-  .page-footer__contacts p{
+  .page-footer__contacts p {
     line-height: 30px;
   }
 
@@ -128,7 +135,7 @@
 
   .call,
   .write-us {
-    width: 40%;
+    width: 50%;
     margin-bottom: 20px;
   }
 
@@ -147,39 +154,48 @@
     flex-direction: row;
     align-items: center;
     padding: 0;
-    margin: 0 -20px;
   }
 
-  .footer-logo{
+  .footer-logo {
     position: relative;
     top: -5px;
   }
 
-  .footer-social{
+  .footer-social {
     position: relative;
     left: -20px;
   }
 
-.logo-htmlacademy{
-  width: 27px;
-  height: 34px;
-}
+  .logo-htmlacademy {
+    width: 27px;
+    height: 34px;
+  }
 }
 @media (min-width: 960px) {
   .page-footer__contacts {
     flex-wrap: nowrap;
+    justify-content: space-around;
     padding: 70px 0 30px;
   }
 
   .page-footer h2 {
     font-size: 40px;
-    margin: 0 60px;
     padding: 0 100px;
   }
 
-  .adress,
-  .call,
-  .write-us {
+  .call {
+    order: 1;
+    width: 30%;
+  }
+
+  .adress{
+    order: 2;
+    width: 30%;
+    padding: 0;
+  }
+
+  .write-us{
+    order: 3;
     width: 30%;
   }
 

@@ -4,10 +4,9 @@
 
 @media (min-width: 700px) {
   .main-24-hours {
-    display: flex;
+    display: block;
     padding: 60px 0;
     text-align: left;
-    margin: 0 -50px;
   }
 
   .main-24-hours .wrapper{
@@ -18,7 +17,6 @@
 
   .main-24-hours-photo {
     background: url("http://placehold.it/240x270") no-repeat;
-    display: flex;
     width: 240px;
     height: 275px;
   }
@@ -54,11 +52,7 @@
   .main-24-hours {
     background: @color-gray;
     position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
     overflow: hidden;
     padding: 0 40px;
   }
@@ -72,15 +66,7 @@
     order: 1;
   }
 
-  .main-24-hours .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
   .main-24-hours-text {
-    display: flex;
-    flex-direction: column;
     order: 2;
     padding-top: 65px;
     width: 581px;
