@@ -1,29 +1,21 @@
 .form {
-  padding: 55px 0;
+  padding: 45px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.form__contacts,
-.form__tel-email {
-  padding-top: 40px;
-  margin: 0;
+.form-header {
+  margin: 0 -10px;
+  line-height: 30px;
 }
 
-.form__achievements,
-.form__app {
-  margin: 0 -20px;
-  padding: 110px 40px 40px;
-  background: @color-gray;
+.form-header span {
+  display: none;
 }
-
-.form__comments {
-  margin-bottom: 0;
-}
-
+/* FLEX ELEMENTS */
 .form-row {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .form-row:last-child {
@@ -31,32 +23,77 @@
 }
 
 .form-column {
-  margin-bottom: 43px;
+  margin-bottom: 52px;
 }
 
 .form-column:last-child {
   margin-bottom: 0;
 }
+/* FLEX CONTAINERS */
+.form__contacts {
+  padding: 35px 0 5px;
+  margin: 0 0 17px;
+}
+
+.form__tel-email {
+  padding: 35px 0 5px;
+  margin: 0 0 17px;
+}
+
+.tel-email-container .form-column {
+  margin-bottom: 17px;
+}
+
+.form__achievements {
+  margin: 0 -20px;
+  padding: 100px 20px 45px;
+  background: @color-gray;
+}
+
+.form__app {
+  margin: 0 -20px;
+  padding: 100px 20px 50px;
+  background: @color-gray;
+}
+
+.form__app .form-column {
+  margin-bottom: 40px;
+}
 
 .form__comments {
-  padding: 75px 0 40px;
+  margin-bottom: 0;
+  padding: 55px 0 40px;
+}
+
+.form__button {
+  margin: 3px -10px 0;
 }
 
 fieldset {
-  padding: 110px 20px 40px;
+  padding: 0;
   border: 0;
   margin-bottom: 40px;
 }
 
 legend {
   position: relative;
-  top: 60px;
+  top: 55px;
   font-family: @font-family-regular;
   font-size: 14px;
   line-height: 18px;
+  padding: 0 20px;
   text-transform: uppercase;
   color: @color-magenta;
   background: @color-gray;
+}
+
+.form__tel-email legend {
+  display: none;
+}
+
+.form__comments legend {
+  background: @color-white;
+  top: 40px;
 }
 
 label {
@@ -69,17 +106,9 @@ label {
   color: @color-magenta;
 }
 
-.form__tel-email legend {
-  display: none;
-}
-
-.form__comments legend {
-  background: @color-white;
-}
-
 .form__contacts label,
 .form__tel-email label {
-  padding: 25px 0 15px 20px;
+  padding: 25px 0 10px 25px;
 }
 
 .form__contacts label:first-of-type,
@@ -101,10 +130,10 @@ input[type="text"],
 textarea {
   font-family: @font-family-regular;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 30px;
   box-sizing: border-box;
   width: 100%;
-  padding: 20px;
+  padding: 15px 22px;
   text-align: left;
   color: @color-darkblue;
   border: 2px solid #e7e7e7;
@@ -135,8 +164,8 @@ input[type="tel"] {
 textarea {
   box-sizing: border-box;
   width: 100%;
-  height: 201px;
-  padding: 20px;
+  height: 200px;
+  padding: 15px 20px;
   color: @color-darkblue;
 }
 
@@ -172,8 +201,8 @@ input[type="checkbox"] + label::before {
   top: -4px;
   left: 0;
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 39px;
+  height: 39px;
   content: "";
   border: 2px solid #e5e5e5;
   background-color: @color-white;
@@ -189,8 +218,8 @@ input[type="checkbox"]:active + label:active::before {
 /* checkbox after */
 input[type="checkbox"]:active + label::after {
   position: absolute;
-  top: 6px;
-  left: 7px;
+  top: 8px;
+  left: 9px;
   display: block;
   width: 22px;
   height: 16px;
@@ -202,8 +231,8 @@ input[type="checkbox"]:active + label::after {
 
 input[type="checkbox"]:checked + label::after {
   position: absolute;
-  top: 6px;
-  left: 7px;
+  top: 8px;
+  left: 9px;
   display: block;
   width: 22px;
   height: 16px;
@@ -254,7 +283,11 @@ input[type="radio"]:checked:active + label:active::after {
   background-color: @color-magenta;
 }
 
-.form span {
+.form__button p {
+  text-transform: uppercase;
+}
+
+.form__button span {
   font-family: @font-family-regular;
   font-size: 14px;
   line-height: 30px;
@@ -277,15 +310,24 @@ input[type="radio"]:checked:active + label:active::after {
   color: @color-darkblue;
 }
 @media (min-width: 700px) {
+  .form {
+    padding: 90px 0 0;
+    margin: 0 -10px;
+  }
+
+  .form__contacts .form-row {
+    margin-bottom: 50px;
+  }
+
   .form-header {
     font-size: 18px;
     line-height: 30px;
-    margin-bottom: 75px;
-    padding: 0 20px;
+    margin-bottom: 70px;
+    padding: 0 50px;
   }
 
-  .form {
-    padding: 100px 0 0;
+  .form-header span {
+    display: inline-block;
   }
 
   .form__contacts {
@@ -345,17 +387,30 @@ input[type="radio"]:checked:active + label:active::after {
     align-items: center;
   }
 
-  .form__contacts,
-  .form__tel-email {
+  .form__contacts {
     padding: 40px 60px;
-    margin: 0 0 60px;
+    margin: 0 0 10px;
   }
 
-  .form__achievements,
+  .form__tel-email {
+    padding: 40px 60px;
+    margin: 0 0 10px;
+  }
+
+  .form__achievements {
+    margin: 0 0 60px;
+    padding: 50px 60px 25px;
+    background: @color-white;
+  }
+
   .form__app {
     margin: 0 0 60px;
-    padding: 40px 60px;
+    padding: 50px 60px 25px;
     background: @color-white;
+  }
+
+  .form__achievements .form-column {
+    margin-bottom: 20px;
   }
 
   .form__comments {
@@ -406,13 +461,13 @@ input[type="radio"]:checked:active + label:active::after {
     line-height: 30px;
     color: @color-darkblue;
   }
-
-  .form span {
-    font-family: @font-family-regular;
-    font-size: 14px;
-    line-height: 30px;
-    color: @color-magenta;
-  }
+  //
+  // .form span {
+  //   font-family: @font-family-regular;
+  //   font-size: 14px;
+  //   line-height: 30px;
+  //   color: @color-magenta;
+  // }
 }
 @media (min-width: 960px) {
   .form {
@@ -526,12 +581,20 @@ input[type="radio"]:checked:active + label:active::after {
     align-items: center;
   }
 
-  .form__contacts,
+  .form__contacts {
+    margin: 0 0 60px;
+  }
+
   .form__tel-email {
     margin: 0 0 60px;
   }
 
-  .form__achievements,
+  .form__achievements {
+    margin: 0 0 60px;
+    padding: 40px 60px;
+    background: @color-white;
+  }
+
   .form__app {
     margin: 0 0 60px;
     padding: 40px 60px;
