@@ -43,6 +43,10 @@
 }
 
 @media (min-width: 700px){
+  .main-about{
+    min-height: 485px;
+  }
+
   .main-about .wrapper{
     display: flex;
     flex-direction: column;
@@ -57,18 +61,25 @@
     flex-direction: column;
     align-content: flex-start;
     position: relative;
+    margin-bottom: 40px;
+  }
+
+  .main-about__item:last-of-type {
+    margin-bottom: 0;
   }
 
   .main-about__item-photo{
     width: 267px;
-    height: 482px;
+    height: 481px;
     position: absolute;
-    top: -80px;
-    left: 0;
+    top: -72px;
+    left: -8px;
   }
 
   .main-about__item-text{
-    width: 310px;
+    padding-left: 300px;
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .item-photo-1{
@@ -103,6 +114,7 @@
 
   .main-about__item-text{
     width: 245px;
+    padding-left: 0;
   }
 
   .item-photo-1,
