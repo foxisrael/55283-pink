@@ -2000,6 +2000,37 @@ td {
     display: none;
   }
 }
+@media (min-width: 960px) {
+  .main-about .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    text-align: center;
+  }
+  .main-about__item {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    position: relative;
+  }
+  .main-about__item-photo {
+    width: 186px;
+    height: 302px;
+    position: static;
+  }
+  .main-about__item-text {
+    width: 245px;
+  }
+  .item-photo-1,
+  .item-photo-2,
+  .item-photo-3 {
+    display: block;
+  }
+}
 .page-header {
   position: relative;
   top: 60px;

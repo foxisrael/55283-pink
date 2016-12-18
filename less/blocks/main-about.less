@@ -80,3 +80,34 @@
     display: none;
   }
 }
+
+@media (min-width: 960px){
+  .main-about .wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .main-about__item {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .main-about__item-photo{
+    width: 186px;
+    height: 302px;
+    position: static;
+  }
+
+  .main-about__item-text{
+    width: 245px;
+  }
+
+  .item-photo-1,
+  .item-photo-2,
+  .item-photo-3{
+    display: block;
+  }
+}
