@@ -74,6 +74,18 @@
   border-radius: 50%;
 }
 
+.footer-social__facebook:hover,
+.footer-social__twitter:hover,
+.footer-social__youtube:hover {
+  border: 3px solid @color-darkblue;
+}
+
+.footer-social__facebook:active,
+.footer-social__twitter:active,
+.footer-social__youtube:active {
+  border: 3px solid #e9ebec;
+}
+
 .footer-social__twitter {
   background: url('../img/icon-twitter.svg') no-repeat;
   background-position: center;
@@ -148,6 +160,14 @@
   .write-us {
     width: 50%;
     margin-bottom: 35px;
+  }
+
+  .write-us a:hover{
+    color: @color-darkblue;
+  }
+
+  .write-us a:active{
+    color: #ced0d2;
   }
 
   .adress {
