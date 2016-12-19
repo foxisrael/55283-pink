@@ -109,12 +109,16 @@ td {
   .service {
     overflow: hidden;
     min-height: 378px;
-    padding: 92px 33px 0;
+    padding: 95px 40px 0;
     background: @color-gray;
     background-image: url("../img/bg-triangle-white.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
+  }
+
+  .service .wrapper {
+    padding: 0;
   }
 
   table {
@@ -127,7 +131,7 @@ td {
   th {
     font-size: 16px;
     line-height: 30px;
-    padding: 5px 0 6px;
+    padding: 9px 0 6px;
   }
 
   th span {
@@ -166,34 +170,35 @@ td {
     left: 3px;
   }
 }
-
-
-
 @media (min-width: 960px) {
   .service {
     min-height: 525px;
-    padding: 150px 60px 100px;
+    padding: 152px 130px 70px;
   }
 
   th {
     font-size: 18px;
     line-height: 30px;
-    padding: 20px 0 15px;
+    padding: 15px 0;
   }
 
   th span {
     display: block;
     font-size: 24px;
     line-height: 30px;
-    margin-top: 7px;
+    margin-top: 3px;
   }
 
   td {
-    padding: 20px 28px 17px;
-    width: 150px;
+    padding: 17px 0px 13px 0px;
+    min-width: 170px;
     font-size: 18px;
     line-height: 30px;
     text-transform: none;
+  }
+
+  .service-header {
+    padding-left: 20px;
   }
 
   .service-element-no,
@@ -209,5 +214,16 @@ td {
 
   .slider-navigation-table {
     display: none;
+  }
+
+  .hit::before {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+  }
+
+  .hit::after {
+    top: 9px;
+    left: 9px;
   }
 }

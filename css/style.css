@@ -1330,7 +1330,7 @@ input[type='reset']:active {
   .btn--download {
     font-size: 21px;
     line-height: 18px;
-    margin-bottom: 65px;
+    margin-bottom: 70px;
   }
   .btn--download:hover {
     font-size: 21px;
@@ -1365,7 +1365,7 @@ input[type='reset']:active {
   }
 }
 .page-footer {
-  padding: 40px 0 0;
+  padding: 50px 0 0;
 }
 .page-footer__contacts {
   padding: 15px 0 40px;
@@ -1454,7 +1454,7 @@ input[type='reset']:active {
 }
 @media (min-width: 700px) {
   .page-footer {
-    padding: 50px 0 0;
+    padding: 55px 0 0;
   }
   .page-footer__social {
     display: -ms-flexbox;
@@ -1523,15 +1523,19 @@ input[type='reset']:active {
   }
 }
 @media (min-width: 960px) {
+  .page-footer {
+    padding: 70px 0 0;
+  }
   .page-footer__contacts {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 70px 0 30px;
+    padding: 65px 0 30px;
   }
   .page-footer h2 {
-    font-size: 40px;
+    font-size: 50px;
+    line-height: 50px;
     padding: 0 120px;
   }
   .call {
@@ -1554,11 +1558,22 @@ input[type='reset']:active {
   .call p,
   .write-us p {
     display: block;
-    margin: 0 0 15px;
+    margin: 0 0 20px;
+  }
+  .page-footer__social {
+    padding: 20px 0 0;
   }
   .map-image-container {
     height: 500px;
     overflow: hidden;
+  }
+  .footer-logo {
+    position: relative;
+    top: -5px;
+    left: -20px;
+  }
+  .footer-copyright a {
+    font-size: 18px;
   }
 }
 .service {
@@ -1659,12 +1674,15 @@ td {
   .service {
     overflow: hidden;
     min-height: 378px;
-    padding: 92px 33px 0;
+    padding: 95px 40px 0;
     background: #f2f2f2;
     background-image: url("../img/bg-triangle-white.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
+  }
+  .service .wrapper {
+    padding: 0;
   }
   table {
     position: static;
@@ -1675,7 +1693,7 @@ td {
   th {
     font-size: 16px;
     line-height: 30px;
-    padding: 5px 0 6px;
+    padding: 9px 0 6px;
   }
   th span {
     font-size: 18px;
@@ -1710,25 +1728,28 @@ td {
 @media (min-width: 960px) {
   .service {
     min-height: 525px;
-    padding: 150px 60px 100px;
+    padding: 152px 130px 70px;
   }
   th {
     font-size: 18px;
     line-height: 30px;
-    padding: 20px 0 15px;
+    padding: 15px 0;
   }
   th span {
     display: block;
     font-size: 24px;
     line-height: 30px;
-    margin-top: 7px;
+    margin-top: 3px;
   }
   td {
-    padding: 20px 28px 17px;
-    width: 150px;
+    padding: 17px 0px 13px 0px;
+    min-width: 170px;
     font-size: 18px;
     line-height: 30px;
     text-transform: none;
+  }
+  .service-header {
+    padding-left: 20px;
   }
   .service-element-no,
   .service-element-ok {
@@ -1742,11 +1763,18 @@ td {
   .slider-navigation-table {
     display: none;
   }
+  .hit::before {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+  }
+  .hit::after {
+    top: 9px;
+    left: 9px;
+  }
 }
-.slider-navigation__round,
-.slider-navigation-table {
-  position: relative;
-  top: 5px;
+.slider-navigation-table,
+.slider-navigation__round {
   margin: 0 auto;
   max-width: 70px;
 }
@@ -1790,10 +1818,8 @@ td {
   display: none;
 }
 @media (min-width: 700px) {
-  .slider-navigation__round,
-  .slider-navigation-table {
-    position: relative;
-    top: 13px;
+  .slider-navigation-table,
+  .slider-navigation__round {
     margin: 0 auto;
     max-width: 70px;
   }
@@ -1802,28 +1828,34 @@ td {
   .slider-navigation__round {
     display: none;
   }
+  .slider-navigation .wrapper {
+    position: relative;
+  }
   .slider-navigation__arrow {
     display: block;
+    position: absolute;
+    top: -120px;
   }
   .arrow-left {
     display: block;
     position: absolute;
-    top: 90px;
-    left: 40px;
+    left: -40px;
+    top: -35px;
   }
   .arrow-right {
     display: block;
     position: absolute;
-    top: 90px;
-    right: 40px;
+    right: -900px;
+    top: -35px;
   }
   .slider-navigation__arrow-element {
     background: url("http://placehold.it/80x65");
     width: 80px;
     height: 65px;
-    top: -360px;
     display: block;
-    position: relative;
+    top: -170px;
+    left: 390px;
+    position: absolute;
     margin: 0 auto;
   }
 }
@@ -1893,9 +1925,11 @@ td {
     font-family: 'opensans', sans-serif;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .comments {
-    padding: 200px 0 50px;
+    min-height: 415px;
+    padding: 195px 10px 40px;
+    position: relative;
   }
   .comments__item {
     margin-bottom: 0;
@@ -1914,7 +1948,7 @@ td {
     font-size: 24px;
     line-height: 30px;
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   .comments__item p {
     font-size: 18px;
@@ -1956,7 +1990,7 @@ td {
   display: none;
 }
 .main-about__item-text {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 .main-about h3 {
   margin: 0 0 13px;
@@ -1994,11 +2028,11 @@ td {
     width: 267px;
     height: 481px;
     position: absolute;
-    top: -72px;
-    left: -8px;
+    top: -70px;
+    left: 0;
   }
   .main-about__item-text {
-    padding-left: 300px;
+    padding-left: 310px;
     width: 100%;
     margin-bottom: 0;
   }
@@ -2011,6 +2045,9 @@ td {
   }
 }
 @media (min-width: 960px) {
+  .main-about {
+    height: 600px;
+  }
   .main-about .wrapper {
     display: -ms-flexbox;
     display: flex;
@@ -2026,15 +2063,28 @@ td {
     -ms-flex-direction: column;
         flex-direction: column;
     position: relative;
+    top: -80px;
+    padding: 0 20px;
   }
   .main-about__item-photo {
+    position: static;
     width: 186px;
     height: 302px;
-    position: static;
+    margin-bottom: 55px;
   }
   .main-about__item-text {
     width: 245px;
     padding-left: 0;
+  }
+  .main-about__item-text h3 {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin-bottom: 25px;
+  }
+  .main-about__item-text p {
+    font-size: 18px;
+    line-height: 30px;
   }
   .item-photo-1,
   .item-photo-2,
@@ -2104,7 +2154,7 @@ td {
     z-index: 1;
   }
   .logo {
-    margin-left: 20px;
+    margin-left: 10px;
     background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
     height: 40px;
   }
@@ -2127,8 +2177,8 @@ td {
         justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-preferred-size: 620px;
-        flex-basis: 620px;
+    -ms-flex-preferred-size: 630px;
+        flex-basis: 630px;
   }
   .menu-item {
     font-family: 'opensans', sans-serif;
@@ -2229,14 +2279,14 @@ td {
     top: 135px;
     height: 495px;
     float: right;
-    margin-right: -10px;
+    margin-right: 0;
   }
   .main-apps__apps {
     width: 310px;
     position: absolute;
     padding: 0;
     top: 155px;
-    left: 46px;
+    left: 55px;
     background: none;
   }
   .main-apps__apps p {
@@ -2261,15 +2311,15 @@ td {
     min-height: 800px;
   }
   .main-apps__apps {
-    left: 30px;
-    top: 225px;
+    left: 23px;
+    top: 220px;
     padding: 0;
     width: 320px;
   }
   .main-apps__apps h2 {
     font-size: 50px;
     line-height: 57px;
-    margin-bottom: 57px;
+    margin-bottom: 62px;
   }
   .apps {
     padding: 0 60px;
@@ -2278,7 +2328,7 @@ td {
   .hand-with-mobile {
     width: 530px;
     top: 210px;
-    left: 5px;
+    left: -25px;
     height: 590px;
     margin: 0;
   }
@@ -2310,8 +2360,8 @@ td {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    padding-top: 35px;
-    width: 300px;
+    padding-top: 40px;
+    width: 310px;
   }
   .main-24-hours-text p {
     color: #283645;
@@ -2337,7 +2387,7 @@ td {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 0 40px;
+    padding: 85px 40px 0;
   }
   .main-24-hours-photo {
     background: url("http://placehold.it/300x345") no-repeat;
@@ -2352,12 +2402,22 @@ td {
   .main-24-hours-text {
     -ms-flex-order: 2;
         order: 2;
-    padding-top: 65px;
+    padding-top: 35px;
     width: 581px;
   }
   .main-24-hours-text h3 {
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+  }
+  .main-24-hours-text p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .main-24-hours-text a {
+    font-size: 18px;
+    line-height: 30px;
+    color: #d22856;
   }
   .main-24-hours-text br {
     display: none;
