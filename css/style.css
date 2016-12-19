@@ -726,7 +726,6 @@ input[type="radio"]:checked:active + label:active::after {
       flex-wrap: wrap;
   position: relative;
   padding: 20px;
-  margin: 0 -20px;
   background: #f2f2f2;
 }
 .photopost-image-container {
@@ -1009,7 +1008,7 @@ input[type='reset']:active {
 .image-panorama-container {
   position: relative;
   width: 100vw;
-  min-height: 137px;
+  height: 137px;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
@@ -1024,14 +1023,18 @@ input[type='reset']:active {
   width: 100%;
   height: auto;
 }
-.post-footer,
 .post-header {
   font-size: 14px;
   line-height: 30px;
   padding: 45px 10px 50px;
 }
+.post-footer {
+  font-size: 14px;
+  line-height: 30px;
+  padding: 20px 10px 40px;
+}
 .post__item {
-  padding-bottom: 20px;
+  padding-bottom: 23px;
   text-align: left;
   background: #f2f2f2;
   margin-bottom: 20px;
@@ -1045,7 +1048,7 @@ input[type='reset']:active {
   position: absolute;
   z-index: 2;
   top: 0;
-  right: -10px;
+  right: 0;
   display: block;
   width: 140px;
   padding: 6px 20px;
@@ -1058,7 +1061,7 @@ input[type='reset']:active {
   height: auto;
 }
 .post__author {
-  padding: 15px 20px 0;
+  padding: 18px 18px 0;
   font-family: 'opensansbold', sans-serif;
 }
 .post__content {
@@ -1397,7 +1400,8 @@ input[type='reset']:active {
   background-repeat: no-repeat;
   background-position: top center;
 }
-.map-image-container {
+.page-footer__map {
+  width: 100%;
   height: 200px;
   overflow: hidden;
 }
@@ -1495,7 +1499,7 @@ input[type='reset']:active {
     width: 100%;
     padding: 0 200px;
   }
-  .map-image-container {
+  .page-footer__map {
     height: 350px;
   }
   .page-footer__social {
@@ -1574,6 +1578,11 @@ input[type='reset']:active {
   }
   .footer-copyright a {
     font-size: 18px;
+  }
+  .page-footer__map {
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
   }
 }
 .service {
@@ -1745,7 +1754,7 @@ td {
     padding: 17px 0px 13px 0px;
     min-width: 170px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 27px;
     text-transform: none;
   }
   .service-header {
