@@ -3,14 +3,15 @@
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 50px;
   background: @color-gray;
 }
 
 .photopost-image-container {
+  width: 100%;
   height: 375px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .photopost::after {
@@ -40,8 +41,8 @@
 .photopost__btn-editors {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  padding: 0 80px;
+  justify-content: space-between;
+  padding: 0 35px;
   margin-bottom: 35px;
 }
 
@@ -74,8 +75,8 @@
 
 .range-toggle {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   cursor: pointer;
   border: 2px solid @color-magenta;
   border-radius: 50%;
@@ -84,7 +85,7 @@
 
 .toggle-1 {
   top: -5px;
-  left: 185px;
+  left: 195px;
 }
 
 .range-toggle:active {
@@ -117,8 +118,7 @@ input[type='reset']:active {
   .photopost {
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px 60px;
-    margin: 0 -40px;
+    padding: 60px 60px 50px 40px;
   }
 
   .photopost::after {
@@ -126,13 +126,13 @@ input[type='reset']:active {
   }
 
   .photopost-image-container {
-    width: 47%;
+    width: 50%;
     height: 400px;
     margin-bottom: 0;
   }
 
   .photopost__filtr {
-    width: 47%;
+    width: 44%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -143,7 +143,6 @@ input[type='reset']:active {
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
-    margin: 0 30px 0 0;
   }
 
   .photopost__crop,
@@ -185,8 +184,8 @@ input[type='reset']:active {
 
   .photopost__range {
     position: relative;
-    width: 180px;
-    margin: 20px 0;
+    width: 200px;
+    margin: 10px 0;
   }
 
   .photopost__range::after {
@@ -194,9 +193,9 @@ input[type='reset']:active {
     bottom: -80px;
     right: 0;
     display: block;
-    width: 290px;
+    width: 260px;
     height: 2px;
-    margin-bottom: 38px;
+    margin-bottom: 50px;
     content: '';
     background: #dddfe0;
   }
@@ -221,14 +220,15 @@ input[type='reset']:active {
     width: 100%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .photopost {
-    padding: 60px 80px;
-    margin: 0;
+    max-width: 940px;
+    padding: 60px 90px 60px 80px;
+    margin: 0 auto;
   }
 
   .photopost-image-container {
-    width: 40%;
+    width: 39%;
     height: 400px;
     margin-bottom: 0;
   }
@@ -239,8 +239,8 @@ input[type='reset']:active {
 
   .photopost__range {
     position: relative;
-    width: 245px;
-    margin: 20px 0;
+    width: 295px;
+    margin: 13px 0;
   }
 
   .toggle-1 {
@@ -260,7 +260,7 @@ input[type='reset']:active {
 
   .photopost__range::after {
     width: 380px;
-    left: -110px;
+    left: -85px;
   }
 
   .photopost__btn-submit {
