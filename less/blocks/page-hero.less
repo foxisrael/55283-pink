@@ -1,7 +1,23 @@
 .page-hero {
   height: 230px;
   padding: 90px 10px 85px;
-  background: url('../img/bg-back-mobile@1x.jpg');
+  background: url("../img/bg-back-mobile@1x.jpg");
+  background-size: cover;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url("../img/bg-back-mobile@2x.jpg 2x");
+  }
+  @media (min-width: 700px) {
+    background: url("../img/bg-back-tablet@1x.jpg 1x");
+  }
+  @media (min-width: 700px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+    background: url("../img/bg-back-tablet@2x.jpg 2x");
+  }
+  @media (min-width: 960px) {
+    background: url("../img/bg-back-desktop@1x.jpg 1x");
+  }
+  @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+    background: url("../img/bg-back-desktop@2x.jpg 2x");
+  }
 }
 
 .page-hero h2 {
