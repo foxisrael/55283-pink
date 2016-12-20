@@ -1753,11 +1753,11 @@ input[type='reset']:active {
         flex-wrap: nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 65px 0 30px;
+    padding: 55px 0 10px;
   }
   .page-footer h2 {
     font-size: 50px;
-    line-height: 55px;
+    line-height: 58px;
     padding: 0 120px;
   }
   .call {
@@ -1783,7 +1783,7 @@ input[type='reset']:active {
     margin: 0 0 20px;
   }
   .page-footer__social {
-    padding: 20px 0 0;
+    padding: 35px 0 0;
   }
   .map-image-container {
     height: 500px;
@@ -1801,6 +1801,7 @@ input[type='reset']:active {
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
     background-position: top center;
+    min-height: 500px;
   }
 }
 .service {
