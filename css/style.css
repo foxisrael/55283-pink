@@ -1746,7 +1746,7 @@ input[type='reset']:active {
 }
 @media (min-width: 960px) {
   .page-footer {
-    padding: 10px 0 0;
+    padding: 65px 0 0;
   }
   .page-footer__contacts {
     -ms-flex-wrap: nowrap;
@@ -1754,6 +1754,7 @@ input[type='reset']:active {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 55px 0 10px;
+    margin: 0 -20px;
   }
   .page-footer h2 {
     font-size: 50px;
@@ -1955,7 +1956,7 @@ td {
 }
 @media (min-width: 960px) {
   .service {
-    min-height: 525px;
+    min-height: 475px;
     padding: 152px 130px 70px;
   }
   th {
@@ -2449,8 +2450,12 @@ td {
   .main-header {
     padding: 70px 60px 80px;
   }
+  .main-header h2:first-child {
+    margin-bottom: 3px;
+  }
   .main-header h2 {
     font-size: 50px;
+    line-height: 58px;
     max-width: 800px;
     margin: 0 auto;
   }
