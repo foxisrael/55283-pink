@@ -7,6 +7,7 @@
 }
 
 .page-header__menu-nav {
+  height: 69px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,8 +15,7 @@
 }
 
 .logo {
-  display: block;
-  margin: 25px 0 28px 30px;
+  margin-left: 15px;
   border: none;
   background: url("../img/logo-pink-white-mobile.svg") no-repeat;
   width: 75px;
@@ -24,33 +24,47 @@
 
 .page-header__menu-items li {
   list-style: none;
+  text-transform: uppercase;
 }
 
 .menu-item {
   display: block;
+  font-size: 18px;
+  line-height: 30px;
   font-family: @font-family-bold;
   text-decoration: none;
   text-transform: uppercase;
   color: @color-white;
-  padding: 20px 0;
+  padding: 16px 0;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000;
 }
+
+.menu-item:hover{
+  color: @color-magenta;
+}
+
+.menu-item:active{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-item-active a{
+  border-bottom: 2px solid white;
+}
+
 @media (min-width: 700px) {
-  .logo {
-    background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
-    width: 150px;
-    height: 40px;
+  .page-header__menu-nav {
+    height: 109px;
   }
 
-  .menu-item {
-    font-size: 18px;
-    line-height: 32px;
-    align-items: center;
-    text-transform: inherit;
+  .logo {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
+    height: 40px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .page-header {
     background: rgba(0, 0, 0, 0.3);
     position: relative;
@@ -60,11 +74,18 @@
     z-index: 1;
   }
 
+  .logo {
+    margin-left: 10px;
+    background: url("../img/logo-pink-blue-mobile.svg") no-repeat;
+    height: 40px;
+  }
+
   .page-header__menu {
     width: 960px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .page-header__menu-items {
@@ -72,11 +93,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 620px;
+    flex-basis: 630px;
   }
 
   .menu-item {
     font-family: @font-family-regular;
     border: none;
+    line-height: 18px;
+    text-transform: none;
   }
 }

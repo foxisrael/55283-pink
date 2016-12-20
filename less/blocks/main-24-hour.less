@@ -1,12 +1,11 @@
-.main-24-hours{
+.main-24-hours {
   display: none;
 }
 
-@media (min-width: 700px){
-  .main-24-hours{
+@media (min-width: 700px) {
+  .main-24-hours {
     display: block;
-    padding: 60px 40px;
-    overflow: hidden;
+    padding: 60px 0;
     text-align: left;
   }
 
@@ -18,44 +17,44 @@
 
   .main-24-hours-photo {
     background: url("http://placehold.it/240x270") no-repeat;
-    display: flex;
     width: 240px;
     height: 275px;
-    order: 1;
   }
 
   .main-24-hours-text {
     display: flex;
     flex-direction: column;
-    order: 2;
-    padding-top: 30px;
-    width: 310px;
+    padding-top: 40px;
+     width: 310px;
   }
 
-  .main-24-hours-text p{
+  .main-24-hours-text p {
     color: @color-darkblue;
   }
 
-  .main-24-hours-text h3{
+  .main-24-hours-text h3 {
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: @color-black;
   }
 
-  .main-24-hours a{
+  .main-24-hours a {
     display: block;
     font-family: @font-family-light;
     font-size: 14px;
     line-height: 18px;
     text-decoration: underline;
     color: @color-magenta;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
-
-@media (min-width: 960px){
-  .main-24-hours{
+@media (min-width: 960px) {
+  .main-24-hours {
     background: @color-gray;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 85px 40px 0;
   }
 
   .main-24-hours-photo {
@@ -67,27 +66,30 @@
     order: 1;
   }
 
-  .main-24-hours .wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
   .main-24-hours-text {
-    display: flex;
-    flex-direction: column;
     order: 2;
-    padding-top: 65px;
+    padding-top: 35px;
     width: 581px;
   }
 
-  .main-24-hours-text h3{
+  .main-24-hours-text h3 {
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
-  .main-24-hours-text br{
+  .main-24-hours-text p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .main-24-hours-text a {
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-magenta;
+  }
+
+  .main-24-hours-text br {
     display: none;
   }
-
 }

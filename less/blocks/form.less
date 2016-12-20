@@ -1,29 +1,20 @@
 .form {
-  padding: 55px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 45px 0;
 }
 
-.form__contacts,
-.form__tel-email {
-  padding-top: 40px;
-  margin: 0;
+.form-header {
+  line-height: 30px;
 }
 
-.form__achievements,
-.form__app {
-  margin: 0 -20px;
-  padding: 110px 40px 40px;
-  background: @color-gray;
+.form-header .text-disabled {
+  display: none;
 }
-
-.form__comments {
-  margin-bottom: 0;
-}
-
+/* FLEX ELEMENTS */
 .form-row {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .form-row:last-child {
@@ -31,32 +22,74 @@
 }
 
 .form-column {
-  margin-bottom: 43px;
+  margin-bottom: 52px;
 }
 
 .form-column:last-child {
   margin-bottom: 0;
 }
+/* FLEX CONTAINERS */
+.form__contacts {
+  padding: 35px 0 5px;
+  margin: 0 0 17px;
+}
+
+.form__tel-email {
+  padding: 35px 0 5px;
+}
+
+.tel-email-container .form-column {
+  margin-bottom: 17px;
+}
+
+.form__achievements {
+  margin: 0 -20px;
+  padding: 100px 20px 45px;
+  background: @color-gray;
+}
+
+.form__app {
+  margin: 0 -20px;
+  padding: 95px 20px 0;
+  background: @color-gray;
+}
+
+.form__app .form-column {
+  margin-bottom: 45px;
+}
 
 .form__comments {
-  padding: 75px 0 40px;
+  padding: 55px 0 40px;
+}
+
+.form__button {
+  margin: 3px 0 0;
 }
 
 fieldset {
-  padding: 110px 20px 40px;
+  padding: 0;
   border: 0;
-  margin-bottom: 40px;
 }
 
 legend {
   position: relative;
-  top: 60px;
+  top: 55px;
   font-family: @font-family-regular;
   font-size: 14px;
   line-height: 18px;
+  padding: 0 20px;
   text-transform: uppercase;
   color: @color-magenta;
   background: @color-gray;
+}
+
+.form__tel-email legend {
+  display: none;
+}
+
+.form__comments legend {
+  background: @color-white;
+  top: 40px;
 }
 
 label {
@@ -69,17 +102,9 @@ label {
   color: @color-magenta;
 }
 
-.form__tel-email legend {
-  display: none;
-}
-
-.form__comments legend {
-  background: @color-white;
-}
-
 .form__contacts label,
 .form__tel-email label {
-  padding: 25px 0 15px 20px;
+  padding: 25px 0 10px 25px;
 }
 
 .form__contacts label:first-of-type,
@@ -101,10 +126,10 @@ input[type="text"],
 textarea {
   font-family: @font-family-regular;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 30px;
   box-sizing: border-box;
   width: 100%;
-  padding: 20px;
+  padding: 15px 22px;
   text-align: left;
   color: @color-darkblue;
   border: 2px solid #e7e7e7;
@@ -135,8 +160,8 @@ input[type="tel"] {
 textarea {
   box-sizing: border-box;
   width: 100%;
-  height: 201px;
-  padding: 20px;
+  height: 200px;
+  padding: 15px 20px;
   color: @color-darkblue;
 }
 
@@ -172,8 +197,8 @@ input[type="checkbox"] + label::before {
   top: -4px;
   left: 0;
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 39px;
+  height: 39px;
   content: "";
   border: 2px solid #e5e5e5;
   background-color: @color-white;
@@ -189,8 +214,8 @@ input[type="checkbox"]:active + label:active::before {
 /* checkbox after */
 input[type="checkbox"]:active + label::after {
   position: absolute;
-  top: 6px;
-  left: 7px;
+  top: 8px;
+  left: 9px;
   display: block;
   width: 22px;
   height: 16px;
@@ -202,8 +227,8 @@ input[type="checkbox"]:active + label::after {
 
 input[type="checkbox"]:checked + label::after {
   position: absolute;
-  top: 6px;
-  left: 7px;
+  top: 8px;
+  left: 9px;
   display: block;
   width: 22px;
   height: 16px;
@@ -218,8 +243,8 @@ input[type="radio"] + label::before {
   top: -4px;
   left: 0;
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 39px;
+  height: 39px;
   content: "";
   border: 2px solid #e5e5e5;
   border-radius: 50%;
@@ -236,11 +261,11 @@ input[type="radio"]:active + label:active::before {
 /* radio after */
 input[type="radio"]:checked + label::after {
   position: absolute;
-  top: 6px;
-  left: 10px;
+  top: 7px;
+  left: 12px;
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   content: "";
   border-radius: 50%;
   background-color: #d22856;
@@ -254,11 +279,19 @@ input[type="radio"]:checked:active + label:active::after {
   background-color: @color-magenta;
 }
 
-.form span {
+.form__button p {
+  text-transform: uppercase;
+}
+
+.form__button .star {
   font-family: @font-family-regular;
   font-size: 14px;
   line-height: 30px;
   color: @color-magenta;
+}
+
+.text-disabled {
+  display: none;
 }
 
 ::-webkit-input-placeholder {
@@ -276,68 +309,31 @@ input[type="radio"]:checked:active + label:active::after {
 :-ms-input-placeholder {
   color: @color-darkblue;
 }
-
-
 @media (min-width: 700px) {
+  .form {
+    padding: 90px 0 0;
+    margin: 0 -10px;
+  }
+
+  .form-column:last-child {
+    margin-bottom: 43px;
+  }
+
   .form-header {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 75px;
-    padding: 0 20px;
+    padding: 0 50px;
   }
 
-  .form {
-    padding: 100px 0 0;
+  .form-header .text-disabled {
+    display: inline;
   }
 
   .form__contacts {
-    display: flex;
     order: 1;
-  }
-
-  .form__app {
-    display: flex;
-    order: 2;
-  }
-
-  .form__tel-email {
-    display: flex;
-    order: 3;
-  }
-
-  .tel-email-container{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-  }
-
-  .tel-email-container .form-column{
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 0;
-  }
-
-  .form-column:last-child{
-    margin-bottom: 43px;
-  }
-
-  .form__achievements {
-    display: flex;
-    order: 4;
-  }
-
-  .form__comments {
-    display: flex;
-    order: 5;
-  }
-
-  .form__button {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    order: 6;
+    padding: 40px 60px;
+    margin: 0 0 10px;
   }
 
   .form__contacts .form-row {
@@ -345,24 +341,94 @@ input[type="radio"]:checked:active + label:active::after {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
   }
 
-  .form__contacts,
-  .form__tel-email {
-    padding: 40px 60px;
-    margin: 0 0 60px;
-  }
-
-  .form__achievements,
   .form__app {
-    margin: 0 0 60px;
-    padding: 40px 60px;
+    order: 2;
+    margin: 0 0 55px;
+    padding: 40px 60px 20px;
     background: @color-white;
   }
 
-  .form__comments {
+  .form__tel-email {
+    order: 3;
     padding: 40px 60px;
+    margin: 0 0 50px;
+  }
+
+  .label-email:before,
+  .label-tel:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -72px;
+    right: 2px;
+    width: 66px;
+    height: 60px;
+    background-color: @color-gray;
+    z-index: 1;
+  }
+
+  .tel-email-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .tel-email-container .form-column {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 35px;
+  }
+
+  .tel-email-container .form-column:last-of-type {
     margin-bottom: 0;
+  }
+
+  .tel-email-container .form-column:first-of-type {
+    order: 2;
+  }
+
+  .tel-email-container .form-column:last-of-type {
+    order: 1;
+  }
+
+  .tel-email-container .email,
+  .tel-email-container .tel {
+    margin-bottom: 10px;
+  }
+
+  .form__achievements {
+    order: 4;
+    margin: 0 0 60px;
+    padding: 45px 60px 0;
+    background: @color-white;
+  }
+
+  .form__achievements .form-column {
+    margin-bottom: 52px;
+  }
+
+  .form__comments {
+    order: 5;
+    padding: 35px 60px 55px;
+    margin: 0;
+  }
+
+  .form__button {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 15px;
+    order: 6;
+    margin: 0;
+  }
+
+  textarea {
+    height: 190px;
   }
 
   fieldset {
@@ -379,14 +445,14 @@ input[type="radio"]:checked:active + label:active::after {
   .form__comments legend,
   .form__tel-email legend,
   legend {
-    display: block;
+    display: inherit;
     position: relative;
     top: 0;
     padding: 0 20px;
     background: @color-white;
   }
 
-  .form__contacts label{
+  .form__contacts label {
     padding: 0;
     margin-right: 20px;
   }
@@ -409,63 +475,112 @@ input[type="radio"]:checked:active + label:active::after {
     color: @color-darkblue;
   }
 
-  .form span {
-    font-family: @font-family-regular;
-    font-size: 14px;
-    line-height: 30px;
-    color: @color-magenta;
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    padding-left: 60px;
   }
+
+  .label-tel {}
 }
-
-
 @media (min-width: 960px) {
+  main .wrapper {
+    padding: 0 10px;
+  }
+
   .form {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-header {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 75px;
+    padding: 0 70px;
+  }
+
+  .form-header .text-disabled {
+    display: inline;
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-darkblue;
   }
 
   .form__contacts {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     order: 1;
-    width: 45%;
+    width: 46%;
+    margin: 0 0 60px;
+    position: relative;
+    top: 10px;
   }
 
-  .form__app{
+  .form__contacts .form-row {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .form__contacts .form-row:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .form__app {
     flex-direction: column;
     order: 2;
-    width: 45%;
+    width: 46%;
+    margin: 0 0 60px;
+    padding: 40px 20px 20px 50px;
+    background: #fff;
+    height: 300px;
+  }
+
+  .form__app .form__app-container{
+    padding-left: 20px;
+  }
+
+  .form__app .form-column:last-of-type {
+    margin-bottom: 0;
   }
 
   .form__tel-email {
-    display: flex;
     order: 3;
     width: 100%;
-    padding: 40px 60px 0;
+    padding: 35px 60px 0;
+    margin: 0 0 60px;
   }
 
-  .tel-email-container{
+  .label-email:before,
+  .label-tel:before {
+    right: -18px;
+  }
+
+  .tel-email-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: baseline;
     padding: 0;
   }
 
-  .tel-email-container .form-column{
+  .tel-email-container .form-column {
     width: 45%;
+    margin-bottom: 15px;
   }
 
   .form__achievements {
-    display: flex;
     order: 4;
     width: 100%;
-    padding: 40px 60px 20px;
+    padding: 45px 0 10px 60px;
+    margin: 0 0 60px;
+    background: @color-white;
   }
 
-  .achievements-container{
+  .achievements-container {
     display: flex;
     flex-direction: row;
     align-content: space-between;
@@ -473,32 +588,32 @@ input[type="radio"]:checked:active + label:active::after {
     padding: 0;
   }
 
-  .achievements-container .form-column:nth-child(1){
+  .achievements-container .form-column:nth-child(1) {
     order: 1;
-    width: 37%;
+    width: 36%;
   }
 
-  .achievements-container .form-column:nth-child(2){
+  .achievements-container .form-column:nth-child(2) {
     order: 4;
-    width: 37%;
+    width: 36%;
   }
 
-  .achievements-container .form-column:nth-child(3){
+  .achievements-container .form-column:nth-child(3) {
     order: 2;
-    width: 34%;
+    width: 35%;
   }
 
-  .achievements-container .form-column:nth-child(4){
+  .achievements-container .form-column:nth-child(4) {
     order: 5;
-    width: 34%;
+    width: 35%;
   }
 
-  .achievements-container .form-column:nth-child(5){
+  .achievements-container .form-column:nth-child(5) {
     order: 3;
     width: 27%;
   }
 
-  .achievements-container .form-column:nth-child(6){
+  .achievements-container .form-column:nth-child(6) {
     order: 6;
     width: 27%;
   }
@@ -509,53 +624,33 @@ input[type="radio"]:checked:active + label:active::after {
   }
 
   .form__comments {
-    display: flex;
     order: 5;
     width: 100%;
+    padding: 40px 60px;
+    margin-bottom: 0;
   }
 
   .form__button {
     width: 100%;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     order: 6;
   }
 
-  .form__contacts .form-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .form__contacts,
-  .form__tel-email {
-    margin: 0 0 60px;
-  }
-
-  .form__achievements,
-  .form__app {
-    margin: 0 0 60px;
-    padding: 40px 60px;
-    background: @color-white;
-  }
-
-  .form__comments {
-    padding: 40px 60px;
-    margin-bottom: 0;
-  }
-
   fieldset {
     padding: 110px 20px 40px;
     border: 2px solid #e5e5e5;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   fieldset.form__contacts {
     border: none;
     padding: 0;
+  }
+
+  legend {
+    display: block;
   }
 
   .form__comments legend,
@@ -587,10 +682,13 @@ input[type="radio"]:checked:active + label:active::after {
     color: @color-darkblue;
   }
 
-  .form span {
-    font-family: @font-family-regular;
-    font-size: 14px;
-    line-height: 30px;
-    color: @color-magenta;
+  textarea {
+    height: 120px;
+    padding: 5px 15px;
+  }
+
+  .text-disabled {
+    display: inline;
+    color: @color-darkblue;
   }
 }

@@ -1,13 +1,21 @@
 .service {
   overflow: hidden;
-  padding: 65px 0 50px;
-  margin: 0 auto;
+  padding: 93px 0 55px;
+  margin: 0;
   background: @color-gray;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 table {
-  margin: 0 auto 40px;
+  width: 940px;
   border-collapse: collapse;
+  position: relative;
+  left: 50%;
+  transform: translateX(-62.5%);
+  margin-bottom: 30px;
 }
 
 td,
@@ -17,6 +25,13 @@ th {
 }
 
 th {
+  font-family: @font-family-bold;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: @color-white;
+  background: @color-darkblue;
   border-top: 3px solid @color-darkblue;
   border-left: 3px solid @color-darkblue;
 }
@@ -29,33 +44,25 @@ th:last-child {
   border-right: 3px solid @color-darkblue;
 }
 
-.service .empty {
-  border-top: none;
-  border-left: none;
-  background: @color-gray;
-}
-
-th {
-  font-family: @font-family-bold;
-  font-size: 18px;
-  line-height: 30px;
-  padding: 25px 0;
-  text-transform: uppercase;
-  color: @color-white;
-  background: @color-darkblue;
-}
-
 th span {
   font-family: @font-family-light;
   font-size: 24px;
   line-height: 30px;
 }
 
+.service .empty {
+  border-top: none;
+  border-left: none;
+  background: @color-gray;
+}
+
 td {
   min-width: 280px;
-  padding: 25px 23px;
+  padding: 17px 17px 17px 21px;
   text-align: left;
   text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
   color: @color-darkblue;
   background: @color-white;
 }
@@ -93,25 +100,38 @@ td {
   left: 9px;
   display: block;
   content: 'ХИТ';
+  font-size: 14px;
+  line-height: 30px;
   transform: rotate(-45deg);
   color: @color-white;
 }
-
-@media (min-width: 700px){
+@media (min-width: 700px) {
   .service {
     overflow: hidden;
-    padding: 40px 0 70px;
+    min-height: 378px;
+    padding: 95px 40px 0;
     background: @color-gray;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .service .wrapper {
+    padding: 0;
   }
 
   table {
-    position: initial;
-    margin: 0 auto;
+    position: static;
+    width: 100%;
+    transform: none;
+    left: auto;
   }
 
   th {
     font-size: 16px;
-    padding: 20px 0 15px;
+    line-height: 30px;
+    padding: 9px 0 6px;
   }
 
   th span {
@@ -119,8 +139,8 @@ td {
   }
 
   td {
-    min-width: 170px;
-    padding: 13px 15px;
+    min-width: 155px;
+    padding: 10px 15px;
     text-transform: none;
   }
 
@@ -131,46 +151,54 @@ td {
     margin: 0 auto;
   }
 
-  .service-item-text{
+  .service-item-text {
     display: none;
   }
 
-  .slider-navigation-table{
+  .slider-navigation-table {
     display: none;
+  }
+
+  .hit::before {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+  }
+
+  .hit::after {
+    top: 3px;
+    left: 3px;
   }
 }
-
-
-@media (min-width: 960px){
+@media (min-width: 960px) {
   .service {
-    padding: 70px 0 100px;
-  }
-
-  table {
-    position: initial;
-    margin: 0 auto;
+    min-height: 475px;
+    padding: 152px 130px 70px;
   }
 
   th {
     font-size: 18px;
     line-height: 30px;
-    padding: 20px 0 15px;
+    padding: 15px 0;
   }
 
   th span {
     display: block;
     font-size: 24px;
     line-height: 30px;
-    margin-top: 7px;
+    margin-top: 3px;
   }
 
   td {
-    min-width: 230px;
-    padding: 20px 28px 17px 28px;
-    width: 150px;
+    padding: 17px 0px 13px 0px;
+    min-width: 170px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 27px;
     text-transform: none;
+  }
+
+  .service-header {
+    padding-left: 20px;
   }
 
   .service-element-no,
@@ -180,12 +208,22 @@ td {
     margin: 0 auto;
   }
 
-  .service-item-text{
+  .service-item-text {
     display: none;
   }
 
-  .slider-navigation-table{
+  .slider-navigation-table {
     display: none;
   }
 
+  .hit::before {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+  }
+
+  .hit::after {
+    top: 9px;
+    left: 9px;
+  }
 }

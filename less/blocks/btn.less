@@ -5,7 +5,7 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   cursor: pointer;
   text-align: center;
   color: @color-white;
@@ -22,19 +22,19 @@
 }
 
 .btn--download {
-  margin: 0 auto 30px;
+  margin: 0 auto 35px;
   outline: none;
 }
 
 .btn--download:hover {
-  margin: 0 auto 30px;
+  margin: 0 auto 35px;
   color: @color-magenta;
   outline: none;
   background: @color-white;
 }
 
 .btn--download:active {
-  margin: 0 auto 30px;
+  margin: 0 auto 35px;
   color: rgba(240, 40, 86, .3);
   outline: none;
   background: @color-white;
@@ -44,10 +44,10 @@
   font-family: @font-family-bold;
   font-size: @font-size-btn;
   width: 100%;
-  margin: 0 0 50px;
-  padding: 20px;
+  margin: 0 0 33px;
+  padding: 23px;
   color: @color-white;
-  border-radius: 10px;
+  border-radius: 7px;
   outline: none;
   background: #2aab6d;
 }
@@ -98,29 +98,30 @@
   outline: none;
   background: @color-magenta;
 }
-
-
 @media (min-width: 700px) {
   .btn--download {
     width: 300px;
+    margin: 0 auto 45px;
   }
 
   .btn--download:hover {
     width: 300px;
+    margin: 0 auto 45px;
   }
 
   .btn--download:active {
     width: 300px;
+    margin: 0 auto 45px;
   }
 
   .btn--submit {
     width: 300px;
-    margin: 70px 0 0;
+    margin: 60px 0 0;
   }
 
   .btn--submit:hover {
     width: 300px;
-    margin: 70px 0 0;
+    margin: 60px 0 0;
   }
 
   .btn--submit:active {
@@ -130,50 +131,75 @@
 
   .btn--post {
     width: 100%;
-    margin: 0 0 15px;
+    margin: 0 0 30px;
+    position: relative;
+    top: 5px;
+    left: 10px;
   }
 
   .btn--post:hover {
     width: 100%;
-    margin: 0 0 15px;
+    margin: 0 0 30px;
+    position: relative;
+    top: 5px;
+    left: 10px;
   }
 
   .btn--post:active {
     width: 100%;
-    margin: 0 0 15px;
+    margin: 0 0 30px;
+    position: relative;
+    top: 5px;
+    left: 10px;
   }
 }
-
-@media (min-width: 1200px) {
-  .btn--download{
-    margin-bottom: 65px;
+@media (min-width: 960px) {
+  .btn--download {
+    font-size: 21px;
+    line-height: 18px;
+    margin-bottom: 70px;
   }
 
-  .btn--download:hover{
-    margin-bottom: 65px;
+  .btn--download:hover {
+    font-size: 21px;
+    line-height: 18px;
+    margin-bottom: 70px;
   }
 
-  .btn--download:hover{
-    margin-bottom: 65px;
+  .btn--download:hover {
+    font-size: 21px;
+    line-height: 18px;
+    margin-bottom: 70px;
   }
-
 
   .btn-menu {
     display: none;
   }
 
   .btn--post {
-    width: 180px;
+    width: 185px;
+    height: 56px;
+    padding: 15px;
     margin: 0;
+    top: -5px;
+    left: 0;
   }
 
   .btn--post:hover {
-    width: 180px;
+    width: 185px;
+    height: 56px;
+    padding: 15px;
     margin: 0;
+    top: -5px;
+    left: 0;
   }
 
   .btn--post:active {
-    width: 180px;
+    width: 185px;
+    height: 56px;
+    padding: 15px;
     margin: 0;
+    top: -5px;
+    left: 0;
   }
 }

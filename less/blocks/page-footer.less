@@ -1,25 +1,22 @@
-.page-footer{
-  padding: 50px 0 0;
+.page-footer {
+  padding: 0 0 20px;
 }
 
 .page-footer__contacts {
-  padding: 45px 0 40px;
+  padding: 15px 0 40px;
   background: @color-white;
 }
 
 .page-footer h2 {
-  padding: 0 20px
+  padding: 0 20px;
+  line-height: 30px;
 }
 
 .page-footer__contacts p {
   font-family: @font-family-bold;
   font-size: 18px;
-  margin: 25px 0 0;
+  margin: 23px 0 0;
   color: @color-darkblue;
-}
-
-.call {
-  margin-top: 0;
 }
 
 .page-footer__contacts a,
@@ -31,17 +28,30 @@
   color: @color-magenta;
 }
 
+.page-footer__contacts address {
+  line-height: 30px;
+}
+
 .page-footer__map {
+  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.page-footer__map {
+  width: 100%;
   height: 200px;
-  background: url('../img/bg-map-mobile@1x.png') no-repeat;
-  background-color: @color-white;
-  background-position: center bottom;
-  background-size: cover;
+  overflow: hidden;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
 }
 
 /* page-footer__SOCICAL */
 .page-footer__social {
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .footer-social {
@@ -62,6 +72,18 @@
   margin-right: 13px;
   border: 3px solid #e9ebec;
   border-radius: 50%;
+}
+
+.footer-social__facebook:hover,
+.footer-social__twitter:hover,
+.footer-social__youtube:hover {
+  border: 3px solid @color-darkblue;
+}
+
+.footer-social__facebook:active,
+.footer-social__twitter:active,
+.footer-social__youtube:active {
+  border: 3px solid #e9ebec;
 }
 
 .footer-social__twitter {
@@ -92,81 +114,158 @@
   vertical-align: middle;
 }
 
-.page-footer__social-disabled{
+.page-footer__social-disabled {
   display: none;
 }
-
 @media (min-width: 700px) {
+  .form{
+    margin: 0;
+  }
+
+  .form_app{
+    padding: 45px 60px 20px;
+  }
+
+  .page-footer {
+    padding: 45px 0 0;
+  }
+
+  .page-footer__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .page-footer__contacts {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 35px 0 50px;
+    padding: 20px 0 50px;
+  }
+
+  .page-footer__contacts p {
+    line-height: 30px;
   }
 
   .page-footer h2 {
     font-size: 40px;
+    line-height: 42px;
     margin: 0 60px;
     padding: 0 50px;
   }
 
   .call,
   .write-us {
-    width: 40%;
-    margin-bottom: 55px;
+    width: 50%;
+    margin-bottom: 35px;
+  }
+
+  .write-us a:hover{
+    color: @color-darkblue;
+  }
+
+  .write-us a:active{
+    color: #ced0d2;
   }
 
   .adress {
     width: 100%;
+    padding: 0 200px;
   }
 
   .page-footer__map {
-    height: 375px;
+    height: 350px;
   }
 
   .page-footer__social {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
   }
 
   .footer-logo {
-    margin-right: 70px;
+    position: relative;
+    top: -5px;
   }
 
   .footer-social {
     position: relative;
-    margin: 0 90px 0 0;
+    left: -20px;
+  }
+
+  .logo-htmlacademy {
+    width: 27px;
+    height: 34px;
   }
 }
-
 @media (min-width: 960px) {
+  .page-footer{
+    padding: 65px 0 0;
+  }
+
   .page-footer__contacts {
     flex-wrap: nowrap;
-    padding: 70px 0 30px;
+    justify-content: space-around;
+    padding: 55px 0 10px;
+    margin: 0 -20px;
   }
 
   .page-footer h2 {
-    font-size: 40px;
-    margin: 0 60px;
-    padding: 0 100px;
+    font-size: 50px;
+    line-height: 58px;
+    padding: 0 120px;
   }
 
-  .call,
-  .write-us,
-  .adress{
+  .call {
+    order: 1;
     width: 30%;
   }
 
+  .adress{
+    order: 2;
+    width: 30%;
+    padding: 0;
+  }
 
+  .write-us{
+    order: 3;
+    width: 30%;
+  }
+
+  .adress p,
   .call p,
-  .write-us p,
-  .adress p{
+  .write-us p {
     display: block;
-    margin: 0 0 15px;
+    margin: 0 0 20px;
+  }
+
+  .page-footer__social{
+    padding: 35px 0 0;
+  }
+
+  .map-image-container {
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .footer-logo {
+    position: relative;
+    top: -5px;
+    left: -20px;
+  }
+
+  .footer-copyright a{
+    font-size: 18px;
   }
 
   .page-footer__map {
-    height: 500px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 500px;
   }
 }

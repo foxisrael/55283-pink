@@ -1,13 +1,25 @@
+.slider-navigation-table,
+.slider-navigation__round {
+  margin: 0 auto;
+  max-width: 70px;
+}
+
 .slider-navigation li {
-  display: inline;
+  list-style: none;
+}
+
+.slider-navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .slider-navigation__control {
-  display: inline-block;
+  display: block;
   width: 6px;
   height: 6px;
   margin-right: 15px;
-  vertical-align: middle;
   border-radius: 50%;
   background: #bec2c7;
 }
@@ -21,58 +33,62 @@
 }
 
 .slider-navigation__control--active {
-  display: inline-block;
   width: 12px;
   height: 12px;
   margin-right: 15px;
-  vertical-align: middle;
   border: 3px solid @color-darkblue;
   border-radius: 50%;
   background: @color-white;
   background: #b5b9be;
 }
 
-.slider-navigation__arrow{
+.slider-navigation__arrow {
   display: none;
 }
-
 @media (min-width: 700px) {
-
-    .slider-navigation__round{
-      display: block;
-    }
+  .slider-navigation-table,
+  .slider-navigation__round {
+    margin: 0 auto;
+    max-width: 70px;
+  }
 }
-
 @media (min-width: 960px) {
-  .slider-navigation__round{
+  .slider-navigation__round {
     display: none;
   }
 
-  .slider-navigation__arrow{
-    display: block;
+  .slider-navigation .wrapper {
+    position: relative;
   }
 
-  .arrow-left{
-    display: block;
-    position: absolute;
-    top: 90px;
-    left: 0;
-  }
-
-  .arrow-right{
+  .slider-navigation__arrow {
     display: block;
     position: absolute;
-    top: 90px;
-    right: 0;
+    top: -120px;
   }
 
-  .slider-navigation__arrow-element{
+  .arrow-left {
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: -35px;
+  }
+
+  .arrow-right {
+    display: block;
+    position: absolute;
+    right: -900px;
+    top: -35px;
+  }
+
+  .slider-navigation__arrow-element {
     background: url("http://placehold.it/80x65");
     width: 80px;
     height: 65px;
-    top: -360px;
     display: block;
-    position: relative;
+    top: -170px;
+    left: 390px;
+    position: absolute;
     margin: 0 auto;
   }
 }
