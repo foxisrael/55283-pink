@@ -357,15 +357,20 @@ input[type="radio"]:checked:active + label:active::after {
     margin: 0 0 50px;
   }
 
-  .label-email:before,
-  .label-tel:before {
-    content: "";
+  .mobile-element{
     display: block;
     position: absolute;
     top: -72px;
     right: 2px;
-    width: 66px;
-    height: 60px;
+    background-color: @color-gray;
+    z-index: 1;
+  }
+
+  .email-element{
+    display: block;
+    position: absolute;
+    top: -72px;
+    right: 2px;
     background-color: @color-gray;
     z-index: 1;
   }
