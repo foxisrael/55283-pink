@@ -47,11 +47,30 @@
   max-width: 350px;
 }
 
-.photopost__contrast,
-.photopost__crop,
-.photopost__fill {
-  border: none;
-  background: none;
+.photopost__crop svg,
+.photopost__fill svg,
+.photopost__contrast svg{
+  fill: @color-darkblue;
+  opacity: 0.3;
+}
+
+.photopost__crop:hover svg,
+.photopost__fill:hover svg,
+.photopost__contrast:hover svg{
+  fill: @color-darkblue;
+  opacity: 0.5;
+}
+
+.photopost__crop:active svg,
+.photopost__fill:active svg,
+.photopost__contrast:active svg{
+  fill: @color-magenta;
+  opacity: 1;
+}
+
+.photopost__crop-active svg{
+  fill: @color-magenta;
+  opacity: 1;
 }
 
 .photopost__btn-range {

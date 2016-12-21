@@ -33,20 +33,36 @@
 }
 
 .page-footer__map {
+  width: 100%;
+  height: 200px;
   position: relative;
+  background: url("../img/bg-map-mobile@1x.jpg");
+  background-size: cover;
+  overflow: hidden;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url("../img/bg-map-mobile@2x.jpg");
+  }
+  @media (min-width: 700px) {
+    background: url("../img/bg-map-tablet@1x.jpg");
+  }
+  @media (min-width: 700px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+    background: url("../img/bg-map-tablet@2x.jpg");
+  }
+  @media (min-width: 960px) {
+    background: url("../img/bg-map-desktop@1x.jpg");
+  }
+  @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+    background: url("../img/bg-map-desktop@2x.jpg");
+  }
 }
 
-.page-footer__map::before {
-  display: block;
-  content: "";
-  position: relative;
+.footer-map-element {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  fill: @color-white;
   top: 0;
   z-index: 1;
-  width: 100%;
-  background-image: url("../img/bg-triangle-white-footer.svg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: top center;
 }
 
 .logo-footer-effect {
@@ -138,7 +154,6 @@
   fill: rgba(40,54,69, 0.3);
 }
 
-
 .page-footer__social-disabled {
   display: none;
 }
@@ -221,6 +236,10 @@
   .logo-htmlacademy {
     width: 27px;
     height: 34px;
+  }
+
+  .page-footer__map {
+    height: 500px;
   }
 }
 @media (min-width: 960px) {

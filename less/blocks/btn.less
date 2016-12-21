@@ -14,11 +14,18 @@
   background: none;
 }
 
-.btn-menu {
-  width: 24px;
-  height: 12px;
-  background-image: url('../img/icon-menu-burger.svg') repeat-y;
+.btn-menu svg{
+  fill: @color-white;
   margin: 25px 25px 25px 0;
+}
+
+.btn-menu:hover svg {
+  fill: @color-magenta;
+}
+
+.btn-menu:active svg{
+  fill: @color-magenta;
+  opacity: 0.3;
 }
 
 .btn--download {
