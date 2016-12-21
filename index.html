@@ -12,6 +12,7 @@
 
 <body>
   <header class="page-header">
+    <!-- Закрытое меню page-header__menu--disabled -->
     <nav class="page-header__menu">
       <div class="page-header__menu-nav">
         <a class="logo" href="index.html">
@@ -29,8 +30,12 @@
           </svg>
         </a>
         <button type="button" class="btn-menu">
-          <svg version="1" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23.867 23.867">
-            <path fill="#FFF" d="M15.087 11.933l8.56-8.56c.293-.292.293-.767 0-1.06L21.554.22c-.14-.14-.33-.22-.53-.22s-.392.08-.53.22l-8.56 8.56L3.374.22c-.284-.282-.78-.282-1.063 0L.22 2.313c-.293.293-.293.768 0 1.06l8.56 8.56-8.56 8.56c-.293.292-.293.767 0 1.06l2.093 2.095c.14.142.33.22.53.22s.39-.078.53-.22l8.56-8.56 8.56 8.56c.142.142.333.22.53.22.2 0 .39-.078.53-.22l2.094-2.094c.293-.294.293-.77 0-1.062l-8.56-8.56z"/>
+          <svg class="btn-menu--open" version="1" xmlns="http://www.w3.org/2000/svg" width="50" height="24" viewBox="0 0 49.945 24.007">
+            <path d="M1.137 0C.51 0 0 .428 0 1.01v1.98C0 3.55.494 4 1.14 4h47.67c.628 0 1.138-.427 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003C.51 10.003 0 10.43 0 11.013v1.98c0 .557.494 1.01 1.14 1.01h47.67c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002c-.627 0-1.137.43-1.137 1.01v1.982c0 .557.494 1.01 1.14 1.01h47.67c.628 0 1.138-.428 1.138-1.01v-1.98c0-.56-.494-1.012-1.138-1.012H1.137z"/>
+            <path d="M1.137 0C.51 0 0 .428 0 1.01v1.98C0 3.55.494 4 1.14 4h47.67c.628 0 1.138-.427 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003C.51 10.003 0 10.43 0 11.013v1.98c0 .557.494 1.01 1.14 1.01h47.67c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002c-.627 0-1.137.43-1.137 1.01v1.982c0 .557.494 1.01 1.14 1.01h47.67c.628 0 1.138-.428 1.138-1.01v-1.98c0-.56-.494-1.012-1.138-1.012H1.137z"/>
+          </svg>
+          <svg class="btn-menu--close" version="1" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23.867 23.867">
+            <path d="M15.087 11.933l8.56-8.56c.293-.292.293-.767 0-1.06L21.554.22c-.14-.14-.33-.22-.53-.22s-.392.08-.53.22l-8.56 8.56L3.374.22c-.284-.282-.78-.282-1.063 0L.22 2.313c-.293.293-.293.768 0 1.06l8.56 8.56-8.56 8.56c-.293.292-.293.767 0 1.06l2.093 2.095c.14.142.33.22.53.22s.39-.078.53-.22l8.56-8.56 8.56 8.56c.142.142.333.22.53.22.2 0 .39-.078.53-.22l2.094-2.094c.293-.294.293-.77 0-1.062l-8.56-8.56z"/>
           </svg>
         </button>
       </div>
@@ -45,10 +50,10 @@
   <main>
     <div class="main-apps">
       <div class="wrapper">
-        <picture>
+        <picture class="hand-with-mobile">
           <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x">
-          <img class="hand-with-mobile" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="mobile photo">
+          <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="mobile photo">
         </picture>
         <div class="main-apps__apps">
           <h2>Взгляните на жизнь иначе!</h2>

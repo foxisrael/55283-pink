@@ -1,7 +1,6 @@
 .main-apps {
   position: relative;
-  width: 100%;
-  height: 488px;
+  min-height: 465px;
   padding: 175px 0 550px;
   background: url("../img/bg-back-mobile@1x.jpg");
   background-size: cover;
@@ -22,16 +21,23 @@
   }
 }
 
+.main-apps .wrapper{
+  position: relative;
+}
+
 .hand-with-mobile {
-  display: block;
-  margin: -5px 0 0 -20px;
+  position: absolute;
+  bottom: 250px;
+  width: 100%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-apps__apps {
-  display: block;
-  margin: 0 -20px;
-  min-height: 270px;
-  padding: 25px 10px 30px;
+  width: 100%;
+  height: 260px;
+  padding: 28px 20px 30px;
   background: @color-darkblue;
 }
 
@@ -42,9 +48,9 @@
 .apps {
   display: flex;
   flex-direction: row;
-  margin: 0 auto 17px;
+  margin: 0 auto 15px;
   justify-content: space-around;
-  padding: 0 40px;
+  padding: 0 20px;
   align-items: center;
   max-width: 350px;
 }
@@ -60,22 +66,19 @@
 @media (min-width: 700px) {
   .main-apps {
     position: relative;
-    height: 625px;
-    padding: 0;
+    height: 680px;
   }
 
   .apps {
-    padding: 0 50px;
+    padding: 0 30px;
     margin-bottom: 35px;
   }
 
   .hand-with-mobile {
-    display: block;
-    position: relative;
-    top: 135px;
-    height: 495px;
-    float: right;
-    margin-right: 0;
+    position: absolute;
+        top: 90px;
+    width: 100%;
+    height: auto;
   }
 
   .main-apps__apps {
@@ -103,12 +106,8 @@
   }
 }
 @media (min-width: 960px) {
-  .wrapper {
-    position: relative;
-  }
-
   .main-apps {
-    min-height: 800px;
+    min-height: 855px;
   }
 
   .main-apps__apps {
@@ -127,12 +126,5 @@
   .apps {
     padding: 0 60px;
     margin-bottom: 55px;
-  }
-
-  .hand-with-mobile {
-    top: 210px;
-    left: -25px;
-    height: 590px;
-    margin: 0;
   }
 }

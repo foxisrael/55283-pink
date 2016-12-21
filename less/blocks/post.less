@@ -84,25 +84,32 @@
   font-family: @font-family-light;
 }
 
-.like {
+.post__like {
+  padding: 0 20px;
+}
+
+.like-heart {
+  display: block;
+  position: relative;
+  top: -3px;
+  fill: @color-magenta;
+  margin-right: 10px;
+}
+
+.like-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.like-counter span {
+  display: block;
   font-size: 12px;
   position: relative;
   display: block;
-  padding: 0 0 5px 50px;
   text-decoration: none;
   text-transform: uppercase;
   color: @color-magenta;
-}
-
-.like::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 20px;
-  width: 13px;
-  height: 12px;
-  background: url('../img/icon-heart.svg');
 }
 @media (min-width: 700px) {
   .post-footer {
@@ -140,16 +147,6 @@
     margin-bottom: 21px;
   }
 
-  .post__item--panorama .like {
-    position: absolute;
-    top: 535px;
-    right: 60px;
-  }
-
-  .like::before {
-    left: 160px;
-  }
-
   .post__item--panorama {
     width: 100%;
     flex-grow: 2;
@@ -176,14 +173,6 @@
     height: 300px;
   }
 
-  .post__item:not(:first-of-type) .like {
-    padding-left: 28px;
-  }
-
-  .post__item:not(:first-of-type) .like::before {
-    left: 255px;
-  }
-
   .post__item--panorama .post__author {
     padding: 20px 25px 0;
     font-family: @font-family-bold;
@@ -203,9 +192,30 @@
     padding: 0 27px 15px;
     flex-grow: 1;
   }
+
+   .post__like-panorama {
+     padding: 0;
+     position: absolute;
+     bottom: 75px;
+     right: 0;
+   }
+
+   .post__like-panorama .like-heart{
+     margin-left: 10px;
+   }
+
+  .post__like {
+    padding: 1px 22px 0 28px;
+  }
+
+  .like-counter {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
 }
 @media (min-width: 960px) {
-
   .header-panorama {
     top: 55px;
     right: 10px;
@@ -245,19 +255,22 @@
     margin: 0 -10px 55px;
   }
 
-  .post__item:not(:first-of-type) .like::before {
-    left: 230px;
-  }
-
   .post__item:nth-of-type(2),
   .post__item:nth-of-type(3),
-  .post__item:nth-of-type(4){
+  .post__item:nth-of-type(4) {
     margin-bottom: 55px;
   }
 
   .post__item:nth-of-type(5),
   .post__item:nth-of-type(6),
-  .post__item:nth-of-type(7){
+  .post__item:nth-of-type(7) {
     margin-bottom: 0;
+  }
+
+  .post__like-panorama {
+    padding: 0 15px 0 0;
+    position: absolute;
+    bottom: 45px;
+    right: 0;
   }
 }

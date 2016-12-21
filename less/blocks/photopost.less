@@ -47,9 +47,28 @@
   max-width: 350px;
 }
 
-.photopost__crop svg,
-.photopost__fill svg,
+.photopost__crop svg{
+  width: 44px;
+  height: 44px;
+  fill: @color-darkblue;
+  opacity: 0.3;
+}
+
+.photopost__crop-active svg{
+  fill: @color-magenta;
+  opacity: 1;
+}
+
+.photopost__fill svg{
+  width: 48px;
+  height: 43px;
+  fill: @color-darkblue;
+  opacity: 0.3;
+}
+
 .photopost__contrast svg{
+  width: 32px;
+  height: 32px;
   fill: @color-darkblue;
   opacity: 0.3;
 }
@@ -64,11 +83,6 @@
 .photopost__crop:active svg,
 .photopost__fill:active svg,
 .photopost__contrast:active svg{
-  fill: @color-magenta;
-  opacity: 1;
-}
-
-.photopost__crop-active svg{
   fill: @color-magenta;
   opacity: 1;
 }
@@ -168,6 +182,21 @@ input[type='reset']:active {
     left: 5px;
   }
 
+  .photopost__crop svg{
+    width: 22px;
+    height: 22px;
+  }
+
+  .photopost__fill svg{
+    width: 24px;
+    height: 22px;
+  }
+
+  .photopost__contrast svg{
+    width: 16px;
+    height: 16px;
+  }
+
   .photopost__crop,
   .photopost__fill {
     margin-bottom: 35px;
@@ -257,20 +286,6 @@ input[type='reset']:active {
     margin-bottom: 45px;
   }
 
-  .photopost__crop img{
-    width: 22px;
-    height: 22px;
-  }
-
-  .photopost__fill img{
-    width: 24px;
-    height: 22px;
-  }
-
-  .photopost__contrast img{
-    width: 16px;
-    height: 16px;
-  }
 }
 @media (min-width: 960px) {
   .photopost {
@@ -292,6 +307,27 @@ input[type='reset']:active {
   .photopost__btn-editors {
     top: -8px;
     left: -3px;
+  }
+
+  .photopost__crop svg{
+    width: 44px;
+    height: 44px;
+    fill: @color-magenta;
+    opacity: 1;
+  }
+
+  .photopost__fill svg{
+    width: 48px;
+    height: 43px;
+    fill: @color-magenta;
+    opacity: 1;
+  }
+
+  .photopost__contrast svg{
+    width: 32px;
+    height: 32px;
+    fill: @color-magenta;
+    opacity: 1;
   }
 
   .photopost__btn-range {
@@ -376,20 +412,5 @@ input[type='reset']:active {
   .photopost__crop,
   .photopost__fill {
     margin-bottom: 25px;
-  }
-
-  .photopost__crop img{
-    width: 44px;
-    height: 44px;
-  }
-
-  .photopost__fill img{
-    width: 48px;
-    height: 43px;
-  }
-
-  .photopost__contrast img{
-    width: 32px;
-    height: 33px;
   }
 }

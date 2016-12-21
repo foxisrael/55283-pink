@@ -16,7 +16,7 @@
 
 .btn-menu svg{
   fill: @color-white;
-  margin: 25px 25px 25px 0;
+  margin: 25px 15px 25px 0;
 }
 
 .btn-menu:hover svg {
@@ -105,6 +105,51 @@
   outline: none;
   background: @color-magenta;
 }
+
+.btn--popup-ok {
+  font-family: @font-family-bold;
+  font-size: @font-size-btn;
+  width: 100%;
+  margin: 0;
+  padding: 23px;
+  color: @color-white;
+  border-radius: 7px;
+  outline: none;
+  background: #2aab6d;
+}
+
+.btn--popup-ok:hover{
+  background: #1c9b5e;
+}
+
+.btn--popup-ok:active {
+  color: rgba(255, 255, 255, .35);
+  background: #1c9b5e;
+}
+
+.btn--popup-bad{
+  font-family: @font-family-bold;
+  font-size: @font-size-btn;
+  width: 100%;
+  margin: 30px 0 0;
+  padding: 23px;
+  color: @color-white;
+  border-radius: 7px;
+  outline: none;
+  background: #2aab6d;
+}
+
+.btn--popup-bad:hover{
+  margin: 30px 0 0;
+  background: #1c9b5e;
+}
+
+.btn--popup-bad:active {
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, .35);
+  background: #1c9b5e;
+}
+
 @media (min-width: 700px) {
   .btn--download {
     width: 300px;
@@ -159,7 +204,13 @@
     top: 5px;
     left: 10px;
   }
+
+  .btn-menu svg{
+    fill: @color-white;
+    margin: 35px 35px 25px 0;
+  }
 }
+
 @media (min-width: 960px) {
   .btn--download {
     font-size: 21px;

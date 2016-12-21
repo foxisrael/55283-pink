@@ -67,6 +67,22 @@
 .menu-item-active a {
   border-bottom: 2px solid white;
 }
+
+.btn-menu--open{
+  display: none;
+}
+
+// Закрытое меню
+.page-header__menu--disabled {
+  .btn-menu--close,
+  .page-header__menu-items{
+    display: none;
+  }
+
+  .btn-menu--open{
+    display: flex;
+  }
+}
 @media (min-width: 700px) {
   .page-header__menu-nav {
     height: 109px;
@@ -104,12 +120,13 @@
     position: relative;
     height: 110px;
     top: 110px;
+    padding-right: 15px;
     margin-top: -110px;
     z-index: 1;
   }
 
   .logo {
-    margin-left: 10px;
+    margin-left: 20px;
     height: 40px;
   }
 
@@ -149,7 +166,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 630px;
+    flex-basis: 625px;
   }
 
   .menu-item {
