@@ -16,7 +16,7 @@
 
 .photopost::after {
   position: absolute;
-  bottom: 152px;
+  bottom: 165px;
   left: 0;
   display: block;
   width: 100%;
@@ -41,9 +41,10 @@
 .photopost__btn-editors {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 35px;
-  margin: 0 auto 35px;
+  justify-content: space-around;
+  padding: 0 30px 0 15px;
+  margin: 0 auto 32px;
+  width: 100%;
   max-width: 350px;
 }
 
@@ -61,7 +62,7 @@
 
 .photopost__fill svg{
   width: 48px;
-  height: 43px;
+  height: 48px;
   fill: @color-darkblue;
   opacity: 0.3;
 }
@@ -88,10 +89,9 @@
 }
 
 .photopost__btn-range {
-  margin: 0 auto 68px;
+  margin: 0 auto 70px;
   position: relative;
-  width: 100%;
-  max-width: 350px;
+  width: 240px;
 }
 
 .photopost__range:nth-child(2),
@@ -115,8 +115,8 @@
 }
 
 .toggle-1 {
-  top: -5px;
-  left: 195px;
+  top: -6px;
+  left: 191px;
 }
 
 .range-toggle:active {
@@ -149,7 +149,7 @@ input[type='reset']:active {
   .photopost {
     flex-direction: row;
     justify-content: space-between;
-    padding: 60px 55px 50px 40px;
+    padding: 55px 40px;
   }
 
   .photopost::after {
@@ -164,6 +164,7 @@ input[type='reset']:active {
 
   .photopost__filtr {
     width: 44%;
+    height: 400px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -179,7 +180,7 @@ input[type='reset']:active {
     width: 10%;
     position: relative;
     top: 10px;
-    left: 5px;
+    left: -5px;
   }
 
   .photopost__crop svg{
@@ -222,17 +223,17 @@ input[type='reset']:active {
 
   .toggle-1 {
     top: -5px;
-    left: 145px;
+    left: 150px;
   }
 
   .toggle-2 {
     top: -5px;
-    left: 23px;
+    left: 30px;
   }
 
   .toggle-3 {
     top: -5px;
-    left: 95px;
+    left: 100px;
   }
 
   .photopost__range {
@@ -256,7 +257,9 @@ input[type='reset']:active {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
+    position: relative;
+    left: -10px;
   }
 
   input[type='reset'] {
