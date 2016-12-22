@@ -143,9 +143,9 @@ textarea:hover {
   outline: none;
 }
 
-input[type="email"]:active,
-input[type="tel"]:active,
-input[type="text"]:active,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
 textarea:active {
   border: 2px solid @color-magenta;
   outline: none;
@@ -169,8 +169,8 @@ textarea:hover {
   border: 2px solid @color-darkblue;
 }
 
-textarea:active {
-  border: 2px solid @color-darkblue;
+textarea:focus {
+  border: 2px solid @color-magenta;
 }
 /* CHECKBOX */
 input[type="checkbox"],

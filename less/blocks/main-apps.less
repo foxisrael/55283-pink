@@ -1,6 +1,6 @@
 .main-apps {
   position: relative;
-  min-height: 465px;
+  height: 465px;
   padding: 175px 0 550px;
   background: url("../img/bg-back-mobile@1x.jpg");
   background-size: cover;
@@ -21,24 +21,23 @@
   }
 }
 
-.main-apps .wrapper{
-  position: relative;
+.main-apps .wrapper {
+  padding: 0;
 }
 
 .hand-with-mobile {
-  position: absolute;
-  bottom: 250px;
+  position: relative;
+  bottom: -5px;
   width: 100%;
   height: auto;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .main-apps__apps {
-  width: 100%;
-  height: 260px;
+  position: relative;
   padding: 28px 20px 30px;
   background: @color-darkblue;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-apps__apps h2 {
@@ -69,14 +68,8 @@
     height: 680px;
   }
 
-  .apps {
-    padding: 0 30px;
-    margin-bottom: 35px;
-  }
-
   .hand-with-mobile {
-    position: absolute;
-        top: 90px;
+    position: relative;
     width: 100%;
     height: auto;
   }
@@ -85,9 +78,14 @@
     width: 310px;
     position: absolute;
     padding: 0;
-    top: 155px;
-    left: 55px;
+    top: 150px;
+    left: 190px;
     background: none;
+  }
+
+  .apps {
+    padding: 0 30px;
+    margin-bottom: 30px;
   }
 
   .main-apps__apps p {
@@ -100,6 +98,7 @@
     display: block;
     color: white;
     font-size: 40px;
+    line-height: 48px;
     padding: 0 40px;
     font-family: @font-family-light;
     margin-bottom: 35px;
@@ -110,11 +109,18 @@
     min-height: 855px;
   }
 
+  .hand-with-mobile {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 70px;
+  }
+
   .main-apps__apps {
-    left: 23px;
+    left: 280px;
     top: 220px;
     padding: 0;
-    width: 320px;
+    width: 350px;
   }
 
   .main-apps__apps h2 {
@@ -125,6 +131,6 @@
 
   .apps {
     padding: 0 60px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 }
