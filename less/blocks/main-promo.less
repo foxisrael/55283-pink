@@ -1,7 +1,6 @@
 .main-promo {
   position: relative;
-  height: 465px;
-  padding: 175px 0 550px;
+  height: 725px;
   background: url("../img/bg-back-mobile@1x.jpg");
   background-size: cover;
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -27,15 +26,18 @@
 
 .main-promo__photo {
   position: relative;
-  bottom: -5px;
+  bottom: -169px;
+  left: -30px;
   width: 100%;
   height: auto;
 }
 
 .main-promo__offer {
   position: relative;
+  min-height: 270px;
   padding: 28px 20px 30px;
   background: @color-darkblue;
+  bottom: -165px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -72,6 +74,8 @@
     position: relative;
     width: 100%;
     height: auto;
+    bottom: -135px;
+    left: 0;
   }
 
   .main-promo__offer {
@@ -106,7 +110,7 @@
 }
 @media (min-width: 960px) {
   .main-promo {
-    min-height: 855px;
+      height: 855px;
   }
 
   .main-promo__photo {
@@ -114,12 +118,13 @@
     width: 100%;
     height: auto;
     left: 70px;
+    bottom: -3px;
   }
 
   .main-promo__offer {
     position: relative;
-    left: 140px;
-    top: 45px;
+    left: 160px;
+    top: 222px;
     padding: 0;
     width: 350px;
   }
@@ -127,7 +132,7 @@
   .main-promo__offer h2 {
     font-size: 50px;
     line-height: 57px;
-    margin-bottom: 62px;
+    margin-bottom: 58px;
   }
 
   .main-promo__apps {

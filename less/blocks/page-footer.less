@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 45px 0 20px;
+  padding: 32px 0 0;
 }
 
 .page-footer-photo{
@@ -11,8 +11,8 @@
   background: @color-white;
 }
 
-.call,
-.write-us {
+.page-footer__contacts-call,
+.page-footer__contacts-write-us {
   margin-bottom: 25px;
 }
 
@@ -177,7 +177,7 @@
 }
 @media (min-width: 700px) {
   .page-footer {
-    padding: 45px 0 0;
+    padding: 50px 0 0;
   }
 
   .page-footer-photo{
@@ -196,7 +196,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0 50px;
+    padding: 40px 0 25px;
   }
 
   .page-footer__contacts p {
@@ -205,26 +205,36 @@
 
   .page-footer h2 {
     font-size: 40px;
-    line-height: 42px;
+    line-height: 45px;
     margin: 0 60px;
     padding: 0 50px;
   }
 
-  .call,
-  .write-us {
+  .page-footer__contacts-call{
+    position: relative;
+    top: 2px;
     width: 50%;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
+    left: -5px;
   }
 
-  .write-us a:hover {
+  .page-footer__contacts-write-us {
+    position: relative;
+    top: 2px;
+    width: 50%;
+    margin-bottom: 50px;
+    left: 4px;
+  }
+
+  .page-footer__contacts-write-us a:hover {
     color: @color-darkblue;
   }
 
-  .write-us a:active {
+  .page-footer__contacts-write-us a:active {
     color: #ced0d2;
   }
 
-  .adress {
+  .page-footer__contacts-adress {
     width: 100%;
     padding: 0 200px;
   }
@@ -240,6 +250,7 @@
   .page-footer__social-btns {
     position: relative;
     left: -5px;
+    top: -5px;
   }
 
   .social-btn {
@@ -251,7 +262,13 @@
   }
 
   .page-footer__map {
-    height: 500px;
+    height: 380px;
+  }
+
+  .page-footer__footer-copyright{
+    position: relative;
+    top: -4px;
+    left: -3px;
   }
 }
 @media (min-width: 960px) {
@@ -276,25 +293,25 @@
     padding: 0 120px;
   }
 
-  .call {
+  .page-footer__contacts-call {
     order: 1;
     width: 30%;
   }
 
-  .adress {
+  .page-footer__contacts-adress {
     order: 2;
     width: 30%;
     padding: 0;
   }
 
-  .write-us {
+  .page-footer__contacts-write-us {
     order: 3;
     width: 30%;
   }
 
-  .adress p,
-  .call p,
-  .write-us p {
+  .page-footer__contacts-adress p,
+  .page-footer__contacts-call p,
+  .page-footer__contacts-write-us p {
     display: block;
     margin: 0 0 20px;
   }
