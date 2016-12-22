@@ -1,4 +1,4 @@
-.main-apps {
+.main-promo {
   position: relative;
   height: 465px;
   padding: 175px 0 550px;
@@ -21,18 +21,18 @@
   }
 }
 
-.main-apps .wrapper {
+.main-promo .wrapper {
   padding: 0;
 }
 
-.hand-with-mobile {
+.main-promo__photo {
   position: relative;
   bottom: -5px;
   width: 100%;
   height: auto;
 }
 
-.main-apps__apps {
+.main-promo__offer {
   position: relative;
   padding: 28px 20px 30px;
   background: @color-darkblue;
@@ -40,11 +40,11 @@
   transform: translateX(-50%);
 }
 
-.main-apps__apps h2 {
+.main-promo__offer h2 {
   display: none;
 }
 
-.apps {
+.main-promo__apps {
   display: flex;
   flex-direction: row;
   margin: 0 auto 15px;
@@ -54,27 +54,27 @@
   max-width: 350px;
 }
 
-.apps li {
+.main-promo__apps li {
   list-style: none;
 }
 
-.main-apps__apps p {
+.main-promo__offer p {
   color: @color-white;
   padding: 0 20px;
 }
 @media (min-width: 700px) {
-  .main-apps {
+  .main-promo {
     position: relative;
     height: 680px;
   }
 
-  .hand-with-mobile {
+  .main-promo__photo {
     position: relative;
     width: 100%;
     height: auto;
   }
 
-  .main-apps__apps {
+  .main-promo__offer {
     width: 310px;
     position: absolute;
     padding: 0;
@@ -83,18 +83,18 @@
     background: none;
   }
 
-  .apps {
+  .main-promo__apps {
     padding: 0 30px;
     margin-bottom: 30px;
   }
 
-  .main-apps__apps p {
+  .main-promo__offer p {
     padding: 0;
     font-size: 18px;
     line-height: 24px;
   }
 
-  .main-apps h2 {
+  .main-promo h2 {
     display: block;
     color: white;
     font-size: 40px;
@@ -105,18 +105,18 @@
   }
 }
 @media (min-width: 960px) {
-  .main-apps {
+  .main-promo {
     min-height: 855px;
   }
 
-  .hand-with-mobile {
+  .main-promo__photo {
     position: absolute;
     width: 100%;
     height: auto;
     left: 70px;
   }
 
-  .main-apps__apps {
+  .main-promo__offer {
     position: relative;
     left: 140px;
     top: 45px;
@@ -124,13 +124,13 @@
     width: 350px;
   }
 
-  .main-apps__apps h2 {
+  .main-promo__offer h2 {
     font-size: 50px;
     line-height: 57px;
     margin-bottom: 62px;
   }
 
-  .apps {
+  .main-promo__apps {
     padding: 0 60px;
     margin-bottom: 50px;
   }
