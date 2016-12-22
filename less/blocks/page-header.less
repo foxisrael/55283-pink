@@ -43,6 +43,14 @@
   text-transform: uppercase;
 }
 
+.page-header__menu-items{
+  display: none;
+}
+
+.page-header__menu-items--no-js{
+  display: block;
+}
+
 .menu-item {
   display: block;
   font-size: 18px;
@@ -72,17 +80,6 @@
   display: none;
 }
 
-// Закрытое меню
-.page-header__menu--disabled {
-  .btn-menu--close,
-  .page-header__menu-items{
-    display: none;
-  }
-
-  .btn-menu--open{
-    display: flex;
-  }
-}
 @media (min-width: 700px) {
   .page-header__menu-nav {
     height: 109px;
@@ -126,7 +123,7 @@
   }
 
   .logo {
-    margin-left: 20px;
+    margin-left: 10px;
     height: 40px;
   }
 
@@ -166,7 +163,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 620px;
+    flex-basis: 630px;
   }
 
   .menu-item {
