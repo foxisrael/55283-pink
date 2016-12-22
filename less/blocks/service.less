@@ -1,6 +1,6 @@
 .service {
   overflow: hidden;
-  padding: 93px 0 55px;
+  padding: 90px 0 55px;
   margin: 0;
   background: @color-gray;
   background-image: url("../img/bg-triangle-white.svg");
@@ -15,7 +15,7 @@ table {
   position: relative;
   left: 50%;
   transform: translateX(-62.5%);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 td,
@@ -50,7 +50,7 @@ th span {
   line-height: 30px;
 }
 
-.service .empty {
+.service__head-empty {
   border-top: none;
   border-left: none;
   background: @color-gray;
@@ -58,7 +58,7 @@ th span {
 
 td {
   min-width: 280px;
-  padding: 17px 17px 17px 21px;
+  padding: 17px 17px 16px 21px;
   text-align: left;
   text-transform: uppercase;
   font-size: 14px;
@@ -67,22 +67,37 @@ td {
   background: @color-white;
 }
 
-.service-header {
+.service__body-header {
   display: block;
   float: left;
 }
 
-.service-element-no,
-.service-element-ok {
+.service__body-element-no {
+  width: 27px;
+  height: 26px;
+  fill: #f25b26;
+  position: relative;
+  top: -4px;
+  left: -2px;
+}
+
+.service__body-element-yes {
+  width: 27px;
+  height: 26px;
+  fill: #3dc644;
+}
+
+.service__body-element-no,
+.service__body-element-yes {
   display: block;
   float: right;
 }
 
-.hit {
+.service__head-element {
   position: relative;
 }
 
-.hit::before {
+.service__head-element::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,7 +109,7 @@ td {
   background: url('../img/bg-hit.svg') no-repeat;
 }
 
-.hit::after {
+.service__head-element::after {
   position: absolute;
   top: 9px;
   left: 9px;
@@ -109,7 +124,7 @@ td {
   .service {
     overflow: hidden;
     min-height: 378px;
-    padding: 95px 40px 0;
+    padding: 90px 40px 0;
     background: @color-gray;
     background-image: url("../img/bg-triangle-white.svg");
     background-size: 100% auto;
@@ -130,7 +145,7 @@ td {
 
   th {
     font-size: 16px;
-    line-height: 30px;
+    line-height: 28px;
     padding: 9px 0 6px;
   }
 
@@ -140,18 +155,18 @@ td {
 
   td {
     min-width: 155px;
-    padding: 10px 15px;
+    padding: 9px 15px 10px;
     text-transform: none;
   }
 
-  .service-element-no,
-  .service-element-ok {
+  .service__body-element-no,
+  .service__body-element-yes {
     display: block;
     float: none;
     margin: 0 auto;
   }
 
-  .service-item-text {
+  .service__body-text {
     display: none;
   }
 
@@ -159,13 +174,13 @@ td {
     display: none;
   }
 
-  .hit::before {
+  .service__head-element::before {
     width: 50px;
     height: 50px;
     background-size: cover;
   }
 
-  .hit::after {
+  .service__head-element::after {
     top: 3px;
     left: 3px;
   }
@@ -173,7 +188,7 @@ td {
 @media (min-width: 960px) {
   .service {
     min-height: 475px;
-    padding: 152px 130px 70px;
+    padding: 152px 130px 55px;
   }
 
   th {
@@ -190,25 +205,25 @@ td {
   }
 
   td {
-    padding: 17px 0px 13px 0px;
+    padding: 17px 0 13px;
     min-width: 170px;
     font-size: 18px;
     line-height: 27px;
     text-transform: none;
   }
 
-  .service-header {
+  .service__body-header {
     padding-left: 20px;
   }
 
-  .service-element-no,
-  .service-element-ok {
+  .service__body-element-no,
+  .service__body-element-yes {
     display: block;
     float: none;
     margin: 0 auto;
   }
 
-  .service-item-text {
+  .service__body-text {
     display: none;
   }
 
@@ -216,13 +231,13 @@ td {
     display: none;
   }
 
-  .hit::before {
+  .service__head-element::before {
     width: 70px;
     height: 70px;
     background-size: cover;
   }
 
-  .hit::after {
+  .service__head-element::after {
     top: 9px;
     left: 9px;
   }

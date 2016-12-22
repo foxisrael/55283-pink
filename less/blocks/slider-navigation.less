@@ -1,7 +1,13 @@
 .slider-navigation-table,
-.slider-navigation__round {
+.slider-navigation__controls {
   margin: 0 auto;
   max-width: 70px;
+}
+
+.slider-navigation__controls {
+  position: relative;
+  left: 3px;
+  top: 4px;
 }
 
 .slider-navigation li {
@@ -42,53 +48,48 @@
   background: #b5b9be;
 }
 
-.slider-navigation__arrow {
+.slider-navigation__arrows {
   display: none;
 }
 @media (min-width: 700px) {
   .slider-navigation-table,
-  .slider-navigation__round {
+  .slider-navigation__controls {
     margin: 0 auto;
     max-width: 70px;
   }
-}
-@media (min-width: 960px) {
-  .slider-navigation__round {
+
+  .slider-navigation--table {
     display: none;
   }
-
+}
+@media (min-width: 960px) {
   .slider-navigation .wrapper {
     position: relative;
   }
 
-  .slider-navigation__arrow {
+  .slider-navigation__arrows {
     display: block;
     position: absolute;
     top: -120px;
   }
 
-  .arrow-left {
+  .slider-navigation__arrow--left {
     display: block;
     position: absolute;
-    left: -40px;
-    top: -35px;
+    left: -30px;
+    top: -40px;
+    fill: #bec2c7;
   }
 
-  .arrow-right {
+  .slider-navigation__arrow--right {
     display: block;
     position: absolute;
-    right: -900px;
-    top: -35px;
+    right: -910px;
+    top: -40px;
+    fill: #bec2c7;
   }
 
-  .slider-navigation__arrow-element {
-    background: url("http://placehold.it/80x65");
-    width: 80px;
-    height: 65px;
-    display: block;
-    top: -170px;
-    left: 390px;
-    position: absolute;
-    margin: 0 auto;
+  .slider-navigation ul {
+    display: none;
   }
 }

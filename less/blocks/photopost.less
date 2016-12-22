@@ -16,7 +16,7 @@
 
 .photopost::after {
   position: absolute;
-  bottom: 152px;
+  bottom: 165px;
   left: 0;
   display: block;
   width: 100%;
@@ -31,7 +31,7 @@
   height: auto;
 }
 
-.photopost__filtr {
+.photopost__filtrs {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -41,36 +41,63 @@
 .photopost__btn-editors {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 35px;
-  margin: 0 auto 35px;
+  justify-content: space-around;
+  padding: 0 30px 0 15px;
+  margin: 0 auto 32px;
+  width: 100%;
   max-width: 350px;
 }
 
-.photopost__contrast,
-.photopost__crop,
-.photopost__fill {
-  border: none;
-  background: none;
+.photopost__crop svg {
+  width: 44px;
+  height: 44px;
+  fill: @color-darkblue;
+  opacity: 0.3;
+}
+
+.photopost__crop-active svg {
+  fill: @color-magenta;
+  opacity: 1;
+}
+
+.photopost__fill svg {
+  width: 48px;
+  height: 48px;
+  fill: @color-darkblue;
+  opacity: 0.3;
+}
+
+.photopost__contrast svg {
+  width: 32px;
+  height: 32px;
+  fill: @color-darkblue;
+  opacity: 0.3;
+}
+
+.photopost__contrast:hover svg,
+.photopost__crop:hover svg,
+.photopost__fill:hover svg {
+  fill: @color-darkblue;
+  opacity: 0.5;
+}
+
+.photopost__contrast:active svg,
+.photopost__crop:active svg,
+.photopost__fill:active svg {
+  fill: @color-magenta;
+  opacity: 1;
 }
 
 .photopost__btn-range {
-  margin: 0 auto 68px;
+  margin: 0 auto 70px;
   position: relative;
-  width: 100%;
-  max-width: 350px;
+  width: 240px;
 }
 
 .photopost__range:nth-child(2),
 .photopost__range:nth-child(3) {
   display: none;
 }
-
-// .photopost__range--active {
-//   position: relative;
-//   width: 240px;
-//   margin: 0 auto 68px;
-// }
 
 .scale {
   height: 2px;
@@ -88,8 +115,8 @@
 }
 
 .toggle-1 {
-  top: -5px;
-  left: 195px;
+  top: -6px;
+  left: 191px;
 }
 
 .range-toggle:active {
@@ -122,7 +149,7 @@ input[type='reset']:active {
   .photopost {
     flex-direction: row;
     justify-content: space-between;
-    padding: 60px 55px 50px 40px;
+    padding: 55px 40px;
   }
 
   .photopost::after {
@@ -135,8 +162,9 @@ input[type='reset']:active {
     margin-bottom: 0;
   }
 
-  .photopost__filtr {
+  .photopost__filtrs {
     width: 44%;
+    height: 400px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -152,7 +180,22 @@ input[type='reset']:active {
     width: 10%;
     position: relative;
     top: 10px;
-    left: 5px;
+    left: -5px;
+  }
+
+  .photopost__crop svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .photopost__fill svg {
+    width: 24px;
+    height: 22px;
+  }
+
+  .photopost__contrast svg {
+    width: 16px;
+    height: 16px;
   }
 
   .photopost__crop,
@@ -180,17 +223,17 @@ input[type='reset']:active {
 
   .toggle-1 {
     top: -5px;
-    left: 145px;
+    left: 150px;
   }
 
   .toggle-2 {
     top: -5px;
-    left: 23px;
+    left: 30px;
   }
 
   .toggle-3 {
     top: -5px;
-    left: 95px;
+    left: 100px;
   }
 
   .photopost__range {
@@ -214,7 +257,9 @@ input[type='reset']:active {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
+    position: relative;
+    left: -10px;
   }
 
   input[type='reset'] {
@@ -243,21 +288,6 @@ input[type='reset']:active {
     background: none;
     margin-bottom: 45px;
   }
-
-  .photopost__crop img{
-    width: 22px;
-    height: 22px;
-  }
-
-  .photopost__fill img{
-    width: 24px;
-    height: 22px;
-  }
-
-  .photopost__contrast img{
-    width: 16px;
-    height: 16px;
-  }
 }
 @media (min-width: 960px) {
   .photopost {
@@ -272,13 +302,34 @@ input[type='reset']:active {
     margin-bottom: 0;
   }
 
-  .photopost__filtr {
+  .photopost__filtrs {
     width: 50%;
   }
 
   .photopost__btn-editors {
     top: -8px;
     left: -3px;
+  }
+
+  .photopost__crop svg {
+    width: 44px;
+    height: 44px;
+    fill: @color-magenta;
+    opacity: 1;
+  }
+
+  .photopost__fill svg {
+    width: 48px;
+    height: 43px;
+    fill: @color-magenta;
+    opacity: 1;
+  }
+
+  .photopost__contrast svg {
+    width: 32px;
+    height: 32px;
+    fill: @color-magenta;
+    opacity: 1;
   }
 
   .photopost__btn-range {
@@ -363,20 +414,5 @@ input[type='reset']:active {
   .photopost__crop,
   .photopost__fill {
     margin-bottom: 25px;
-  }
-
-  .photopost__crop img{
-    width: 44px;
-    height: 44px;
-  }
-
-  .photopost__fill img{
-    width: 48px;
-    height: 43px;
-  }
-
-  .photopost__contrast img{
-    width: 32px;
-    height: 33px;
   }
 }

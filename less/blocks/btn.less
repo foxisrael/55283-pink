@@ -14,11 +14,18 @@
   background: none;
 }
 
-.btn-menu {
-  width: 24px;
-  height: 12px;
-  background-image: url('../img/icon-menu-burger.svg') repeat-y;
-  margin: 25px 25px 25px 0;
+.btn-menu svg {
+  fill: @color-white;
+  margin: 25px 15px 25px 0;
+}
+
+.btn-menu:hover svg {
+  fill: @color-magenta;
+}
+
+.btn-menu:active svg {
+  fill: @color-magenta;
+  opacity: 0.3;
 }
 
 .btn--download {
@@ -98,6 +105,50 @@
   outline: none;
   background: @color-magenta;
 }
+
+.btn--popup-ok {
+  font-family: @font-family-bold;
+  font-size: @font-size-btn;
+  width: 100%;
+  margin: 0;
+  padding: 23px;
+  color: @color-white;
+  border-radius: 7px;
+  outline: none;
+  background: #2aab6d;
+}
+
+.btn--popup-ok:hover {
+  background: #1c9b5e;
+}
+
+.btn--popup-ok:active {
+  color: rgba(255, 255, 255, .35);
+  background: #1c9b5e;
+}
+
+.btn--popup-bad {
+  font-family: @font-family-bold;
+  font-size: @font-size-btn;
+  width: 100%;
+  margin: 30px 0 0;
+  padding: 23px;
+  color: @color-white;
+  border-radius: 7px;
+  outline: none;
+  background: #2aab6d;
+}
+
+.btn--popup-bad:hover {
+  margin: 30px 0 0;
+  background: #1c9b5e;
+}
+
+.btn--popup-bad:active {
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, .35);
+  background: #1c9b5e;
+}
 @media (min-width: 700px) {
   .btn--download {
     width: 300px;
@@ -152,24 +203,29 @@
     top: 5px;
     left: 10px;
   }
+
+  .btn-menu svg {
+    fill: @color-white;
+    margin: 35px 35px 25px 0;
+  }
 }
 @media (min-width: 960px) {
   .btn--download {
     font-size: 21px;
     line-height: 18px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 
   .btn--download:hover {
     font-size: 21px;
     line-height: 18px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 
   .btn--download:hover {
     font-size: 21px;
     line-height: 18px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 
   .btn-menu {

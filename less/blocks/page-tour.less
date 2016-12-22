@@ -1,7 +1,25 @@
 .page-tour {
   height: 230px;
   padding: 90px 0 60px;
-  background: url('../img/bg-back-mobile@1x.jpg');
+  background: url("../img/bg-back-mobile@1x.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url("../img/bg-back-mobile@2x.jpg");
+  }
+  @media (min-width: 700px) {
+    background: url("../img/bg-back-tablet@1x.jpg");
+  }
+  @media (min-width: 700px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+    background: url("../img/bg-back-tablet@2x.jpg");
+  }
+  @media (min-width: 960px) {
+    background: url("../img/bg-back-desktop@1x.jpg");
+  }
+  @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+    background: url("../img/bg-back-desktop@2x.jpg");
+  }
 }
 
 .page-tour h2 {
@@ -13,8 +31,6 @@
   .page-tour {
     min-height: 390px;
     padding: 128px 50px 85px;
-    background: url('../img/bg-back-mobile@1x.jpg');
-    background-size: cover;
   }
 
   .page-tour h2 {
@@ -26,8 +42,6 @@
 @media (min-width: 960px) {
   .page-tour {
     height: 395px;
-    background: url("../img/bg-back-mobile@1x.jpg");
-    background-size: cover;
     padding: 175px 100px 110px;
   }
 
