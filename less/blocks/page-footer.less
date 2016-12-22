@@ -77,16 +77,16 @@
   display: none;
 }
 
-.footer-logo:hover .logo-footer-glasses,
-.footer-logo:hover .logo-footer-word {
+.page-footer__footer-logo:hover .logo-footer-glasses,
+.page-footer__footer-logo:hover .logo-footer-word {
   fill: @color-magenta;
 }
 
-.footer-logo:active .logo-footer-word {
+.page-footer__footer-logo:active .logo-footer-word {
   fill: @color-darkblue;
   opacity: 0.3;
 
-  .footer-logo:active .logo-footer-glasses {
+  .page-footer__footer-logo:active .logo-footer-glasses {
     opacity: 0.3;
   }
 }
@@ -95,7 +95,7 @@
   padding: 10px 0;
 }
 
-.footer-social-btns {
+.page-footer__social-btns {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -150,7 +150,7 @@
   left: 1px;
 }
 
-.footer-copyright a {
+.page-footer__footer-copyright a {
   font-size: 14px;
   line-height: 18px;
   font-family: @font-family-regular;
@@ -164,11 +164,11 @@
   margin-left: 3px;
 }
 
-.footer-copyright:hover .htmlacademy:hover {
+.page-footer__footer-copyright:hover .htmlacademy:hover {
   fill: @color-darkblue;
 }
 
-.footer-copyright:active .htmlacademy:active {
+.page-footer__footer-copyright:active .htmlacademy:active {
   fill: rgba(40,54,69, 0.3);
 }
 
@@ -237,7 +237,7 @@
     padding: 0;
   }
 
-  .footer-social-btns {
+  .page-footer__social-btns {
     position: relative;
     left: -5px;
   }
@@ -303,22 +303,22 @@
     padding: 35px 0 0;
   }
 
-  .footer-logo {
+  .page-footer__footer-logo {
     position: relative;
     left: -10px;
   }
 
-  .footer-copyright {
+  .page-footer__footer-copyright {
     position: relative;
     right: -10px;
   }
 
-  .footer-social-btns {
+  .page-footer__social-btns {
     position: relative;
     left: 15px;
   }
 
-  .footer-copyright a {
+  .page-footer__footer-copyright a {
     font-size: 18px;
   }
 
@@ -331,11 +331,11 @@
     fill: @color-magenta;
   }
 
-  .footer-logo:active .logo-footer-word {
+  .page-footer__footer-logo:active .logo-footer-word {
     fill: @color-darkblue;
     opacity: 0.3;
 
-    .footer-logo:active .logo-footer-glasses {
+    .page-footer__footer-logo:active .logo-footer-glasses {
       opacity: 0.3;
     }
   }

@@ -50,7 +50,7 @@ th span {
   line-height: 30px;
 }
 
-.service .empty {
+ .service__head-empty {
   border-top: none;
   border-left: none;
   background: @color-gray;
@@ -67,12 +67,12 @@ td {
   background: @color-white;
 }
 
-.service-header {
+.service__body-header {
   display: block;
   float: left;
 }
 
-.service-element-no {
+.service__body-element-no {
   width: 27px;
   height: 26px;
   fill: #f25b26;
@@ -81,23 +81,23 @@ td {
   left: -2px;
 }
 
-.service-element-yes {
+.service__body-element-yes {
   width: 27px;
   height: 26px;
   fill: #3dc644;
 }
 
-.service-element-no,
-.service-element-yes {
+.service__body-element-no,
+.service__body-element-yes {
   display: block;
   float: right;
 }
 
-.hit {
+.service__head-element {
   position: relative;
 }
 
-.hit::before {
+.service__head-element::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,7 +109,7 @@ td {
   background: url('../img/bg-hit.svg') no-repeat;
 }
 
-.hit::after {
+.service__head-element::after {
   position: absolute;
   top: 9px;
   left: 9px;
@@ -159,14 +159,14 @@ td {
     text-transform: none;
   }
 
-  .service-element-no,
-  .service-element-yes {
+  .service__body-element-no,
+  .service__body-element-yes {
     display: block;
     float: none;
     margin: 0 auto;
   }
 
-  .service-item-text {
+  .service__body-text {
     display: none;
   }
 
@@ -174,13 +174,13 @@ td {
     display: none;
   }
 
-  .hit::before {
+  .service__head-element::before {
     width: 50px;
     height: 50px;
     background-size: cover;
   }
 
-  .hit::after {
+  .service__head-element::after {
     top: 3px;
     left: 3px;
   }
@@ -212,18 +212,18 @@ td {
     text-transform: none;
   }
 
-  .service-header {
+  .service__body-header {
     padding-left: 20px;
   }
 
-  .service-element-no,
-  .service-element-yes {
+  .service__body-element-no,
+  .service__body-element-yes {
     display: block;
     float: none;
     margin: 0 auto;
   }
 
-  .service-item-text {
+  .service__body-text {
     display: none;
   }
 
@@ -231,13 +231,13 @@ td {
     display: none;
   }
 
-  .hit::before {
+  .service__head-element::before {
     width: 70px;
     height: 70px;
     background-size: cover;
   }
 
-  .hit::after {
+  .service__head-element::after {
     top: 9px;
     left: 9px;
   }

@@ -27,6 +27,11 @@
 .comments__text p {
   line-height: 30px;
 }
+
+.comments__graphic-element{
+  display: none;
+}
+
 @media (min-width: 700px) {
   .comments {
     padding: 40px 0 30px;
@@ -106,5 +111,16 @@
     font-size: 18px;
     color: @color-darkblue;
     font-family: @font-family-regular;
+  }
+
+  .comments__graphic-element {
+    position: absolute;
+    top: 70px;
+    display: block;
+    width: 80px;
+    height: 65px;
+    fill: @color-gray;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
