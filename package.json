@@ -9,6 +9,7 @@
     "css-mqpacker": "^5.0.1",
     "grunt": "1.0.1",
     "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-less": "^1.4.0",

@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-postcss");
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgstore');
 
@@ -15,10 +16,11 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "css/style.css": "less/style.less"
+          "build/css/style.css": "less/style.less"
         }
       }
     },
+
     postcss: {
       style: {
         options: {
@@ -31,19 +33,21 @@ module.exports = function(grunt) {
             })
           ]
         },
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
+
     csso: {
       style: {
         options: {
           report: "gzip"
         },
         files: {
-          "css/style.min.css": ["css/style.css"]
+          "build/css/style.min.css": ["build/css/style.css"]
         }
       }
     },
+
     imagemin: {
       images: {
         options: {
@@ -55,6 +59,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+
     svgstore: {
       options: {
         svg: {
@@ -67,14 +72,36 @@ module.exports = function(grunt) {
         }
       }
     },
+
     svgmin: {
-      symbols:{
+      symbols: {
         files: [{
           expand: true,
           src: ["img/icons /*.svg"]
         }]
       }
     },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            "fonts /** /*.{woff,woff2}",
+            "img /**",
+            "js /**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      }
+    },
+
+    clean: {
+      build: ["build"]
+    },
+
+
     browserSync: {
       server: {
         bsFiles: {
@@ -93,6 +120,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     watch: {
       style: {
         files: ["less/**/*.less"],
@@ -104,4 +132,6 @@ module.exports = function(grunt) {
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
   grunt.registerTask("build", ["less", "postcss", "csso", "symbols", "imagemin"]);
+  grunt.registerTask("copy", ["copy"]);
+  grunt.registerTask("clean", ["clean"]);
 };
