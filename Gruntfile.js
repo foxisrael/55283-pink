@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["img /** /*.{png,jpg,gif}"]
+          src: ["build/img /** /*.{png,jpg,gif}"]
         }]
       }
     },
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
       },
       symbols: {
         files: {
-          "img/symbols.svg": ["img/icons /*.svg"]
+          "build/img/symbols.svg": ["img/icons /*.svg"]
         }
       }
     },
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
       symbols: {
         files: [{
           expand: true,
-          src: ["img/icons /*.svg"]
+          src: ["build/img/icons /*.svg"]
         }]
       }
     },
@@ -94,6 +94,13 @@ module.exports = function(grunt) {
           ],
           dest: "build"
         }]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["*.html"],
+          dest: "build"
+        }]
       }
     },
 
@@ -106,12 +113,12 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "*.html",
-            "css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: ".",
+          server: "build",
           watchTask: true,
           notify: false,
           open: true,
@@ -122,16 +129,18 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      html: {
+        files: ["*.html"],
+        tasks: ["copy:html"]
+      },
       style: {
         files: ["less/**/*.less"],
-        tasks: ["less", "postcss"]
+        tasks: ["less", "postcss", "csso"]
       }
     }
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
-  grunt.registerTask("build", ["less", "postcss", "csso", "symbols", "imagemin"]);
-  grunt.registerTask("copy", ["copy"]);
-  grunt.registerTask("clean", ["clean"]);
+  grunt.registerTask("build", ["clean", "copy", "less", "postcss", "csso", "symbols", "imagemin"]);
 };
