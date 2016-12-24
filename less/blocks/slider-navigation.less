@@ -73,7 +73,8 @@
     position: absolute;
     left: -30px;
     top: -40px;
-    fill: #bec2c7;
+    fill: @color-darkblue;
+    opacity: 0.3;
   }
 
   .slider-navigation__arrow--right {
@@ -81,7 +82,18 @@
     position: absolute;
     right: -910px;
     top: -40px;
-    fill: #bec2c7;
+    fill: @color-darkblue;
+    opacity: 0.3;
+  }
+
+  .slider-navigation__arrow--left:hover,
+  .slider-navigation__arrow--right:hover{
+    opacity: 1;
+  }
+
+  .slider-navigation__arrow--left:active,
+  .slider-navigation__arrow--right:active{
+    opacity: 0.1;
   }
 
   .slider-navigation ul {

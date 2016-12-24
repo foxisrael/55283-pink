@@ -133,6 +133,7 @@ textarea {
   text-align: left;
   color: @color-darkblue;
   border: 2px solid @color-gray2;
+  outline: none;
 }
 
 input[type="email"]:hover,
@@ -140,6 +141,7 @@ input[type="tel"]:hover,
 input[type="text"]:hover,
 textarea:hover {
   border: 2px solid @color-darkblue;
+  outline: none;
 }
 
 input[type="email"]:focus,
@@ -147,12 +149,18 @@ input[type="tel"]:focus,
 input[type="text"]:focus,
 textarea:active {
   border: 2px solid @color-pink;
+  outline: none;
 }
 
 input[type="email"],
 input[type="tel"] {
   position: relative;
   display: block;
+  outline: none;
+}
+
+.achievements-container .form-column{
+  position: relative;
 }
 /* TEXTAREA */
 textarea {
@@ -171,9 +179,19 @@ textarea:focus {
   border: 2px solid @color-pink;
 }
 /* CHECKBOX */
+label .icon-yes{
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  fill: red;
+  z-index: 5;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   display: none;
+  outline: none;
 }
 
 input[type="checkbox"] + label,
@@ -189,7 +207,7 @@ input[type="checkbox"] + label:last-child,
 input[type="radio"] + label:last-child {
   margin-bottom: 0;
 }
-/* checkbox before */
+
 input[type="checkbox"] + label::before {
   position: absolute;
   top: -4px;
@@ -202,39 +220,19 @@ input[type="checkbox"] + label::before {
   background-color: @color-white;
 }
 
+input[type="checkbox"]:checked + label .icon-yes {
+  display: block;
+}
+
 input[type="checkbox"]:hover + label:hover::before {
   border: 2px solid @color-darkblue;
 }
 
 input[type="checkbox"]:active + label:active::before {
   border: 2px solid @color-pink;
-}
-/* checkbox after */
-input[type="checkbox"]:active + label::after {
-  position: absolute;
-  top: 8px;
-  left: 9px;
   display: block;
-  width: 22px;
-  height: 16px;
-  content: "";
-  outline: none;
-  background-image: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:checked + label::after {
-  position: absolute;
-  top: 8px;
-  left: 9px;
-  display: block;
-  width: 22px;
-  height: 16px;
-  content: "";
-  outline: none;
-  background-image: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
-}
 /* radio before */
 input[type="radio"] + label::before {
   position: absolute;
@@ -742,6 +740,7 @@ input[type="radio"]:checked:active + label:active::after {
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     padding-left: 60px;
+    margin-bottom: 0;
   }
 
   .form__comments {
