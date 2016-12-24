@@ -28,14 +28,14 @@
 }
 
 .post-header {
-  font-size: @font-size-p;
-  line-height: 30px;
+  font-size: @font-size-basic;
+  line-height: @line-height-basic+6;
   padding: 45px 0 50px;
 }
 
 .post-footer {
-  font-size: @font-size-p;
-  line-height: 30px;
+  font-size: @font-size-basic;
+  line-height: @line-height-basic+6;
   padding: 20px 0 45px;
 }
 
@@ -52,7 +52,7 @@
 
 .header-panorama {
   font-size: 12px;
-  line-height: 24px;
+  line-height: @line-height-basic;
   position: absolute;
   z-index: 2;
   top: 0;
@@ -62,7 +62,7 @@
   padding: 6px 20px;
   text-align: center;
   color: @color-white;
-  background: @color-magenta;
+  background: @color-pink;
 }
 
 .post__item-photo {
@@ -92,7 +92,7 @@
   display: block;
   position: relative;
   top: -3px;
-  fill: @color-magenta;
+  fill: @color-pink;
   margin-right: 10px;
 }
 
@@ -109,19 +109,19 @@
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: @color-magenta;
+  color: @color-pink;
 }
 @media (min-width: 700px) {
   .post-footer {
     width: 100%;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     padding: 75px 70px 70px;
   }
 
   .post-header {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     padding: 95px 50px 75px;
   }
 

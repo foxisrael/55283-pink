@@ -7,11 +7,11 @@
   background: @color-gray;
 }
 
-.photopost-image-container {
-  width: 100%;
+.photopost__image-container {
+  width: 280px;
   height: 375px;
+  margin: 0 auto 40px;
   overflow: hidden;
-  margin-bottom: 40px;
 }
 
 .photopost::after {
@@ -56,7 +56,7 @@
 }
 
 .photopost__crop-active svg {
-  fill: @color-magenta;
+  fill: @color-pink;
   opacity: 1;
 }
 
@@ -84,7 +84,7 @@
 .photopost__contrast:active svg,
 .photopost__crop:active svg,
 .photopost__fill:active svg {
-  fill: @color-magenta;
+  fill: @color-pink;
   opacity: 1;
 }
 
@@ -109,7 +109,7 @@
   width: 14px;
   height: 14px;
   cursor: pointer;
-  border: 2px solid @color-magenta;
+  border: 2px solid @color-pink;
   border-radius: 50%;
   background: @color-gray;
 }
@@ -120,7 +120,7 @@
 }
 
 .range-toggle:active {
-  background: @color-magenta;
+  background: @color-pink;
 }
 
 input[type="reset"] {
@@ -156,7 +156,7 @@ input[type="reset"]:active {
     display: none;
   }
 
-  .photopost-image-container {
+  .photopost__image-container {
     width: 50%;
     height: 400px;
     margin-bottom: 0;
@@ -296,7 +296,7 @@ input[type="reset"]:active {
     margin: 0 auto;
   }
 
-  .photopost-image-container {
+  .photopost__image-container {
     width: 39%;
     height: 400px;
     margin-bottom: 0;
@@ -314,21 +314,21 @@ input[type="reset"]:active {
   .photopost__crop svg {
     width: 44px;
     height: 44px;
-    fill: @color-magenta;
+    fill: @color-pink;
     opacity: 1;
   }
 
   .photopost__fill svg {
     width: 48px;
     height: 43px;
-    fill: @color-magenta;
+    fill: @color-pink;
     opacity: 1;
   }
 
   .photopost__contrast svg {
     width: 32px;
     height: 32px;
-    fill: @color-magenta;
+    fill: @color-pink;
     opacity: 1;
   }
 
@@ -384,7 +384,7 @@ input[type="reset"]:active {
     display: block;
     width: 185px;
     height: 56px;
-    padding: 15px;
+    padding: 11px 5px 12px;
     margin: 0;
     left: 30px;
     top: -5px;
@@ -394,7 +394,7 @@ input[type="reset"]:active {
     display: block;
     width: 185px;
     height: 56px;
-    padding: 15px;
+    padding: 11px 5px 12px;
     margin: 0;
     left: 30px;
     top: -5px;
@@ -404,7 +404,7 @@ input[type="reset"]:active {
     display: block;
     width: 185px;
     height: 56px;
-    padding: 15px;
+    padding: 11px 5px 12px;
     margin: 0;
     left: 30px;
     top: -5px;

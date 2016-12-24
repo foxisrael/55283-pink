@@ -26,8 +26,8 @@ th {
 
 th {
   font-family: @font-family-bold;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: @font-size-basic+4;
+  line-height: @line-height-basic+6;
   padding: 15px 0;
   text-transform: uppercase;
   color: @color-white;
@@ -47,7 +47,7 @@ th:last-child {
 th span {
   font-family: @font-family-light;
   font-size: 24px;
-  line-height: 30px;
+  line-height: @line-height-basic+6;
 }
 
 .service__head-empty {
@@ -62,7 +62,7 @@ td {
   text-align: left;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 24px;
+  line-height: @line-height-basic;
   color: @color-darkblue;
   background: @color-white;
 }
@@ -116,7 +116,7 @@ td {
   display: block;
   content: "ХИТ";
   font-size: 14px;
-  line-height: 30px;
+  line-height: @line-height-basic+6;
   transform: rotate(-45deg);
   color: @color-white;
 }
@@ -150,7 +150,7 @@ td {
   }
 
   th span {
-    font-size: 18px;
+    font-size: @font-size-basic+4;
   }
 
   td {
@@ -192,22 +192,22 @@ td {
   }
 
   th {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     padding: 15px 0;
   }
 
   th span {
     display: block;
     font-size: 24px;
-    line-height: 30px;
+    line-height: @line-height-basic+6;
     margin-top: 3px;
   }
 
   td {
     padding: 17px 0 13px;
     min-width: 170px;
-    font-size: 18px;
+    font-size: @font-size-basic+4;
     line-height: 27px;
     text-transform: none;
   }

@@ -6,7 +6,7 @@
 }
 
 .form-header {
-  line-height: 30px;
+  line-height: @line-height-basic+6;
 }
 
 .form-header .text-disabled {
@@ -75,11 +75,11 @@ legend {
   position: relative;
   top: 55px;
   font-family: @font-family-regular;
-  font-size: 14px;
+  font-size: @font-size-basic;
   line-height: 18px;
   padding: 0 20px;
   text-transform: uppercase;
-  color: @color-magenta;
+  color: @color-pink;
   background: @color-gray;
 }
 
@@ -94,12 +94,12 @@ legend {
 
 label {
   font-family: @font-family-regular;
-  font-size: @font-size-label;
-  line-height: @line-height-label;
+  font-size: @font-size-basic;
+  line-height: @line-height-basic;
   position: relative;
   display: block;
   text-align: left;
-  color: @color-magenta;
+  color: @color-pink;
 }
 
 .form__contacts label,
@@ -115,8 +115,8 @@ label {
 .form__achievements label,
 .form__app label {
   font-family: @font-family-regular;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: @font-size-basic+4;
+  line-height: @line-height-basic+6;
   color: @color-darkblue;
 }
 
@@ -125,8 +125,8 @@ input[type="tel"],
 input[type="text"],
 textarea {
   font-family: @font-family-regular;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: @font-size-basic+4;
+  line-height: @line-height-basic+6;
   box-sizing: border-box;
   width: 100%;
   padding: 15px 22px;
@@ -146,7 +146,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="text"]:focus,
 textarea:active {
-  border: 2px solid @color-magenta;
+  border: 2px solid @color-pink;
 }
 
 input[type="email"],
@@ -168,7 +168,7 @@ textarea:hover {
 }
 
 textarea:focus {
-  border: 2px solid @color-magenta;
+  border: 2px solid @color-pink;
 }
 /* CHECKBOX */
 input[type="checkbox"],
@@ -207,7 +207,7 @@ input[type="checkbox"]:hover + label:hover::before {
 }
 
 input[type="checkbox"]:active + label:active::before {
-  border: 2px solid @color-magenta;
+  border: 2px solid @color-pink;
 }
 /* checkbox after */
 input[type="checkbox"]:active + label::after {
@@ -254,7 +254,7 @@ input[type="radio"]:hover + label:hover::before {
 }
 
 input[type="radio"]:active + label:active::before {
-  border: 2px solid @color-magenta;
+  border: 2px solid @color-pink;
 }
 /* radio after */
 input[type="radio"]:checked + label::after {
@@ -266,15 +266,15 @@ input[type="radio"]:checked + label::after {
   height: 16px;
   content: "";
   border-radius: 50%;
-  background-color: @color-magenta;
+  background-color: @color-pink;
 }
 
 input[type="radio"]:checked:hover + label:hover::after {
-  background-color: @color-magenta;
+  background-color: @color-pink;
 }
 
 input[type="radio"]:checked:active + label:active::after {
-  background-color: @color-magenta;
+  background-color: @color-pink;
 }
 
 .form__button p {
@@ -283,9 +283,9 @@ input[type="radio"]:checked:active + label:active::after {
 
 .form__button .star {
   font-family: @font-family-regular;
-  font-size: 14px;
-  line-height: 30px;
-  color: @color-magenta;
+  font-size: @font-size-basic;
+  line-height: @line-height-basic+6;
+  color: @color-pink;
 }
 
 .text-disabled {
@@ -366,8 +366,8 @@ input[type="radio"]:checked:active + label:active::after {
   }
 
   .form-header {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     margin-bottom: 75px;
     padding: 0 50px;
   }
@@ -420,7 +420,7 @@ input[type="radio"]:checked:active + label:active::after {
     left: 20px;
     width: 20px;
     height: 19px;
-    fill: @color-magenta;
+    fill: @color-pink;
   }
 
   .email-element-container {
@@ -440,7 +440,7 @@ input[type="radio"]:checked:active + label:active::after {
     left: 22px;
     width: 18px;
     height: 13px;
-    fill: @color-magenta;
+    fill: @color-pink;
   }
 
   .tel-email-container {
@@ -543,8 +543,8 @@ input[type="radio"]:checked:active + label:active::after {
   .form__achievements label,
   .form__app label {
     font-family: @font-family-regular;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     color: @color-darkblue;
   }
 
@@ -578,8 +578,8 @@ input[type="radio"]:checked:active + label:active::after {
   }
 
   .form__popup-ok p {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic;
     padding: 0 60px;
   }
 
@@ -594,8 +594,8 @@ input[type="radio"]:checked:active + label:active::after {
   }
 
   .form__popup-bad p {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic;
     padding: 0;
   }
 }
@@ -611,16 +611,16 @@ input[type="radio"]:checked:active + label:active::after {
   }
 
   .form-header {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     margin-bottom: 75px;
     padding: 0 70px;
   }
 
   .form-header .text-disabled {
     display: inline;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     color: @color-darkblue;
   }
 
@@ -797,8 +797,8 @@ input[type="radio"]:checked:active + label:active::after {
   .form__achievements label,
   .form__app label {
     font-family: @font-family-regular;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic+6;
     color: @color-darkblue;
   }
 
@@ -844,8 +844,8 @@ input[type="radio"]:checked:active + label:active::after {
   }
 
   .form__popup-ok p {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: @font-size-basic+4;
+    line-height: @line-height-basic;
     padding: 0 150px;
   }
 

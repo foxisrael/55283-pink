@@ -18,12 +18,12 @@
 
 .page-footer h2 {
   padding: 0 20px;
-  line-height: 30px;
+  line-height: @line-height-basic+6;
 }
 
 .page-footer__contacts p {
   font-family: @font-family-bold;
-  font-size: 18px;
+  font-size: @font-size-basic+4;
   color: @color-darkblue;
 }
 
@@ -33,11 +33,11 @@
   font-size: @font-size-h2;
   font-style: normal;
   text-decoration: none;
-  color: @color-magenta;
+  color: @color-pink;
 }
 
 .page-footer__contacts address {
-  line-height: 30px;
+  line-height: @line-height-basic+6;
 }
 
 .page-footer__map {
@@ -46,6 +46,7 @@
   position: relative;
   background: url("../img/bg-map-mobile@1x.png");
   background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background: url("../img/bg-map-mobile@2x.jpg");
@@ -79,7 +80,7 @@
 
 .page-footer__footer-logo:hover .logo-footer-glasses,
 .page-footer__footer-logo:hover .logo-footer-word {
-  fill: @color-magenta;
+  fill: @color-pink;
 }
 
 .page-footer__footer-logo:active .logo-footer-word {
@@ -114,7 +115,7 @@
 
 .social-btn:hover {
   border: 3px solid @color-darkblue;
-  fill: @color-magenta;
+  fill: @color-pink;
 }
 
 .social-btn:active {
@@ -124,16 +125,16 @@
 }
 
 .twitter {
-  fill: @color-magenta;
+  fill: @color-pink;
   width: 18px;
   height: 14px;
   position: relative;
-  top: 15px;
-  left: 0;
+  top: 13px;
+  left: 1px;
 }
 
 .facebook {
-  fill: @color-magenta;
+  fill: @color-pink;
   width: 9px;
   height: 19px;
   position: relative;
@@ -142,19 +143,19 @@
 }
 
 .youtube {
-  fill: @color-magenta;
+  fill: @color-pink;
   width: 15px;
   height: 14px;
   position: relative;
-  top: 15px;
-  left: 1px;
+  top: 13px;
+  left: 2px;
 }
 
 .page-footer__footer-copyright a {
   font-size: 14px;
   line-height: 18px;
   font-family: @font-family-regular;
-  fill: @color-magenta;
+  fill: @color-pink;
   color: @color-darkblue;
 }
 
@@ -200,7 +201,7 @@
   }
 
   .page-footer__contacts p {
-    line-height: 30px;
+    line-height: @line-height-basic+6;
   }
 
   .page-footer h2 {
@@ -336,7 +337,7 @@
   }
 
   .page-footer__footer-copyright a {
-    font-size: 18px;
+    font-size: @font-size-basic+4;
   }
 
   .logo-footer-effect {
@@ -345,7 +346,7 @@
   }
 
   .logo-footer-effect:last-of-type {
-    fill: @color-magenta;
+    fill: @color-pink;
   }
 
   .page-footer__footer-logo:active .logo-footer-word {

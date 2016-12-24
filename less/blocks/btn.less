@@ -1,7 +1,7 @@
 .btn {
   font-family: @font-family-bold;
   font-size: @font-size-btn;
-  line-height: 18px;
+  line-height: @line-height-basic+4;
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -20,11 +20,11 @@
 }
 
 .btn-menu:hover svg {
-  fill: @color-magenta;
+  fill: @color-pink;
 }
 
 .btn-menu:active svg {
-  fill: @color-magenta;
+  fill: @color-pink;
   opacity: 0.3;
 }
 
@@ -35,7 +35,7 @@
 
 .btn--download:hover {
   margin: 0 auto 35px;
-  color: @color-magenta;
+  color: @color-pink;
   outline: none;
   background: @color-white;
 }
@@ -81,8 +81,8 @@
   display: block;
   width: 100%;
   margin-bottom: 12px;
-  color: @color-magenta;
-  border: 3px solid @color-magenta;
+  color: @color-pink;
+  border: 3px solid @color-pink;
   outline: none;
 }
 
@@ -91,9 +91,9 @@
   width: 100%;
   margin-bottom: 12px;
   color: @color-white;
-  border: 3px solid @color-magenta;
+  border: 3px solid @color-pink;
   outline: none;
-  background: @color-magenta;
+  background: @color-pink;
 }
 
 .btn--post:active {
@@ -101,9 +101,9 @@
   width: 100%;
   margin-bottom: 12px;
   color: rgba(255, 255, 255, .3);
-  border: 3px solid @color-magenta;
+  border: 3px solid @color-pink;
   outline: none;
-  background: @color-magenta;
+  background: @color-pink;
 }
 
 .btn--popup-ok {
@@ -177,7 +177,7 @@
 
   .btn--submit:active {
     width: 300px;
-    margin: 70px 0 0;
+    margin: 60px 0 0;
   }
 
   .btn--post {
@@ -235,7 +235,7 @@
   .btn--post {
     width: 185px;
     height: 56px;
-    padding: 15px;
+    padding: 11px 5px 12px;
     margin: 0;
     top: -5px;
     left: 0;
@@ -244,7 +244,7 @@
   .btn--post:hover {
     width: 185px;
     height: 56px;
-    padding: 15px;
+    padding: 11px 5px 12px;
     margin: 0;
     top: -5px;
     left: 0;
@@ -253,7 +253,7 @@
   .btn--post:active {
     width: 185px;
     height: 56px;
-    padding: 15px;
+    padding: 11px 5px 12px;
     margin: 0;
     top: -5px;
     left: 0;
