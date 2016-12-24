@@ -49,11 +49,13 @@
   <main>
     <div class="main-promo">
       <div class="wrapper">
-        <picture class="main-promo__photo">
+        <div class="main-promo__photo">
+        <picture>
           <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x">
           <source media="(min-width: 700px)" srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x">
           <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="mobile photo">
         </picture>
+      </div>
         <div class="main-promo__offer">
           <h2>Взгляните на жизнь иначе!</h2>
           <button class="btn btn--download" type="button">Скачать приложение</button>
@@ -84,7 +86,7 @@
           <div class="main-about__photo main-about__photo-1">
             <picture>
               <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png, img/iphone-screen-1-desktop@2x.png 2x">
-              <img class="photo-item" src="img/iphone-screen-1-tablet@1x.png" srcset="iphone-screen-1-tablet@2x.png 2x" alt="">
+              <img class="photo-item" width="155" height="320" src="img/iphone-screen-1-tablet@1x.png" srcset="iphone-screen-1-tablet@2x.png 2x" alt="">
             </picture>
           </div>
           <div class="main-about__text">
@@ -96,7 +98,7 @@
           <div class="main-about__photo main-about__photo-2">
             <picture>
               <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png, img/iphone-screen-2-desktop@2x.png 2x">
-              <img class="photo-item" src="img/iphone-screen-2-tablet@1x.png" srcset="iphone-screen-2-tablet@2x.png 2x" alt="">
+              <img class="photo-item" width="155" height="320" src="img/iphone-screen-2-tablet@1x.png" srcset="iphone-screen-2-tablet@2x.png 2x" alt="">
             </picture>
           </div>
           <div class="main-about__text">
@@ -109,7 +111,7 @@
             <picture>
               <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png, img/iphone-screen-3-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/iphone-screen-3-tablet@1x.png, img/iphone-screen-3-tablet@2x.png 2x">
-              <img class="photo-item" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="">
+              <img class="photo-item" width="155" height="320" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="">
             </picture>
           </div>
           <div class="main-about__text">
@@ -279,7 +281,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="slider-navigation slider-navigation--table">
+        <div class="slider-navigation">
           <ul class="slider-navigation__controls slider-navigation__controls--round">
             <li>
               <a href="#" class="slider-navigation__control" title=""></a>
